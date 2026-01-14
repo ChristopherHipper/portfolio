@@ -1,0 +1,21 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo{
+    width: 52px;
+    height: 38px;
+}
+
+.name{
+    font-family: 'anta';
+    font-size: 14px;
+}
+
+.job{
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    color: #262E34;
+}

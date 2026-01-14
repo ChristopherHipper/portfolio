@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    color: #FFFFFF;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+input{
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
+}
+
+/* anta-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Anta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
+}

@@ -1,0 +1,14 @@
+.language-container{
+    display: flex;
+    gap: 12px;
+    button{
+        font-size: 18px;
+        background-color: unset;
+        padding: 0;
+        color: #262E34;
+        &:hover{
+            color: #F8F5EC;
+            transition-duration: 0.5s;
+        }
+    }
+}
