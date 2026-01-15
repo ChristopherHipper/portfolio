@@ -1,3 +1,5 @@
+@import "../../../../styles/colors";
+
 ul {
     display: flex;
     justify-content: space-between;
@@ -5,11 +7,11 @@ ul {
 }
 
 a {
-    color: #262E34;
+    color: $main-color;
     font-size: 26px;
     padding: 16px;
     &:hover {
-        color: #F8F5EC;
+        color: $second-color;
     }
     &:active{
         background-image: url('../../../../assets/img/test.png');

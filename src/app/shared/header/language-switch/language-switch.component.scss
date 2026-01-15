@@ -1,3 +1,5 @@
+@import "../../../../styles/colors";
+
 .language-container{
     display: flex;
     gap: 12px;
@@ -5,9 +7,9 @@
         font-size: 18px;
         background-color: unset;
         padding: 0;
-        color: #262E34;
+        color: $main-color;
         &:hover{
-            color: #F8F5EC;
+            color: $second-color;
             transition-duration: 0.5s;
         }
     }

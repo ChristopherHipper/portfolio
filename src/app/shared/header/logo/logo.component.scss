@@ -1,3 +1,5 @@
+@import "../../../../styles/colors";
+
 section{
     display: flex;
     flex-direction: column;
@@ -12,10 +14,11 @@ section{
 .name{
     font-family: 'anta';
     font-size: 14px;
+    color: $second-color;
 }
 
 .job{
     font-family: 'Josefin Sans';
     font-size: 14px;
-    color: #262E34;
+    color: $main-color;
 }

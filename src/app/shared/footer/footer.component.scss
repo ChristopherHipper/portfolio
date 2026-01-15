@@ -1,0 +1,40 @@
+@import "../../../styles/colors";
+
+footer {
+    background-color: $second-bg-color;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Josefin Sans';
+    margin: 0 auto;
+    padding: 0 72px;
+    height: 214px;
+    max-width: 1440px;
+}
+
+.sozial-media-container {
+    display: flex;
+    gap: 18px;
+}
+
+.legal-notice-container {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    a {
+        color: $main-color;
+
+        &:hover {
+            color: $second-color;
+        }
+    }
+
+    span {
+        color: $main-color;
+    }
+}
