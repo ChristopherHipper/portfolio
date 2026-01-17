@@ -1,1 +1,23 @@
-<p>hero-section works!</p>
+<section>
+    <div class="hero-container">
+        <div class="hero-img">
+            <!-- <img src="" alt=""> -->
+        </div>
+        <div class="hero-content-container">
+            <div class="logo-sozial-media-container">
+                <app-logo [logoVariant]="'hero'"></app-logo>
+                <div class="sozial-media-container">
+                    @for (icon of icons; track $index) {
+                    <app-sozial-media-icons [iconImg]="icon"></app-sozial-media-icons>
+                    }
+                </div>
+            </div>
+            <div>
+                <h1>Christopher Hipper</h1>
+                <span>FRONTEND DEVELOPER</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>

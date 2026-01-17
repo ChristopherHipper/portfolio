@@ -1,16 +1,32 @@
 @import "../../../../styles/colors";
 
-.language-container{
+.language-container {
     display: flex;
-    gap: 12px;
-    button{
+    gap: 6px;
+    button {
         font-size: 18px;
         background-color: unset;
-        padding: 0;
-        color: $main-color;
-        &:hover{
-            color: $second-color;
-            transition-duration: 0.5s;
-        }
+        padding: 2px 4px;
+        transition: color 0.5s, background-image 0.5s;
     }
+    button:not(.active):hover {
+        ~.active {
+            background-image: none;
+            color: #262E34;
+        }
+        color: $second-color;
+    }
+}
+
+.active {
+    &:has(+ button:not(.active):hover) {
+        background-image: none;
+        color: #262E34;
+    }
+    background-image: url('../../../../assets/img/shapes/ellipse-nav-hover.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $second-color;
+    cursor: default;
 }

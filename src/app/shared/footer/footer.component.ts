@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LogoComponent } from "../header/logo/logo.component";
+import { LogoComponent } from "../logo/logo.component";
 import { SozialMediaIconsComponent } from "../sozial-media-icons/sozial-media-icons.component";
 
 @Component({

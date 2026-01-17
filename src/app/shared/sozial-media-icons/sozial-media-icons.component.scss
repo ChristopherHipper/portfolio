@@ -1,0 +1,59 @@
+a{
+    display: flex;
+    width: 30px;
+    height: 30px;
+}
+
+.git-footer{
+    cursor: default;
+    background-image: url('../../../assets/img/icons/socialmedia/git-footer.png');
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url('../../../assets/img/icons/socialmedia/git-footer-hover.png');
+    }
+}
+
+.mail-footer{
+    cursor: default;
+    background-image: url('../../../assets/img/icons/socialmedia/mail-footer.png');
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url('../../../assets/img/icons/socialmedia/mail-footer-hover.png');
+    }
+}
+
+.linkedin-footer{
+    cursor: default;
+    background-image: url('../../../assets/img/icons/socialmedia/linkedin-footer.png');
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url('../../../assets/img/icons/socialmedia/linkedin-footer-hover.png');
+    }
+}
+
+.git-hero{
+    cursor: default;
+    background-image: url('../../../assets/img/icons/socialmedia/git-hero.png');
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url('../../../assets/img/icons/socialmedia/git-hero-hover.png');
+    }
+}
+
+.mail-hero{
+    cursor: default;
+    background-image: url('../../../assets/img/icons/socialmedia/mail-hero.png');
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url('../../../assets/img/icons/socialmedia/mail-hero-hover.png');
+    }
+}
+
+.linkedin-hero{
+    cursor: default;
+    background-image: url('../../../assets/img/icons/socialmedia/linkedin-hero.png');
+    background-repeat: no-repeat;
+    &:hover{
+        background-image: url('../../../assets/img/icons/socialmedia/linkedin-hero-hover.png');
+    }
+}

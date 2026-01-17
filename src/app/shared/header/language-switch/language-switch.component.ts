@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './language-switch.component.scss'
 })
 export class LanguageSwitchComponent {
+  language: 'german' | 'english' = 'german'
 
+  switchLanguage(lang: 'german' | 'english'): void{
+    if (lang === this.language)return;
+    this.language = lang;
+  }
 }

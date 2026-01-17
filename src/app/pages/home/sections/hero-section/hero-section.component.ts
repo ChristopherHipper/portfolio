@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { LogoComponent } from "../../../../shared/logo/logo.component";
+import { SozialMediaIconsComponent } from "../../../../shared/sozial-media-icons/sozial-media-icons.component";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [],
+  imports: [LogoComponent, SozialMediaIconsComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-
+  icons:string[] = ['git-hero','mail-hero','linkedin-hero']
+  logoVariant:string = ''
 }

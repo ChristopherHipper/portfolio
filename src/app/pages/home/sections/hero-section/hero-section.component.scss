@@ -1,0 +1,49 @@
+@import "../../../../../styles/colors";
+
+section {
+    background-color: $main-bg-color;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 72px;
+    padding-top: 72px;
+    max-width: 1440px;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition-duration: 0.3s;
+    transition-delay: 100ms;
+    width: 580px;
+    height: 616px;
+    &:hover {
+        background-image: url('../../../../../assets/img/shapes/ellipse-hero-hover.png');
+    }
+}
+
+.hero-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-sozial-media-container{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sozial-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
