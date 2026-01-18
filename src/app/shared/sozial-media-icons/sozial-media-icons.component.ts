@@ -13,11 +13,11 @@ export class SozialMediaIconsComponent {
   getHref() {
     let iconName = this.iconImg.split("-")[0];    
     if (iconName === 'git') {
-      return 'https://github.com/ChristopherHipper'
+      return 'https://github.com/ChristopherHipper';
     } else if (iconName === 'mail') {
-      return 'https://workspace.google.com/intl/de/products/gmail/'
+      return 'https://workspace.google.com/intl/de/products/gmail/';
     } else {
-      return 'https://www.linkedin.com/in/christopher-hipper-014293253/'
-    }
-  }
-}
+      return 'https://www.linkedin.com/in/christopher-hipper-014293253/';
+    };
+  };
+};

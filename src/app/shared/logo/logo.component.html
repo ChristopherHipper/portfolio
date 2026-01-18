@@ -1,5 +1,5 @@
 <section>
-    <img class="main-logo" src="assets/img/icons/logo/{{ logoVariant }}.png" alt="Christopher Hipper Logo">
+    <img class="main-logo" [src]="getLogo()" alt="Christopher Hipper Logo">
     <span class="name">C.Hipper</span>
     <span [style]="{'color': logoVariant === 'hero' ? secondColor : mainColor}"  class="job">developer</span>
 </section>

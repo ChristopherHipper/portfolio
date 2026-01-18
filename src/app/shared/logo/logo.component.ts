@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './logo.component.scss'
 })
 export class LogoComponent {
-  @Input() logoVariant: string = '';
+  @Input() logoVariant: 'nav' | 'hero' = 'hero'
   mainColor:string = '#262E34';
   secondColor:string = '#89BCD9';
-}
+
+  getLogo(){
+    return `assets/img/icons/logo/${this.logoVariant}.png`;
+  };
+};

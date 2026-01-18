@@ -1,23 +1,23 @@
 <section>
     <div class="hero-container">
-        <div class="hero-img">
+        <figure class="hero-img">
             <!-- <img src="" alt=""> -->
-        </div>
-        <div class="hero-content-container">
-            <div class="logo-sozial-media-container">
+        </figure>
+        <div class="hero-content">
+            <header class="hero-header">
+                <div></div>
                 <app-logo [logoVariant]="'hero'"></app-logo>
-                <div class="sozial-media-container">
+                <nav class="sozial-media">
                     @for (icon of icons; track $index) {
                     <app-sozial-media-icons [iconImg]="icon"></app-sozial-media-icons>
                     }
-                </div>
-            </div>
-            <div>
+                </nav>
+            </header>
+            <div class="hero-intro">
                 <h1>Christopher Hipper</h1>
-                <span>FRONTEND DEVELOPER</span>
+                <p>FRONTEND DEVELOPER</p>
             </div>
-
+            <app-scroll-indicator class="scroll-indicator" [scrollDirection]="'down'" [scrollTarget]="'whyMe'"></app-scroll-indicator>
         </div>
-
     </div>
 </section>
