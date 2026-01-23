@@ -1,0 +1,29 @@
+@import '../../../../../../../styles/colors.scss';
+
+.about-me-infos {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    gap: 6px;
+    color: $second-color;
+    div{
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 74.43px;
+        height: 63.28px;
+    }
+
+    span {
+        color: $second-bg-color;
+    }
+}
+
+.seperator {
+    width: 3px;
+    height: 33px;
+    background-color: #89BCD9;
+    margin-left: 6px;
+}
