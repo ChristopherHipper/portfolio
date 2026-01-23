@@ -3,12 +3,13 @@
 .about-me-infos {
     display: flex;
     font-size: 30px;
-    align-items: center;
+    align-items: flex-end;
     gap: 6px;
     color: $second-color;
     div{
         display: flex;
         align-items: center;
+        padding-bottom: 8px;
     }
 
     img {
@@ -26,4 +27,5 @@
     height: 33px;
     background-color: #89BCD9;
     margin-left: 6px;
+    
 }

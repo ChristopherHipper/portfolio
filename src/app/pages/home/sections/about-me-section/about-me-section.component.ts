@@ -1,11 +1,11 @@
-import { Component, inject } from '@angular/core';
-import { ButtonComponent } from "../../../../shared/button/button.component";
+import { Component } from '@angular/core';
 import { IconTextComponent } from "./components/icon-text/icon-text.component";
+import { SecondaryButtonComponent } from "../../../../shared/button/secondary-button/secondary-button.component";
 
 @Component({
   selector: 'app-about-me-section',
   standalone: true,
-  imports: [ButtonComponent, IconTextComponent],
+  imports: [IconTextComponent, SecondaryButtonComponent],
   templateUrl: './about-me-section.component.html',
   styleUrl: './about-me-section.component.scss'
 })
