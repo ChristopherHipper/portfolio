@@ -1,0 +1,14 @@
+@use 'colors' as *;
+
+button{
+    border-radius: 30px;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: $bg-color;
+    padding: 13px 30px;
+    font-size: 18px;
+    font-family: 'Josefin Sans';
+    &:hover {
+        background-color: #F8F5EC1F;
+    }
+}

@@ -1,0 +1,41 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+
+
+.skills-container {
+    @include display(center, stretch, unset);
+    max-width: 860px;
+    gap: 79px;
+}
+
+.skills {
+    @include display(start, flex-start, unset);
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 57px;
+}
+
+.current-learning {
+    background-image: url('../../../../../assets/img/shapes/ellipse-skills.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-size: 18px;
+    @include display(center, center, column);
+    color: $second-color;
+    gap: 36px;
+    flex: 1;
+    height: 380px;
+    transition-duration: 0.3s;
+    transition-delay: 100ms;
+
+    &:hover {
+        background-image: url('../../../../../assets/img/shapes/ellipse-skills-hover.png');
+    }
+}
+
+p {
+    width: 70%;
+    text-align: center;
+}

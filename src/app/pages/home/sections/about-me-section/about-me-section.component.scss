@@ -1,26 +1,12 @@
-@import '../../../../../styles/colors.scss';
+@use 'colors' as *;
+@use 'mixins' as *;
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 80px 0;
-    font-family: 'Josefin Sans';
-}
 
-h2 {
-    font-family: 'Anta';
-    font-size: 60px;
-    color: $second-bg-color;
-    margin-bottom: 62px;
-}
 
 .about-me-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include display(center , stretch , unset);
     max-width: 860px;
-    gap: 50px;
+    gap: 79px;
 }
 
 p {
@@ -28,18 +14,16 @@ p {
 }
 
 app-icon-text{
-    width: 55%;
+    flex: 1;
 }
 
 article {
     font-size: 18px;
-    display: flex;
-    flex-direction: column;
+    @include display(unset, unset , column);
     gap: 36px;
     flex: 1;
 }
 
 .btn-container{
-    display: flex;
-    justify-content: flex-end;
+    @include display(flex-end, unset , unset);
 }

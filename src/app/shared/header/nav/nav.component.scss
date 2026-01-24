@@ -1,4 +1,4 @@
-@import "../../../../styles/colors";
+@use 'colors' as *;
 
 ul {
     display: flex;
@@ -7,7 +7,7 @@ ul {
 }
 
 a {
-    color: $main-color;
+    color: $bg-color;
     font-size: 26px;
     padding: 16px;
     &:hover {

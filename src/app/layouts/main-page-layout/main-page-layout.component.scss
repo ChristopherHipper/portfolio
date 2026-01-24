@@ -1,6 +1,7 @@
+@use 'mixins' as *;
+
 .layout{
-    display: flex;
-    flex-direction: column;
+    @include display(center , unset , column);
     min-height: 100vh;
 }
 

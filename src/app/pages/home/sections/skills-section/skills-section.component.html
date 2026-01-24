@@ -1,1 +1,16 @@
-<p>skills-section works!</p>
+<section>
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skills">
+            @for (skill of skills; track skill) {
+            <app-single-skill [skill]="skill"></app-single-skill>
+            }
+        </div>
+        <div class="current-learning">
+            <p>I am currently learning</p>
+            <div></div>
+            <p>Show that you are motivated to continually improve your skills, implement innovative solutions and stay
+                abreast of new technologies.</p>
+        </div>
+    </div>
+</section>

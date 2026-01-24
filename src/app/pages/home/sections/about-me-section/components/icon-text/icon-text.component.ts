@@ -17,7 +17,7 @@ interface TypeParams {
   styleUrl: './icon-text.component.scss'
 })
 export class IconTextComponent {
-  titles: string[] = ['located in Germany..', 'ready to work remote..'];
+  titles: string[] = ['located in Paderborn..', 'ready to work remote..'];
   icons: string[] = ['assets/img/aboutme/remote.png', 'assets/img/aboutme/location.png'];
   currentIconIndex: number = 0;
   currentIcon:string = 'assets/img/aboutme/location.png';
@@ -28,7 +28,7 @@ export class IconTextComponent {
     this.currentIcon = this.icons[this.currentIconIndex]
   }
   
-  typedText$ = this.getTypewriterEffect(this.titles).pipe(map((text) => text));
+  typedText$ = this.getTypewriterEffect(this.titles);
 
   private type({ word, speed, backwards = false }: TypeParams) {
     return interval(speed).pipe(

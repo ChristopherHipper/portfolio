@@ -1,14 +1,13 @@
-@import "../../../styles/colors";
+@use 'colors' as *;
+@use 'mixins' as *;
 
 footer {
-    background-color: $second-bg-color;
+    background-color: $primary-color;
     margin-top: auto;
 }
 
 .footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include display(space-between,center,unset);
     font-family: 'Josefin Sans';
     margin: 0 auto;
     padding: 0 72px;
@@ -23,12 +22,11 @@ footer {
 
 .legal-notice-container {
     font-size: 18px;
-    display: flex;
-    flex-direction: column;
+    @include display(unset,unset,column);
     gap: 6px;
 
     a {
-        color: $main-color;
+        color: $bg-color;
         margin-right: auto;
         &:hover {
             color: $second-color;
@@ -36,6 +34,6 @@ footer {
     }
 
     span {
-        color: $main-color;
+        color: $bg-color;
     }
 }

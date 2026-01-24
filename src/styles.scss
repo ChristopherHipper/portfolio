@@ -30,6 +30,21 @@ ul{
     list-style: none;
 }
 
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Josefin Sans';
+}
+
+h2 {
+    font-family: 'Anta';
+    font-size: 60px;
+    color: #89BCD9;
+    margin-bottom: 80px;
+    margin-top: 104px;
+}
+
 /* josefin-sans-regular - latin */
 @font-face {
   font-display: swap;

@@ -1,7 +1,7 @@
-@import "../../../styles/colors";
+@use 'colors' as *;
 
 header {
-    background-color: $second-bg-color;
+    background-color: $primary-color;
 }
 
 .header-container {

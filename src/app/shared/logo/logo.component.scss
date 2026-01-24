@@ -1,9 +1,9 @@
-@import "../../../styles/colors";
+@use 'colors' as *;
+@use 'mixins' as *;
 
 section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include display(unset, center, column);
+    margin: 0;
 }
 
 .main-logo{
