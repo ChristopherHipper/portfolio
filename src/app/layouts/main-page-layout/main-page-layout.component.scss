@@ -1,11 +1,5 @@
 @use 'mixins' as *;
 
-.layout{
-    @include display(center , unset , column);
-    min-height: 100vh;
-}
-
 main{
-    flex: 1;
     background-color: #262E34;
 }

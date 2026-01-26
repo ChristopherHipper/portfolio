@@ -1,6 +1,6 @@
 @use 'colors' as *;
 
-div{
+div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -9,15 +9,38 @@ div{
     max-width: 55px;
 }
 
-p{
+p {
     font-size: 18px;
     color: $primary-color;
     text-align: center;
 }
 
-img{
+img {
     transition: transform 0.5s ease;
     &:hover {
-        transform: rotate(360deg);
+        opacity: 1;
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+        transform: scale(1.1);
+    }
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

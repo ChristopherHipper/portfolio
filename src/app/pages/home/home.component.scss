@@ -1,7 +1,1 @@
 @use 'mixins' as *;
-
-main{
-    @include display(center , center , column);
-    max-width: 1440px;
-    margin: 0 auto;
-}

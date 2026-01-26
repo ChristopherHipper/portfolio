@@ -10,7 +10,7 @@
 }
 
 .skills {
-    @include display(start, flex-start, unset);
+    display: flex;
     flex-wrap: wrap;
     flex: 1;
     gap: 57px;

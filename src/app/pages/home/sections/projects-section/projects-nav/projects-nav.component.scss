@@ -1,0 +1,28 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+li{
+    color: $primary-color;
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        color: $second-color;
+    }
+}
+
+.active-project{
+    color: $second-color;
+    background-color: #2D3840;
+    padding: 33px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
