@@ -1,8 +1,21 @@
 @use 'mixins' as *;
+@use 'colors' as *;
 
-.projects-container{
+.nav{
     width: 100%;
     @include display(space-between, center,unset);
     max-width: 1440px;
     padding: 0 72px;
+}
+
+main{
+    background-color: #2D3840;
+    width: 100%;
+}
+
+.projects-container{
+    @include display(center, center,unset);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 31px 130px;
 }

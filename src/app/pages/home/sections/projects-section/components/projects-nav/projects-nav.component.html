@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        @for (project of projects; track project.name; let i = $index ) {
+            <li [class.active-project]="project.name === activeProject" (click)="getProjectName(project.name)"> {{ i+1 + '. ' + project.label }} </li>
+        }
+    </ul>
+</nav>

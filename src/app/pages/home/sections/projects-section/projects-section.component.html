@@ -1,9 +1,9 @@
 <section>
     <h2>My Projects</h2>
-    <div class="projects-container">
-        <app-projects-nav></app-projects-nav>
-        <main>
-            
-        </main>
-    </div>
+    <app-projects-nav (selectProject)="getProject($event)" [projects]="projects" class="nav"></app-projects-nav>
+    <main>
+        <div class="projects-container">
+            <app-project-detail [project]="project"></app-project-detail>
+        </div>
+    </main>
 </section>
