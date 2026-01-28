@@ -3,5 +3,10 @@ export interface Project {
   label: string;
   duration: string;
   technologies: string[];
-  sections: string[];
+  sections: ProjectSection[];
+}
+
+export interface ProjectSection {
+  title: string;
+  content: string
 }

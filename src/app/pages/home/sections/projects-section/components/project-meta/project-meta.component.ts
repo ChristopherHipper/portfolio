@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Project } from '../../interfaces/project.interface';
 
 @Component({
   selector: 'app-project-meta',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './project-meta.component.scss'
 })
 export class ProjectMetaComponent {
-
+  @Input()project!:Project;
 }

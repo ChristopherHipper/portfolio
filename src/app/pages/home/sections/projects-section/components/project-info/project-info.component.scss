@@ -1,0 +1,33 @@
+@use 'colors' as *;
+
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.project-info {
+    p{
+        margin-left: 50px;
+    }
+
+    img {
+        width: 29px;
+        height: 26px;
+    }
+}
+
+.project-info-headline {
+    display: flex;
+    align-items: flex-start;
+    gap: 21px;
+}
+
+.duration {
+    position: relative;
+    top: 56px;
+    left: 300px;
+    margin: 0 !important;
+}

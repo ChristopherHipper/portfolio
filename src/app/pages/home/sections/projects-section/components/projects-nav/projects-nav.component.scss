@@ -5,6 +5,7 @@ ul{
     display: flex;
     align-items: center;
     gap: 27px;
+    padding: 0;
 }
 
 li{
@@ -12,6 +13,7 @@ li{
     font-family: 'Josefin Sans';
     font-size: 30px;
     font-weight: 500;
+    padding: 33px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     &:hover{
@@ -22,7 +24,7 @@ li{
 .active-project{
     color: $second-color;
     background-color: #2D3840;
-    padding: 33px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    cursor: default;
 }

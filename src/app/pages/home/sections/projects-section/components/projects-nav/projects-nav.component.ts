@@ -17,9 +17,4 @@ export class ProjectsNavComponent {
     this.activeProject = projectName;
     this.selectProject.emit(projectName);
   };
-
-  ngOnInit(){
-    console.log(this.projects);
-    
-  }
 }

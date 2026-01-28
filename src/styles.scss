@@ -1,32 +1,32 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     height: 100%;
 
 }
 
-button{
+button {
     cursor: pointer;
     border: none;
 }
 
-input{
+input {
     border: none;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -52,20 +52,26 @@ h3 {
     margin-bottom: 16px;
 }
 
+p {
+    font-size: 18px;
+    font-family: 'Josefin Sans';
+    color: #F8F5EC;
+}
+
 /* josefin-sans-regular - latin */
 @font-face {
-  font-display: swap;
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./assets/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
 }
 
 /* anta-regular - latin */
 @font-face {
-  font-display: swap;
-  font-family: 'Anta';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
+    font-display: swap;
+    font-family: 'Anta';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
 }

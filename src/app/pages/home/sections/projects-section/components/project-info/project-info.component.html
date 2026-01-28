@@ -1,1 +1,13 @@
-<p>project-info works!</p>
+<article>
+    <p class="duration">Duration: {{ project.duration }}</p>
+    @for (section of project.sections; track $index) {
+
+    <div class="project-info">
+        <div class="project-info-headline">
+            <img src="assets/img/shapes/ellipse.png" alt="">
+            <h3>{{ section.title }}</h3>
+        </div>
+        <p>{{ section.content }}</p>
+    </div>
+    }
+</article>
