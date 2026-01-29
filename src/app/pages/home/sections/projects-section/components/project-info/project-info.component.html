@@ -1,6 +1,6 @@
 <article>
     <p class="duration">Duration: {{ project.duration }}</p>
-    @for (section of project.sections; track $index) {
+    @for (section of project.sections; track section.title) {
 
     <div class="project-info">
         <div class="project-info-headline">

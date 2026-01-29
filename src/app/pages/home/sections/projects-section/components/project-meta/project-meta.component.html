@@ -1,1 +1,7 @@
-<p>project-meta works!</p>
+
+    <p>Technologies</p>
+    <div class="icon-container">
+        @for (skill of project.technologies; track $index) {
+        <app-skill-icons [projectIcon]="true" [skill]="skill"></app-skill-icons>
+        }
+    </div>

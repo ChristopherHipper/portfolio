@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
+  navList:string[] = ['Why me', 'Skills', 'Projects', 'Contact']
+  activeLink: string = '';
 
+  setActiveClass(item:string){
+    this.activeLink = item;
+  }
 }

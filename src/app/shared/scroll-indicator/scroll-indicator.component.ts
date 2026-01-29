@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ScrollIndicatorComponent {
   @Input() scrollDirection: 'up' | 'down' = 'down';
-  @Input() scrollTarget: 'whyMe' | 'hero' = 'whyMe';
+  @Input() scrollTarget: 'aboutMe' | 'hero' = 'aboutMe';
 
   imageSrc(){
     return `assets/img/scroll/arrow-${this.scrollDirection}.png`;

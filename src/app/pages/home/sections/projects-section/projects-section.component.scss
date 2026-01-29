@@ -13,10 +13,3 @@ main{
     background-color: #2D3840;
     width: 100%;
 }
-
-.projects-container{
-    @include display(flex-start, center,unset);
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 40px 94px;
-}

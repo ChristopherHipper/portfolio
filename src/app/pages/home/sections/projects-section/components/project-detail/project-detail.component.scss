@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+
+.project-container{
+    @include display(flex-start, center,unset);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 94px;
+}
+
+app-project-info{
+    width: 50%;
+}
+
+.project-meta-rev-cotainer{
+    flex: 1;
+    @include display(center, center,column);
+}

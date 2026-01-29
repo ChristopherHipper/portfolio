@@ -1,8 +1,7 @@
 <nav>
     <ul>
-        <li><a href="">Why me</a></li>
-        <li><a href="">Skills</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
+        @for (navItem of navList; track navItem; let i = $index) {
+            <li><a (click)="setActiveClass(navItem)" [class.active-link]="navItem === activeLink" href="#{{navItem}}">{{navItem}}</a></li>
+        }
     </ul>
 </nav>

@@ -2,8 +2,6 @@
     <h2>My Projects</h2>
     <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects" class="nav"></app-projects-nav>
     <main>
-        <div class="projects-container">
-            <app-project-detail [project]="project"></app-project-detail>
-        </div>
+        <app-project-detail [project]="project"></app-project-detail>
     </main>
 </section>

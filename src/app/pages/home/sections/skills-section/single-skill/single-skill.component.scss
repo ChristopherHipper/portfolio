@@ -13,10 +13,12 @@ p {
     font-size: 18px;
     color: $primary-color;
     text-align: center;
+    cursor: default;
 }
 
-img {
+app-skill-icons {
     transition: transform 0.5s ease;
+
     &:hover {
         opacity: 1;
         -webkit-animation: flash 1.5s;
