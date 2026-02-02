@@ -4,7 +4,8 @@
     @include display(flex-start, center,unset);
     max-width: 1440px;
     margin: 0 auto;
-    padding: 40px 94px;
+    padding: 0px 94px;
+    padding-bottom: 40px;
 }
 
 app-project-info{

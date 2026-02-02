@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-secondary-button',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './secondary-button.component.scss'
 })
 export class SecondaryButtonComponent {
+  @Input() gitHubBtn:boolean = false;
 
 }

@@ -4,6 +4,8 @@ export interface Project {
   duration: string;
   technologies: string[];
   sections: ProjectSection[];
+  image:string,
+  links:string[]
 }
 
 export interface ProjectSection {

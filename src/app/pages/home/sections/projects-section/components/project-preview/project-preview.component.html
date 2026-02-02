@@ -1,1 +1,9 @@
-<p>project-preview works!</p>
+<img src="assets/img/projects/{{ project.image }}" alt="">
+<div class="btn-container">
+    <app-primary-button>
+        <a class="primary-btn-link" target="_blank" href="{{project.links[0]}}">Live Test</a>
+    </app-primary-button>
+    <app-secondary-button [gitHubBtn]="true" >
+        <a class="secondary-btn-link" target="_blank" href="{{project.links[1]}}">GitHub</a>
+    </app-secondary-button>
+</div>

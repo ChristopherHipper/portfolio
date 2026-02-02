@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -14,4 +14,10 @@ export class NavComponent {
   setActiveClass(item:string){
     this.activeLink = item;
   }
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event:any){
+    console.log('scrolling');
+    
+  }
+  
 }
