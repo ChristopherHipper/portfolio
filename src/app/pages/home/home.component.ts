@@ -5,6 +5,7 @@ import { ProjectsSectionComponent } from "./sections/projects-section/projects-s
 import { TestimonialsSectionComponent } from "./sections/testimonials-section/testimonials-section.component";
 import { ContactSectionComponent } from "./sections/contact-section/contact-section.component";
 
+
 @Component({
   selector: 'app-home',
   standalone: true,

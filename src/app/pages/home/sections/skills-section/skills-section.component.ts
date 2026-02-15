@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SingleSkillComponent } from "./single-skill/single-skill.component";
+import { ScrollAnimationDirective } from '../../../../shared/directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-skills-section',
   standalone: true,
-  imports: [SingleSkillComponent],
+  imports: [SingleSkillComponent, ScrollAnimationDirective],
   templateUrl: './skills-section.component.html',
   styleUrl: './skills-section.component.scss'
 })
