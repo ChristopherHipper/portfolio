@@ -5,11 +5,11 @@ import { PrimaryButtonComponent } from "../../../../../../shared/button/primary-
 import { ScrollAnimationDirective } from '../../../../../../shared/directives/scroll-animation.directive';
 
 @Component({
-  selector: 'app-project-preview',
-  standalone: true,
-  imports: [SecondaryButtonComponent, PrimaryButtonComponent, ScrollAnimationDirective],
-  templateUrl: './project-preview.component.html',
-  styleUrl: './project-preview.component.scss'
+    selector: 'app-project-preview',
+    standalone: true,
+    imports: [SecondaryButtonComponent, PrimaryButtonComponent, ScrollAnimationDirective],
+    templateUrl: './project-preview.component.html',
+    styleUrl: './project-preview.component.scss'
 })
 export class ProjectPreviewComponent {
   @Input()project!:Project;

@@ -5,11 +5,11 @@ import { ProjectMetaComponent } from "../project-meta/project-meta.component";
 import { ProjectPreviewComponent } from "../project-preview/project-preview.component";
 
 @Component({
-  selector: 'app-project-detail',
-  standalone: true,
-  imports: [ProjectInfoComponent, ProjectMetaComponent, ProjectPreviewComponent],
-  templateUrl: './project-detail.component.html',
-  styleUrl: './project-detail.component.scss'
+    selector: 'app-project-detail',
+    standalone: true,
+    imports: [ProjectInfoComponent, ProjectMetaComponent, ProjectPreviewComponent],
+    templateUrl: './project-detail.component.html',
+    styleUrl: './project-detail.component.scss'
 })
 export class ProjectDetailComponent {
   @Input()project!:Project;

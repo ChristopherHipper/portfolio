@@ -6,11 +6,11 @@ import { ProjectsService } from './services/projects.service';
 import { ScrollAnimationDirective } from '../../../../shared/directives/scroll-animation.directive';
 
 @Component({
-  selector: 'app-projects-section',
-  standalone: true,
-  imports: [ProjectsNavComponent, ProjectDetailComponent, ScrollAnimationDirective],
-  templateUrl: './projects-section.component.html',
-  styleUrl: './projects-section.component.scss'
+    selector: 'app-projects-section',
+    standalone: true,
+    imports: [ProjectsNavComponent, ProjectDetailComponent, ScrollAnimationDirective],
+    templateUrl: './projects-section.component.html',
+    styleUrl: './projects-section.component.scss'
 })
 export class ProjectsSectionComponent {
   projects = inject(ProjectsService)

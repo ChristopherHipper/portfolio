@@ -4,11 +4,11 @@ import { SecondaryButtonComponent } from "../../../../shared/button/secondary-bu
 import { ScrollAnimationDirective } from '../../../../shared/directives/scroll-animation.directive';
 
 @Component({
-  selector: 'app-about-me-section',
-  standalone: true,
-  imports: [IconTextComponent, SecondaryButtonComponent, ScrollAnimationDirective],
-  templateUrl: './about-me-section.component.html',
-  styleUrl: './about-me-section.component.scss'
+    selector: 'app-about-me-section',
+    standalone: true,
+    imports: [IconTextComponent, SecondaryButtonComponent, ScrollAnimationDirective],
+    templateUrl: './about-me-section.component.html',
+    styleUrl: './about-me-section.component.scss'
 })
 export class AboutMeSectionComponent {
   

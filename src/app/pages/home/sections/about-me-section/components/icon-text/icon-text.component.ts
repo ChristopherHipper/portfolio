@@ -10,11 +10,11 @@ interface TypeParams {
 }
 
 @Component({
-  selector: 'app-icon-text',
-  standalone: true,
-  imports: [ AsyncPipe],
-  templateUrl: './icon-text.component.html',
-  styleUrl: './icon-text.component.scss'
+    selector: 'app-icon-text',
+    standalone: true,
+    imports: [AsyncPipe],
+    templateUrl: './icon-text.component.html',
+    styleUrl: './icon-text.component.scss'
 })
 export class IconTextComponent {
   titles: string[] = ['located in Paderborn..', 'ready to work remote..'];

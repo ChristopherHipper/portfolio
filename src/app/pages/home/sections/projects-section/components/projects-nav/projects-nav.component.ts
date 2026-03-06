@@ -1,11 +1,11 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-projects-nav',
-  standalone: true,
-  imports: [],
-  templateUrl: './projects-nav.component.html',
-  styleUrl: './projects-nav.component.scss'
+    selector: 'app-projects-nav',
+    standalone: true,
+    imports: [],
+    templateUrl: './projects-nav.component.html',
+    styleUrl: './projects-nav.component.scss'
 })
 export class ProjectsNavComponent {
   @Output() selectProject = new EventEmitter<string>();

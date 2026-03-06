@@ -4,11 +4,11 @@ import { HeaderComponent } from '../../shared/header/header.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-sub-page-layout',
-  standalone: true,
-  imports: [HeaderComponent, RouterOutlet, FooterComponent],
-  templateUrl: './sub-page-layout.component.html',
-  styleUrl: './sub-page-layout.component.scss'
+    selector: 'app-sub-page-layout',
+    standalone: true,
+    imports: [HeaderComponent, RouterOutlet, FooterComponent],
+    templateUrl: './sub-page-layout.component.html',
+    styleUrl: './sub-page-layout.component.scss'
 })
 export class SubPageLayoutComponent {
 

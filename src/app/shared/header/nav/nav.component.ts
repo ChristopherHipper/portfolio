@@ -1,11 +1,11 @@
 import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-nav',
-  standalone: true,
-  imports: [],
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss'
+    selector: 'app-nav',
+    standalone: true,
+    imports: [],
+    templateUrl: './nav.component.html',
+    styleUrl: './nav.component.scss'
 })
 export class NavComponent implements AfterViewInit, OnDestroy {
   navList: string[] = ['Why me', 'Skills', 'Projects', 'Contact']

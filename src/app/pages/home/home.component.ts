@@ -7,11 +7,11 @@ import { ContactSectionComponent } from "./sections/contact-section/contact-sect
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [AboutMeSectionComponent, SkillsSectionComponent, ProjectsSectionComponent, TestimonialsSectionComponent, ContactSectionComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    standalone: true,
+    imports: [AboutMeSectionComponent, SkillsSectionComponent, ProjectsSectionComponent, TestimonialsSectionComponent, ContactSectionComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
