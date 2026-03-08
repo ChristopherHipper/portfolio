@@ -1,7 +1,17 @@
 <section appScrollAnimation>
     <h2>My Projects</h2>
-    <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects" class="nav"></app-projects-nav>
+    <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects"
+        class="nav"></app-projects-nav>
     <main>
-        <app-project-detail [project]="project"></app-project-detail>
+        @if(previousProject()){
+        <div class="project fade-out">
+            <app-project-detail [project]="previousProject()"></app-project-detail>
+        </div>
+        }
+        @if(currentProject()){
+        <div class="project fade-in">
+            <app-project-detail [project]="currentProject()"></app-project-detail>
+        </div>
+        }
     </main>
 </section>

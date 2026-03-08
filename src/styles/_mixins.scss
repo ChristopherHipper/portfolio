@@ -1,4 +1,4 @@
-@mixin display($jc , $ai , $fd) {
+@mixin display($jc: space-between , $ai: center , $fd: unset) {
     display: flex;
     justify-content: $jc;
     align-items: $ai;

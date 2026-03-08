@@ -26,7 +26,7 @@ export class ProjectsService {
         },
       ],
       image: 'el-pollo-loco.png',
-      links:['', 'https://github.com/ChristopherHipper/el-pollo-loco']
+      links: ['', 'https://github.com/ChristopherHipper/el-pollo-loco']
     },
     {
       name: 'join',
@@ -47,7 +47,7 @@ export class ProjectsService {
       },
       ],
       image: 'join.png',
-      links:['', 'https://github.com/ChristopherHipper/Join']
+      links: ['', 'https://github.com/ChristopherHipper/Join']
     },
     {
       name: 'protfolio',
@@ -57,9 +57,18 @@ export class ProjectsService {
       sections: [{
         title: 'About the Project',
         content: 'Portfolio Website developed with Angular, TypeScript, and SCSS. It employs a reusable component-based architecture, routing, and modern frontend development techniques. Includes a modular layout with interactive elements and a contact form, all in a responsive design.'
-      }],
-      image:'',
-      links:['', 'https://github.com/ChristopherHipper/portfolio']
-    },
+      },
+      {
+        title: 'How I have organised my work process',
+        content: 'I structured the project using Angular’s component-based architecture to keep the application modular and maintainable. I used Angular routing to organize the navigation between pages and created separate components where shared logic was required.'
+      },
+      {
+        title: 'What I have learnt',
+        content: 'Through this project I gained practical experience with Angular and modern frontend development using TypeScript. I learned how to structure applications with components, services, and routing while keeping the code modular and scalable. Additionally, I improved my understanding of data binding, component communication, and reusable UI design.'
+      },
+      ],
+  image: '',
+  links: ['', 'https://github.com/ChristopherHipper/portfolio']
+},
   ];
 }

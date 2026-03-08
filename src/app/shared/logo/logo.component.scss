@@ -1,26 +1,30 @@
 @use 'colors' as *;
 @use 'mixins' as *;
 
-section{
+.container {
     @include display(unset, center, column);
     margin: 0;
-}
 
-.main-logo{
-    width: 56px;
-    height: 38px;
-}
+    a{
+        cursor: unset;
+    }
 
-.name{
-    font-family: 'anta';
-    font-size: 16px;
-    color: $second-color;
-    font-weight: 400;
-    margin-bottom: 4px;
-}
+    &__logo {
+        width: 56px;
+        height: 38px;
+    }
 
-.job{
-    font-family: 'Josefin Sans';
-    font-size: 14px;
-    font-weight: 100;
+    &__name {
+        font-family: 'anta';
+        font-size: 16px;
+        color: $second-color;
+        font-weight: 400;
+        margin-bottom: 4px;
+    }
+
+    &__job {
+        font-family: 'Josefin Sans';
+        font-size: 14px;
+        font-weight: 100;
+    }
 }

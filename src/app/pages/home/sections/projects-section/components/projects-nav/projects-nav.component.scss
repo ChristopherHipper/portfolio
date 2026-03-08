@@ -15,7 +15,7 @@ li{
     font-weight: 500;
     padding: 33px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: all 0.5s ease;
     &:hover{
         color: $second-color;
     }

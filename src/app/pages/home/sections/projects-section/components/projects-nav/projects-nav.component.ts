@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, input, signal, output } from '@angular/core';
+import { Project } from '../../interfaces/project.interface';
 
 @Component({
     selector: 'app-projects-nav',
@@ -8,13 +9,12 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
     styleUrl: './projects-nav.component.scss'
 })
 export class ProjectsNavComponent {
-  @Output() selectProject = new EventEmitter<string>();
-  @Input() projects!: { name: string; label: string }[];
-
-  activeProject:string = 'el-pollo-loco';
+  selectProject = output<string>()
+  projects = input<Project[]>();
+  activeProject = signal('el-pollo-loco');
 
   getProjectName(projectName:string) {
-    this.activeProject = projectName;
+    this.activeProject.set(projectName);
     this.selectProject.emit(projectName);
   };
 }

@@ -16,3 +16,12 @@ button{
 .git-hub{
     background-color: #2D3840;
 }
+
+.disabled{
+    color: #f8f5ec82;
+    border: 1px solid #f8f5ec82;
+    cursor: unset;
+    &:hover{
+        background-color: $bg-color;
+    }
+}

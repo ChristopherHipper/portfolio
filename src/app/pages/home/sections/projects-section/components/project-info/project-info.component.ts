@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 
 @Component({
@@ -9,5 +9,5 @@ import { Project } from '../../interfaces/project.interface';
     styleUrl: './project-info.component.scss'
 })
 export class ProjectInfoComponent {
-  @Input()project!:Project;
+  project = input<Project>();
 }

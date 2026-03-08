@@ -1,0 +1,40 @@
+<form [formGroup]="contactForm" (ngSubmit)="formSubmit()">
+    <div class="name-mail-container">
+        <div class="">
+            @if (invalidName){
+            <label class="error" for="name">Your name is required</label>
+            } @else{
+            <label for="name">Your Name </label>
+            }
+            <input [class.input-error]="invalidName" id="name" type="text" formControlName="name" />
+        </div>
+        <div>
+            @if (invalidEmail) {
+            <label class="error" for="email">Your Email </label>
+            }@else {
+            <label for="email">Your Email </label>
+            }
+            <input [class.input-error]="invalidEmail" id="email" type="text" formControlName="email" />
+        </div>
+    </div>
+    @if (invalidMessage) {
+    <label class="error" for="text">Your Message </label>
+    }@else{
+    <label for="text">Your Message </label>
+    }
+    <input [class.input-error]="invalidMessage" id="text" type="text" formControlName="message" />
+
+    <div class="checkbox">
+        <input formControlName="checkbox" id="checkbox" type="checkbox">
+        <label class="checkbox-label" for="checkbox">
+            <span class="checkbox-img"></span>
+            I've read the <a href="legal-notice">private policy</a> and agree to the processing of my data as outlined.
+        </label>
+    </div>
+
+    <app-secondary-button [disabled]="!contactForm.valid" type="submit">
+        Send
+    </app-secondary-button>
+
+
+</form>

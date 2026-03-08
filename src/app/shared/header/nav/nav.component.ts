@@ -1,15 +1,17 @@
-import { Component, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector: 'app-nav',
     standalone: true,
-    imports: [],
+    imports: [RouterLink],
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })
 export class NavComponent implements AfterViewInit, OnDestroy {
-  navList: string[] = ['Why me', 'Skills', 'Projects', 'Contact']
-  activeLink: string = '';
+  navList = signal(['Why me', 'Skills', 'Projects', 'Contact']);
+  activeLink = signal('');
+  aactiveLink: string = '';
   private observer!: IntersectionObserver;
   options = {
       root: null,
@@ -17,7 +19,7 @@ export class NavComponent implements AfterViewInit, OnDestroy {
     };
 
   setActiveClass(item: string) {
-    this.activeLink = item;
+    this.activeLink.set(item);
   }
 
 
@@ -30,14 +32,14 @@ export class NavComponent implements AfterViewInit, OnDestroy {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-            this.activeLink = entry.target.id
+            this.activeLink.set(entry.target.id);
         }
       });
     }, this.options);
   }
 
   getSection(){
-    this.navList.forEach(id => {
+    this.navList().forEach(id => {
       const section = document.getElementById(id);
       if (section) {
         this.observer.observe(section);

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { LogoComponent } from "../../../../shared/logo/logo.component";
 import { SozialMediaIconsComponent } from "../../../../shared/sozial-media-icons/sozial-media-icons.component";
 import { ScrollIndicatorComponent } from "../../../../shared/scroll-indicator/scroll-indicator.component";
@@ -11,6 +11,6 @@ import { ScrollIndicatorComponent } from "../../../../shared/scroll-indicator/sc
     styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-  icons:string[] = ['git-hero','mail-hero','linkedin-hero']
-  logoVariant:string = ''
+  icons = signal(['git-hero','mail-hero','linkedin-hero']);
+  logoVariant = signal('');
 }

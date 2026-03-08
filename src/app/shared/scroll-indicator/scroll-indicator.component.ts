@@ -1,17 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
     selector: 'app-scroll-indicator',
     standalone: true,
-    imports: [],
+    imports: [RouterLink],
     templateUrl: './scroll-indicator.component.html',
     styleUrl: './scroll-indicator.component.scss'
 })
 export class ScrollIndicatorComponent {
-  @Input() scrollDirection: 'up' | 'down' = 'down';
-  @Input() scrollTarget: 'aboutMe' | 'hero' = 'aboutMe';
+  scrollDirection = input();
+  scrollTarget = input('Why me');
 
   imageSrc(){
-    return `assets/img/scroll/arrow-${this.scrollDirection}.png`;
+    return `assets/img/scroll/arrow-${this.scrollDirection()}.png`;
   }
 }

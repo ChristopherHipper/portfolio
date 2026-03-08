@@ -9,7 +9,8 @@ export class ScrollAnimationDirective implements AfterViewInit, OnDestroy {
 
   private observer!: IntersectionObserver;
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {
+   }
 
   ngAfterViewInit(): void {
     this.initAnimationObserver()
@@ -22,7 +23,6 @@ export class ScrollAnimationDirective implements AfterViewInit, OnDestroy {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           nativeEl.classList.add('in-view');
-          this.observer.unobserve(nativeEl);
         }
       });
     }, { threshold: 0.5 });

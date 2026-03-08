@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { SkillIconsComponent } from "../../../../../../shared/skill-icons/skill-icons.component";
 
@@ -10,5 +10,5 @@ import { SkillIconsComponent } from "../../../../../../shared/skill-icons/skill-
     styleUrl: './project-meta.component.scss'
 })
 export class ProjectMetaComponent {
-  @Input()project!:Project;
+  project = input<Project>();
 }

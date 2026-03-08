@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { SkillIconsComponent } from "../../../../../shared/skill-icons/skill-icons.component";
 
 @Component({
@@ -9,9 +9,9 @@ import { SkillIconsComponent } from "../../../../../shared/skill-icons/skill-ico
     styleUrl: './single-skill.component.scss'
 })
 export class SingleSkillComponent {
-  @Input() skill:string = '';
+  skill = input('');
 
   getSkillImg(){
-    return `assets/img/icons/skills/${this.skill}.png`
+    return `assets/img/icons/skills/${this.skill()}.png`
   }
 }

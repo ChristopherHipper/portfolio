@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { SecondaryButtonComponent } from "../../../../../../shared/button/secondary-button/secondary-button.component";
 import { PrimaryButtonComponent } from "../../../../../../shared/button/primary-button/primary-button.component";
@@ -12,5 +12,5 @@ import { ScrollAnimationDirective } from '../../../../../../shared/directives/sc
     styleUrl: './project-preview.component.scss'
 })
 export class ProjectPreviewComponent {
-  @Input()project!:Project;
+  project = input<Project>();
 }

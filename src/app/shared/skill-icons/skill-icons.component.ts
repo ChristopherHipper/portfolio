@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
     selector: 'app-skill-icons',
@@ -8,10 +8,10 @@ import { Component, Input } from '@angular/core';
     styleUrl: './skill-icons.component.scss'
 })
 export class SkillIconsComponent {
-    @Input() skill:string = '';
-    @Input() projectIcon:boolean = false;
+    skill = input('');
+    projectIcon = input()
   
     getSkillImg(){
-      return `assets/img/icons/skills/${this.skill}.png`
+      return `assets/img/icons/skills/${this.skill()}.png`
     }
 }

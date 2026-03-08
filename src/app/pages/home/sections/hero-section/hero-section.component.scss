@@ -1,14 +1,7 @@
 @use 'colors' as *;
 @use 'mixins' as *;
 
-
-section {
-    @include display(center, center, unset);
-    background-color: $bg-color;
-    margin: 0;
-}
-
-.hero-container {
+.container {
     padding: 0 72px;
     display: flex;
     align-items: flex-end;
@@ -16,59 +9,45 @@ section {
     margin: 0 auto;
     max-width: 1440px;
     height: 100vh;
-}
 
-.hero-img {
-    background-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition-duration: 0.3s;
-    transition-delay: 100ms;
-    height: 80vh;
-    width: 80vh;
+    &__img {
+        background-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition-duration: 0.5s ease;
+        transition-delay: 100ms;
+        height: 80vh;
+        width: 80vh;
 
-    &:hover {
-        background-image: url('../../../../../assets/img/shapes/ellipse-hero-hover.png');
+        &:hover {
+            background-image: url('../../../../../assets/img/shapes/ellipse-hero-hover.png');
+        }
     }
-}
 
-.hero-content {
-    margin-bottom: 64px;
-    @include display(unset , center , column);
-}
+    &__content{
+        text-align: center;
+    }
 
-.hero-header {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto 0fr;
-    align-items: center;
-}
+    &__header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto 0fr;
+        align-items: center;
+    }
 
-.sozial-media {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
+    &__sozialmedia {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
 
-.hero-intro {
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-h1 {
-    font-family: 'Anta';
-    color: $second-color;
-    font-size: 88px;
-    margin-bottom: 24px;
-    margin-top: 56px;
+    &__text {
+        text-align: center;
+        margin-bottom: 48px;
+    }
 }
 
 p {
     font-size: 40px;
-}
-
-.scroll-indicator {
-    display: flex;
-    align-items: flex-end;
 }

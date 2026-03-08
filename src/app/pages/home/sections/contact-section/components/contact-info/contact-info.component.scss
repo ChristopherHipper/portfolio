@@ -1,0 +1,36 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.info{
+    @include display(space-between , flex-start , unset);
+    gap: 36px;
+    &__text{
+        flex: 1;
+    }
+    &__contact{
+        @include display(center , flex-start , column);
+        gap: 16px;
+        flex: 1;
+        a{
+            color: $second-color;
+        }
+        :hover{
+            color: $primary-color;
+            .default{
+                display: none;
+            }
+            .hover{
+                display: inline;
+            }
+        }
+    }
+}
+
+.mail-link{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .hover{
+        display: none;
+    }
+}
