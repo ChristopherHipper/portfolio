@@ -1,22 +1,26 @@
 @use 'mixins' as *;
 @use 'colors' as *;
 
-.btn-container{
+.btn-container {
     @include display(center, center, unset);
     gap: 40px;
     margin-top: 34px;
 }
 
-img{
+img {
     width: 450px;
     height: 312px;
     border-radius: 30px;
 }
 
-.primary-btn-link{
+.primary-btn-link {
     color: $bg-color;
 }
 
-.secondary-btn-link{
+.secondary-btn-link {
     color: $primary-color;
+}
+
+.img-container{
+    min-height: 320px;
 }

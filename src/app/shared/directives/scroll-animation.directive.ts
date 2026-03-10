@@ -5,7 +5,7 @@ import { AfterViewInit, Directive, ElementRef, Input, OnDestroy} from '@angular/
   standalone: true
 })
 export class ScrollAnimationDirective implements AfterViewInit, OnDestroy {
-  @Input() type: 'fade' | 'slide-left' | 'slide-right' | 'flip' = 'fade';
+  @Input() type: 'slide-bottom' | 'fade' | 'slide-left' | 'slide-right' | 'flip' = 'fade';
 
   private observer!: IntersectionObserver;
 

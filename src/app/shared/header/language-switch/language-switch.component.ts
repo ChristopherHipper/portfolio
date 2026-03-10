@@ -8,7 +8,7 @@ import { Component, signal } from '@angular/core';
     styleUrl: './language-switch.component.scss'
 })
 export class LanguageSwitchComponent {
-  language = signal('german')
+  language = signal('english')
 
   switchLanguage(lang: 'german' | 'english'): void{
     if (lang === this.language())return;
