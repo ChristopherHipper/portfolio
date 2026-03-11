@@ -9,7 +9,7 @@ export class ProjectsService {
     {
       name: 'el-pollo-loco',
       label: 'El-Pollo-Loco',
-      duration: '10 weeks (part-time, alongside full-time job)',
+      duration: '10 weeks (alongside full-time job)',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       sections: [
         {
@@ -18,11 +18,11 @@ export class ProjectsService {
         },
         {
           title: 'How I have organised my work process',
-          content: 'I organized the project by splitting the game into small, logical components. Using object-oriented programming, every component was implemented as a separate class, supported by additional helper and logic classes. I developed the game step by step, beginning with the core mechanics and game loop, then adding animations, interactions, and optimizations. Regular testing helped me improve gameplay and fix bugs early.'
+          content: 'I organized the project by splitting the game into small, logical components. Using object-oriented programming, every component was implemented as a separate class, supported by additional helper and logic classes. Regular testing helped me improve gameplay and fix bugs early.'
         },
         {
           title: 'What I have learnt',
-          content: 'This project strengthened my understanding of JavaScript"s object-oriented programming. I learned to manage a game loop with FPS, handle collisions, animations, and player input. Additionally, I improved my skills in structuring bigger projects and generate clean, maintainable code. Building a project from the ground up improved my confidence as a developer'
+          content: "This project strengthened my understanding of JavaScript's object-oriented programming. I learned to manage a game loop with FPS, handle collisions, animations, and player input. Additionally, I improved my skills in structuring bigger projects and generate clean, maintainable code wich improved my confidence as a developer"
         },
       ],
       image: 'el-pollo-loco.png',
@@ -31,7 +31,7 @@ export class ProjectsService {
     {
       name: 'join',
       label: 'Join',
-      duration: '7 weeks (part-time, alongside full-time job)',
+      duration: '7 weeks (alongside full-time job)',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Git'],
       sections: [{
         title: 'About the Project',
@@ -52,11 +52,11 @@ export class ProjectsService {
     {
       name: 'protfolio',
       label: 'Portfolio',
-      duration: '5 weeks',
+      duration: '5 weeks (alongside full-time job)',
       technologies: ['Angular', 'CSS', 'TypeScript'],
       sections: [{
         title: 'About the Project',
-        content: 'Portfolio Website developed with Angular, TypeScript, and SCSS. It employs a reusable component-based architecture, routing, and modern frontend development techniques. Includes a modular layout with interactive elements and a contact form, all in a responsive design.'
+        content: 'Portfolio Website developed with Angular, TypeScript, and SCSS. It employs modern frontend development techniques. Includes a modular layout with interactive elements and a contact form, all in a responsive design.'
       },
       {
         title: 'How I have organised my work process',

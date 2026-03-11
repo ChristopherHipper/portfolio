@@ -8,16 +8,23 @@ form {
     margin-bottom: 80px;
 }
 
-input {
+.inputfield {
     border-radius: 30px;
     color: $second-color;
     font-size: 18px;
     height: 60px;
-    padding-left: 24px;
+    padding: 0 24px;
     background: transparent;
     position: absolute;
     inset: 0;
     z-index: 10;
+}
+
+.messagefield {
+    padding: 12px 24px;
+    height: 150px;
+    max-height: 150px;
+    resize: none;
 }
 
 label {
@@ -60,8 +67,14 @@ p {
 }
 
 .input-error {
-    border: 2px solid #E44C36;
-    z-index: 9999;
+    border: 3px solid #E44C36;
+    z-index: 1;
+}
+
+.input-error-message {
+    border: 3px solid #E44C36;
+    z-index: 1;
+    height: 150px;
 }
 
 
@@ -111,11 +124,10 @@ app-scroll-indicator {
 .border-animation {
     --offset: 1px;
     background: #323F48;
-    border-radius: 50px;
+    border-radius: 30px;
     position: relative;
     height: 60px;
     overflow: hidden;
-
 }
 
 .border-animation::before {
@@ -127,7 +139,7 @@ app-scroll-indicator {
     transform: translate(-50%, -50%);
     aspect-ratio: 1;
     width: 100%;
-    animation: rotate 2s linear infinite;
+    animation: rotate 3s linear infinite;
 }
 
 

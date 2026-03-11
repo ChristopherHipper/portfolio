@@ -7,7 +7,7 @@
             <label for="name">Your Name </label>
             }
             <div class="border-animation">
-                <input [class.input-error]="invalidName" id="name" type="text" formControlName="name" />
+                <input class="inputfield" [class.input-error]="invalidName" id="name" type="text" formControlName="name" />
             </div>
         </div>
 
@@ -19,7 +19,7 @@
             <label for="email">Your Email </label>
             }
             <div class="border-animation">
-                <input [class.input-error]="invalidEmail" id="email" type="text" formControlName="email" />
+                <input class="inputfield" [class.input-error]="invalidEmail" id="email" type="text" formControlName="email" />
             </div>
         </div>
 
@@ -33,8 +33,11 @@
         <label for="text">Your Message </label>
         }
         <div class="border-animation input-message">
-            <input [class.input-error]="invalidMessage" id="text" type="text" formControlName="message" />
+            <textarea class="inputfield messagefield" [class.input-error-message]="invalidMessage" name="text" id="text" formControlName="message"></textarea>
         </div>
+        
+
+        
 
         <div class="checkbox">
             <input formControlName="checkbox" id="checkbox" type="checkbox">
