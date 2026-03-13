@@ -1,15 +1,28 @@
 <div class="hero">
-    @if (mobile()) {
+    @if (isMobile()) {
     <div class="hero__mobile">
-        <app-mobile-nav></app-mobile-nav>
+        <app-mobile-nav (burgerMenu)="toggleBurgerMenu()"></app-mobile-nav>
     </div>
     }
 
-    <figure class="hero__img">
-        <!-- <img src="" alt=""> -->
+
+    <figure class="hero__img" [class.menu-open]="burgerMenuNav()">
+        <img class="hero-img hero-img--me" src="assets/img/hero/me.png" alt="me">
+        <img class="hero-img hero-img--shape" src="assets/img/shapes/ellipse-hero.png" alt="shape">
+        @if (burgerMenuNav()) {
+        <nav class="burger-nav">
+            <ul>
+                @for (navItem of navList(); track navItem; let i = $index) {
+                <li><a [routerLink]="[]" [fragment]="navItem">{{navItem}}</a></li>
+                }
+                <app-language-switch></app-language-switch>
+            </ul>
+        </nav>
+        }
     </figure>
+
     <div class="hero__content">
-        @if (!mobile()) {
+        @if (!isMobile()) {
         <app-logo [logoVariant]="'hero'"></app-logo>
         }
         <div class="hero__text">
@@ -19,6 +32,7 @@
         <app-scroll-indicator [scrollDirection]="'down'" [scrollTarget]="'Why me'"></app-scroll-indicator>
     </div>
 
+    @if (!isMobile()) {
     <div class="hero__sozialmedia-container">
         <nav class="hero__sozialmedia">
             @for (icon of icons(); track $index) {
@@ -26,4 +40,5 @@
             }
         </nav>
     </div>
+    }
 </div>

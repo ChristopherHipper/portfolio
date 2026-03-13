@@ -1,24 +1,33 @@
-import { Component, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { LogoComponent } from "../../../../shared/logo/logo.component";
 import { SozialMediaIconsComponent } from "../../../../shared/sozial-media-icons/sozial-media-icons.component";
 import { ScrollIndicatorComponent } from "../../../../shared/scroll-indicator/scroll-indicator.component";
 import { MobileNavComponent } from "./components/mobile-nav/mobile-nav.component";
+import { RouterLink } from "@angular/router";
+import { LanguageSwitchComponent } from "../../../../shared/header/language-switch/language-switch.component";
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [LogoComponent, SozialMediaIconsComponent, ScrollIndicatorComponent, MobileNavComponent],
+  imports: [LogoComponent, SozialMediaIconsComponent, ScrollIndicatorComponent, MobileNavComponent, RouterLink, LanguageSwitchComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
   icons = signal(['git-hero', 'mail-hero', 'linkedin-hero']);
   logoVariant = signal('');
-  mobile = signal(window.innerWidth < 1024)
+  isMobile = input()
+  burgerMenuNav = signal(false);
+  navList = signal(['Why me', 'Skills', 'Projects', 'Contact']);
 
-  constructor() {
-    window.addEventListener('resize', () => {
-      this.mobile.set(window.innerWidth < 1024);
-    });
+
+  ngOnChanges(){
+    if (!this.isMobile()) {
+      this.burgerMenuNav.set(false)
+    }
+  }
+
+  toggleBurgerMenu() {
+    this.burgerMenuNav.set(!this.burgerMenuNav());
   }
 }

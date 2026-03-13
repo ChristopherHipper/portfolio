@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HeroSectionComponent } from "../../pages/home/sections/hero-section/hero-section.component";
 import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
@@ -12,5 +12,11 @@ import { RouterOutlet } from '@angular/router';
     styleUrl: './main-page-layout.component.scss'
 })
 export class MainPageLayoutComponent {
+    isMobile = signal(window.innerWidth < 1024)
 
+    constructor() {
+        window.addEventListener('resize', () => {
+            this.isMobile.set(window.innerWidth < 1024);
+        });
+    }
 }

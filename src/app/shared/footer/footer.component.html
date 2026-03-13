@@ -4,11 +4,14 @@
             <a href="legal-notice">Legal notice</a>
             <span>© Christopher Hipper 2026</span>
         </div>
-        <app-logo [logoVariant]="'nav'"></app-logo>
-        <div class="sozial-media-container">
-            @for (icon of icons; track $index) {
+        <div class="logo-sozialmedia-container">
+            <app-logo [logoVariant]="'nav'"></app-logo>
+            <div class="sozial-media-container">
+                @for (icon of icons; track $index) {
                 <app-sozial-media-icons [iconImg]="icon"></app-sozial-media-icons>
-            }
+                }
+            </div>
         </div>
+
     </div>
 </footer>

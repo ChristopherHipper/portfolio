@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { LogoComponent } from '../../../../../../shared/logo/logo.component';
 
 @Component({
@@ -8,5 +8,5 @@ import { LogoComponent } from '../../../../../../shared/logo/logo.component';
   styleUrl: './mobile-nav.component.scss',
 })
 export class MobileNavComponent {
-
+  burgerMenu = output();
 }

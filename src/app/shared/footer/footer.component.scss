@@ -1,5 +1,5 @@
 @use 'colors' as *;
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
 footer {
     background-color: $primary-color;
@@ -7,12 +7,18 @@ footer {
 }
 
 .footer-container {
-    @include display(space-between,center,unset);
+    @include mx.display(space-between, center, column-reverse);
     font-family: 'Josefin Sans';
     margin: 0 auto;
-    padding: 0 72px;
-    height: 214px;
+    gap: 32px;
     max-width: 1440px;
+    padding: 32px 0;
+
+    @include mx.respond(lg) {
+        @include mx.display(space-between, center, unset);
+        padding: 0 72px;
+        height: 214px;
+    }
 }
 
 .sozial-media-container {
@@ -22,12 +28,13 @@ footer {
 
 .legal-notice-container {
     font-size: 18px;
-    @include display(unset,unset,column);
-    gap: 6px;
+    @include mx.display(space-between, unset, column);
+
 
     a {
         color: $bg-color;
         margin-right: auto;
+
         &:hover {
             color: $second-color;
         }
@@ -35,5 +42,25 @@ footer {
 
     span {
         color: $bg-color;
+    }
+
+    @include mx.respond(sm) {
+        @include mx.display(unset, unset, unset);
+        gap: 32px;
+    }
+
+    @include mx.respond(lg) {
+        @include mx.display(unset, unset, column);
+        gap: 6px;
+    }
+}
+
+.logo-sozialmedia-container {
+    @include mx.display(space-between, center, column);
+    width: 50%;
+    gap: 32px;
+
+    @include mx.respond(lg) {
+        @include mx.display(space-between, center, unset);
     }
 }
