@@ -22,24 +22,11 @@ export class ContactFormComponent {
     checkbox: ['', [Validators.requiredTrue]]
   })
 
-    post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-
-
   formSubmit() {
     if (this.contactForm.valid) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactForm.value))
+      this.http.post('https://christopher-hipper.de/sendMail.php', this.contactForm.value)
         .subscribe({
           next: (response) => {
-
             this.contactForm.reset();
           },
           error: (error) => {

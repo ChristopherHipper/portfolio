@@ -1,6 +1,15 @@
+@use './variables' as var;
+
 @mixin display($jc: space-between , $ai: center , $fd: unset) {
     display: flex;
     justify-content: $jc;
     align-items: $ai;
     flex-direction: $fd;
+}
+
+
+@mixin respond($size) {
+    @media screen and (min-width: map-get(var.$breakpoints, $size)) {
+        @content;
+    }
 }
