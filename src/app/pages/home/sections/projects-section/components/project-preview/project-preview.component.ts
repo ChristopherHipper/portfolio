@@ -7,7 +7,7 @@ import { ScrollAnimationDirective } from '../../../../../../shared/directives/sc
 @Component({
   selector: 'app-project-preview',
   standalone: true,
-  imports: [SecondaryButtonComponent, PrimaryButtonComponent, ScrollAnimationDirective],
+  imports: [ScrollAnimationDirective],
   templateUrl: './project-preview.component.html',
   styleUrl: './project-preview.component.scss'
 })

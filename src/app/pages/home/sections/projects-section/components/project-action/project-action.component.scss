@@ -1,0 +1,16 @@
+@use 'mixins' as *;
+@use 'colors' as *;
+
+.btn-container {
+    @include display(center, center, unset);
+    gap: 40px;
+    margin-top: 34px;
+}
+
+.primary-btn-link {
+    color: $bg-color;
+}
+
+.secondary-btn-link {
+    color: $primary-color;
+}

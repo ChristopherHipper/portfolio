@@ -1,7 +1,6 @@
 <section appScrollAnimation>
     <h2>My Projects</h2>
-    <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects"
-        class="nav"></app-projects-nav>
+    <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects"></app-projects-nav>
     <main>
         @if(previousProject()){
         <div class="project fade-out">

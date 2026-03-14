@@ -25,5 +25,9 @@ article {
 }
 
 .btn-container {
-    @include mx.display(flex-end, unset, unset);
+    @include mx.display(center, unset, unset);
+
+    @include mx.respond(md) {
+        @include mx.display(flex-end, unset, unset);
+    }
 }

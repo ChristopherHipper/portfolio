@@ -9,7 +9,6 @@ export class ProjectsService {
     {
       name: 'el-pollo-loco',
       label: 'El-Pollo-Loco',
-      duration: '10 weeks (alongside full-time job)',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       sections: [
         {
@@ -31,7 +30,6 @@ export class ProjectsService {
     {
       name: 'join',
       label: 'Join',
-      duration: '7 weeks (alongside full-time job)',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Git'],
       sections: [{
         title: 'About the Project',
@@ -52,7 +50,6 @@ export class ProjectsService {
     {
       name: 'protfolio',
       label: 'Portfolio',
-      duration: '5 weeks (alongside full-time job)',
       technologies: ['Angular', 'CSS', 'TypeScript'],
       sections: [{
         title: 'About the Project',

@@ -1,30 +1,64 @@
 @use 'colors' as *;
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
-ul{
+ul {
     display: flex;
     align-items: center;
-    gap: 27px;
+    justify-content: center;
     padding: 0;
-}
 
-li{
-    color: $primary-color;
-    font-family: 'Josefin Sans';
-    font-size: 30px;
-    font-weight: 500;
-    padding: 33px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    &:hover{
-        color: $second-color;
+    @include mx.respond(md) {
+        gap: 15px;
+    }
+
+    @include mx.respond(md) {
+        gap: 27px;
     }
 }
 
-.active-project{
+li {
+    color: $primary-color;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 6px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+        color: $second-color;
+    }
+
+    @include mx.respond(sm) {
+        padding: 18px 12px;
+        font-size: 20px;
+    }
+
+        @include mx.respond(sml) {
+        padding: 22px 18px;
+        font-size: 22px;
+    }
+
+    @include mx.respond(md) {
+        padding: 33px;
+        font-size: 24px;
+    }
+
+    @include mx.respond(lg) {
+        font-size: 30px;
+        padding: 33px;
+    }
+}
+
+.active-project {
     color: $second-color;
     background-color: #2D3840;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     cursor: default;
+
+    @include mx.respond(sm) {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
 }
