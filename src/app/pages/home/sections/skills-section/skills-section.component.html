@@ -7,9 +7,13 @@
             }
         </div>
         <div appScrollAnimation type="slide-right" class="current-learning">
-            <p>I am currently learning</p>
-            <div></div>
-            <p> <strong>Learning & Growth:</strong><br>Discovering new technologies and continuously expanding my knowledge motivates me to take myself and my projects to the next level.</p>
+            <p class="current-learning__headline">I am currently learning</p>
+            <div class="current-learning__info">
+                <p> <strong>Learning & Growth:</strong><br>Discovering new technologies and continuously expanding my
+                    knowledge motivates me to take myself and my projects to the next level.</p>
+                <app-single-skill [currentlearning]="true" [skill]="'Docker'"></app-single-skill>
+
+            </div>
         </div>
     </div>
 </section>

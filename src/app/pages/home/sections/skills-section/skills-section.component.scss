@@ -1,41 +1,85 @@
 @use 'colors' as *;
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
 
 
 .skills-container {
-    @include display(center, stretch, unset);
-    max-width: 860px;
-    gap: 79px;
+    margin: 0 13px;
+    @include mx.display(center, center, column);
+
+    @include mx.respond(lg) {
+        @include mx.display(center, center, unset);
+        max-width: 860px;
+        gap: 79px;
+    }
 }
 
 .skills {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     flex: 1;
-    gap: 57px;
+    gap: 38px;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @include mx.respond(sml) {
+        @include mx.display(flex-start, center, unset);
+        width: 400px;
+        gap: 57px;
+    }
+
+    @include mx.respond(md) {}
 }
 
 .current-learning {
-    background-image: url('../../../../../assets/img/shapes/ellipse-skills.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     font-size: 18px;
-    @include display(center, center, column);
+    @include mx.display(center, center, column);
     color: $second-color;
-    gap: 36px;
     flex: 1;
     height: 380px;
     transition-duration: 0.3s;
     transition-delay: 100ms;
 
-    &:hover {
-        background-image: url('../../../../../assets/img/shapes/ellipse-skills-hover.png');
+
+    @include mx.respond(lg) {
+        background-image: url('../../../../../assets/img/shapes/ellipse-skills.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        gap: 32px;
+
+        &:hover {
+            background-image: url('../../../../../assets/img/shapes/ellipse-skills-hover.png');
+        }
+    }
+
+    &__headline {
+        color: $primary-color;
+        text-align: center;
+
+        @include mx.respond(lg) {
+            color: $second-color;
+        }
+    }
+
+    &__info {
+        @include mx.display(center, center, unset);
+        padding: 0 13px;
+
+        @include mx.respond(lg) {
+            padding: 0;
+            @include mx.display(center, center, column-reverse);
+            gap: 19px;
+        }
     }
 }
 
 p {
     width: 70%;
-    text-align: center;
+    text-align: start;
+
+    @include mx.respond(lg) {
+        text-align: center;
+    }
 }

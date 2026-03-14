@@ -1,30 +1,70 @@
 @use 'colors' as *;
+@use './mixins' as mx;
 
 .about-me-infos {
     display: flex;
-    font-size: 25px;
-    align-items: flex-end;
     color: $second-color;
-    div{
+    width: 286px;
+
+    @include mx.respond(sm) {
+        align-items: flex-end;
+        width: 330px;
+    }
+
+        @include mx.respond(md) {
+        width: 100%;
+    }
+
+
+    div {
         display: flex;
         align-items: center;
-        padding-bottom: 8px;
+
+        @include mx.respond(sml) {
+            padding-bottom: 10px;
+        }
     }
 
     img {
-        width: 73px;
-        height: 63px;
+        width: 53px;
+        height: 43px;
+
+        @include mx.respond(sml) {
+            width: 73px;
+            height: 63px;
+        }
+
     }
 
     span {
         color: $primary-color;
+        font-size: 18px;
+
+        @include mx.respond(sml) {
+            font-size: 20px;
+        }
+
+        @include mx.respond(lg) {
+            font-size: 25px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+
+        @include mx.respond(sml) {
+            font-size: 20px;
+        }
+
+        @include mx.respond(lg) {
+            font-size: 25px;
+        }
     }
 }
 
 .seperator {
-    width: 3px;
+    width: 3px !important;
     height: 33px;
     background-color: $primary-color;
     margin-left: 6px;
-    
 }

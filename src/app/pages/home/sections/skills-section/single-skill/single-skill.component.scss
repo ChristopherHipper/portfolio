@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'mixins' as mx;
 
 div {
     display: flex;
@@ -10,10 +11,49 @@ div {
 }
 
 p {
-    font-size: 18px;
-    color: $primary-color;
-    text-align: center;
-    cursor: default;
+    display: none;
+
+    @include mx.respond(md) {
+        display: block;
+        font-size: 18px;
+        color: $primary-color;
+        text-align: center;
+        cursor: default;
+    }
+}
+
+.currentlearning {
+    max-width: 150px;
+    width: 120px;
+    height: 120px;
+    background-image: url('../../../../../../assets/img/shapes/ellipse-skills.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    p {
+        font-size: 16px;
+        color: $second-color;
+        display: block;
+    }
+
+    app-skill-icons {
+        &:hover {
+            animation: none;
+            transform: none;
+        }
+    }
+
+    @include mx.respond(sm) {
+        width: 150px;
+        height: 150px;
+    }
+
+    @include mx.respond(lg) {
+        background-image: none;
+        width: auto;
+        height: auto;
+    }
 }
 
 app-skill-icons {

@@ -10,6 +10,7 @@ import { SkillIconsComponent } from "../../../../../shared/skill-icons/skill-ico
 })
 export class SingleSkillComponent {
   skill = input('');
+  currentlearning = input(false);
 
   getSkillImg(){
     return `assets/img/icons/skills/${this.skill()}.png`
