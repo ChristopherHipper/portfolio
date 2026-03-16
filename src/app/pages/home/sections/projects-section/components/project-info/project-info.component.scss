@@ -1,9 +1,12 @@
 @use 'colors' as *;
+@use 'mixins' as mx;
 
 .project-info {
     p{
-        margin-left: 50px;
         margin-bottom: 36px;
+        @include mx.respond(sml){
+            margin-left: 50px;
+        }
     }
 
     img {
@@ -14,6 +17,7 @@
 
 .project-info-headline {
     display: flex;
-    align-items: flex-start;
-    gap: 21px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
 }

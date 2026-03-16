@@ -1,11 +1,32 @@
+@use 'mixins' as mx;
+
 img {
-    width: 450px;
-    height: 312px;
     border-radius: 30px;
+    width: 100%;
+    height: auto;
+    max-height: 440px;
+
+    @include mx.respond(lg) {
+    }
+
+
 }
 
 
 
-.img-container{
-    min-height: 320px;
+.img-container {
+    padding: 0 32px;
+    min-height: 210px;
+
+    @include mx.respond(sm) {
+        min-height: 260px;
+    }
+
+    @include mx.respond(sml) {
+        min-height: 330px;
+    }
+
+    @include mx.respond(md) {
+        min-height: 440px;
+    }
 }

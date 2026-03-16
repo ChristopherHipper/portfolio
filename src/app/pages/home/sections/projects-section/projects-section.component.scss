@@ -8,15 +8,31 @@ main {
     border-bottom-left-radius: 50px;
     width: 100%;
     display: grid;
-    
+
 
     @include mx.respond(lg) {
         border-radius: 0;
     }
 }
 
-.project {
+app-projects-nav {
     width: 100%;
+    max-width: 1440px;
+    display: flex;
+
+    @include mx.respond(sm) {
+        padding-left: 24px;
+    }
+
+    @include mx.respond(md) {
+        padding-left: 64px;
+    }
+
+    @include mx.respond(lg) {
+        padding-left: 94px;
+    }
+}
+
+.project {
     grid-area: 1 / 1;
-    padding-top: 40px;
 }

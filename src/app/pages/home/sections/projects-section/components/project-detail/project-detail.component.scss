@@ -1,18 +1,61 @@
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
-.project-container{
-    @include display(flex-start, center,unset);
+.project-container {
+    @include mx.display(flex-start, center, column);
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0px 94px;
-    padding-bottom: 40px;
+
+    @include mx.respond(lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "info meta"
+            "info preview"
+            "info action";
+    }
 }
 
-app-project-info{
-    width: 50%;
+app-project-info {
+    order: 3;
+    padding: 24px;
+    padding-bottom: 0;
+
+    @include mx.respond(lg) {
+        grid-area: info;
+        padding-left: 94px;
+    }
 }
 
-.project-meta-rev-cotainer{
-    flex: 1;
-    @include display(center, center,column);
+app-project-meta {
+    order: 1;
+    width: 100%;
+
+    @include mx.respond(sm) {
+        width: auto;
+    }
+
+    @include mx.respond(lg) {
+        grid-area: meta;
+    }
+}
+
+app-project-preview {
+    order: 2;
+
+    @include mx.respond(lg) {
+        grid-area: preview;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+app-project-action {
+    order: 4;
+    margin-bottom: 38px;
+    width: 100%;
+
+    @include mx.respond(lg) {
+        grid-area: action;
+    }
 }

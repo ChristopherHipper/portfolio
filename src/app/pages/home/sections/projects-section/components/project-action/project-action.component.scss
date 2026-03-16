@@ -1,10 +1,13 @@
-@use 'mixins' as *;
+@use 'mixins' as mx;
 @use 'colors' as *;
 
 .btn-container {
-    @include display(center, center, unset);
-    gap: 40px;
-    margin-top: 34px;
+    @include mx.display(space-evenly, center, unset);
+    @include mx.respond(lg){
+        margin-top: 34px;
+        @include mx.display(center, center, unset);
+        gap: 40px;
+    }
 }
 
 .primary-btn-link {

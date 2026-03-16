@@ -1,4 +1,11 @@
-.project-icon{
-    width: 36px;
-    height: 36px;
+@use 'mixins' as mx;
+
+.project-icon {
+    width: 26px;
+    height: 26px;
+
+    @include mx.respond(sm) {
+        width: 36px;
+        height: 36px;
+    }
 }

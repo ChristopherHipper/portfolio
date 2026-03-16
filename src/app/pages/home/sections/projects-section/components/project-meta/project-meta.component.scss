@@ -1,12 +1,29 @@
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
-p {
-    text-align: center;
-    margin-bottom: 12px;
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+
+    @include mx.respond(sm) {
+        padding-left: 0;
+    }
+
+    @include mx.respond(lg) {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
 
 .icon-container {
     display: flex;
-    gap: 32px;
-    margin-bottom: 16px;
+    gap: 18px;
+
+
+    @include mx.respond(sml) {
+        gap: 32px;
+    }
 }

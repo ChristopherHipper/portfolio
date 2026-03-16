@@ -53,9 +53,17 @@ h2 {
 
 h3 {
     font-family: 'Josefin Sans';
-    font-size: 28px;
-    color: #F8F5EC;
-    margin-bottom: 16px;
+    font-size: 18px;
+    color: #89BCD9;
+
+    @include mx.respond(sml) {
+        font-size: 22px;
+    }
+
+    @include mx.respond(md) {
+        font-size: 28px;
+        color: #F8F5EC;
+    }
 }
 
 p {
