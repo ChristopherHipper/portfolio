@@ -1,12 +1,16 @@
 <div class="mobile">
     <app-logo [logoVariant]="'hero'"></app-logo>
-    <input type="checkbox" id="burger" class="checkbox3 visuallyHidden ">
-    <label (click)="burgerMenu.emit()" class="hero__burger-menu" for="burger">
-        <div  class="hamburger hamburger3">
-            <span class="bar bar1"></span>
-            <span class="bar bar2"></span>
-            <span class="bar bar3"></span>
-            <span class="bar bar4"></span>
-        </div>
-    </label>
+    <div class="input-container">
+        <input (click)="toggleBurgerMenu()" type="checkbox" id="burger" class="checkbox3 visuallyHidden container"
+            [checked]="isChecked()">
+        <label for="burger" class="container">
+            <div class="hamburger hamburger3">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
+    </div>
+
 </div>

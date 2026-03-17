@@ -17,17 +17,12 @@ export class HeroSectionComponent {
   icons = signal(['git-hero', 'mail-hero', 'linkedin-hero']);
   logoVariant = signal('');
   isMobile = input()
-  burgerMenuNav = signal(false);
   navList = signal(['Why me', 'Skills', 'Projects', 'Contact']);
-
+  mobileNav = signal(false)
 
   ngOnChanges(){
     if (!this.isMobile()) {
-      this.burgerMenuNav.set(false)
+      this.mobileNav.set(false)
     }
-  }
-
-  toggleBurgerMenu() {
-    this.burgerMenuNav.set(!this.burgerMenuNav());
   }
 }

@@ -3,22 +3,31 @@
 
 .mobile {
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
+    padding-top: 27px;
+}
+
+.input-container{
+    display: grid;
+}
+
+.container{
+    grid-area: 1 / 1;
 }
 
 
 .visuallyHidden {
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
 }
+
 
 .hamburger {
     margin: 0 auto;
-    margin-top: 30px;
     width: 30px;
     height: 30px;
     position: relative;
+    cursor: pointer;
 }
 
 .hamburger .bar {

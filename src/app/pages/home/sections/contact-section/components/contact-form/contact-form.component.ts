@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { SecondaryButtonComponent } from "../../../../../../shared/button/secondary-button/secondary-button.component";
 import { ScrollAnimationDirective } from '../../../../../../shared/directives/scroll-animation.directive';
@@ -14,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class ContactFormComponent {
   formbuilder = inject(FormBuilder)
   http = inject(HttpClient)
+  checkbox = signal(false);
 
   contactForm = this.formbuilder.group({
     name: ['', [Validators.required, Validators.minLength(1)]],
@@ -37,15 +38,27 @@ export class ContactFormComponent {
     }
   }
 
-  get invalidName(){
+  get invalidName() {
     return !this.contactForm.get('name')?.valid && this.contactForm.get('name')?.touched;
   }
 
-  get invalidEmail(){
+  get invalidEmail() {
     return !this.contactForm.get('email')?.valid && this.contactForm.get('email')?.touched;
   }
 
-  get invalidMessage(){
+  get invalidMessage() {
     return !this.contactForm.get('message')?.valid && this.contactForm.get('message')?.touched;
+  }
+
+  toggleCheckbox(){
+    this.checkbox.set(!this.checkbox());
+  }
+
+  checkboxImageSrc() {
+    if (this.checkbox()) {
+      return `assets/img/checkbox/checkbox-checked.png`
+    } else {
+      return `assets/img/checkbox/checkbox.png`
+    }
   }
 }

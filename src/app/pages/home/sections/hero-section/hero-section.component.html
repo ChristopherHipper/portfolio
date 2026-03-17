@@ -1,19 +1,19 @@
 <div class="hero">
     @if (isMobile()) {
     <div class="hero__mobile">
-        <app-mobile-nav (burgerMenu)="toggleBurgerMenu()"></app-mobile-nav>
+        <app-mobile-nav [isChecked]="mobileNav()" (isCheckedChange)="mobileNav.set($event)"></app-mobile-nav>
     </div>
     }
 
 
-    <figure class="hero__img" [class.menu-open]="burgerMenuNav()">
+    <figure class="hero__img" [class.menu-open]="mobileNav()">
         <img class="hero-img hero-img--me" src="assets/img/hero/me.png" alt="me">
         <img class="hero-img hero-img--shape" src="assets/img/shapes/ellipse-hero.png" alt="shape">
-        @if (burgerMenuNav()) {
+        @if (mobileNav()) {
         <nav class="burger-nav">
             <ul>
                 @for (navItem of navList(); track navItem; let i = $index) {
-                <li><a [routerLink]="[]" [fragment]="navItem">{{navItem}}</a></li>
+                <li><a (click)="mobileNav.set(false)" [routerLink]="[]" [fragment]="navItem">{{navItem}}</a></li>
                 }
                 <app-language-switch></app-language-switch>
             </ul>

@@ -1,36 +1,47 @@
 @use 'colors' as *;
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
-.info{
-    @include display(space-between , flex-start , unset);
+.info {
+    @include mx.display(space-between, flex-start, column-reverse);
     gap: 36px;
-    &__text{
+    &__text {
         flex: 1;
     }
-    &__contact{
-        @include display(center , flex-start , column);
+
+    &__contact {
+        @include mx.display(center, flex-start, column);
         gap: 16px;
         flex: 1;
-        a{
+
+        a {
             color: $second-color;
         }
-        :hover{
+
+        :hover {
             color: $primary-color;
-            .default{
+
+            .default {
                 display: none;
             }
-            .hover{
+
+            .hover {
                 display: inline;
             }
         }
     }
+
+    @include mx.respond(md) {
+        @include mx.display(space-between, flex-start, unset);
+        
+    }
 }
 
-.mail-link{
+.mail-link {
     display: flex;
     align-items: center;
     gap: 12px;
-    .hover{
+
+    .hover {
         display: none;
     }
 }

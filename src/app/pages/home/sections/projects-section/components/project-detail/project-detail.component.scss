@@ -44,9 +44,7 @@ app-project-preview {
 
     @include mx.respond(lg) {
         grid-area: preview;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include mx.display(center, center, unset);
     }
 }
 

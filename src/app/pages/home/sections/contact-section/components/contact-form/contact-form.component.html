@@ -7,44 +7,46 @@
             <label for="name">Your Name </label>
             }
             <div class="border-animation">
-                <input class="inputfield" [class.input-error]="invalidName" id="name" type="text" formControlName="name" />
+                <input class="inputfield" [class.input-error]="invalidName" id="name" type="text"
+                    formControlName="name" />
             </div>
         </div>
 
-
         <div appScrollAnimation type="slide-right">
             @if (invalidEmail) {
-            <label class="error" for="email">Your Email </label>
+            <label class="error" for="email">Your Email is incorrect</label>
             }@else {
             <label for="email">Your Email </label>
             }
             <div class="border-animation">
-                <input class="inputfield" [class.input-error]="invalidEmail" id="email" type="text" formControlName="email" />
+                <input class="inputfield" [class.input-error]="invalidEmail" id="email" type="text"
+                    formControlName="email" />
             </div>
         </div>
 
     </div>
 
-
     <div appScrollAnimation type="slide-bottom">
         @if (invalidMessage) {
-        <label class="error" for="text">Your Message </label>
+        <label class="error" for="text">A Message is required</label>
         }@else{
         <label for="text">Your Message </label>
         }
         <div class="border-animation input-message">
-            <textarea class="inputfield messagefield" [class.input-error-message]="invalidMessage" name="text" id="text" formControlName="message"></textarea>
+            <textarea class="inputfield messagefield" [class.input-error-message]="invalidMessage" name="text" id="text"
+                formControlName="message"></textarea>
         </div>
-        
-
-        
 
         <div class="checkbox">
             <input formControlName="checkbox" id="checkbox" type="checkbox">
             <label class="checkbox-label" for="checkbox">
-                <span class="checkbox-img"></span>
-                I've read the <a href="legal-notice">private policy</a> and agree to the processing of my data as
-                outlined.
+                <img (click)="toggleCheckbox()" class="checkbox-img" [src]="checkboxImageSrc()" alt="checkbox">
+                <div>
+                    <span>I've read the </span> <a href="legal-notice">private policy</a> <span> and agree to the
+                        processing of my data as outlined.</span>
+                </div>
+
+
             </label>
         </div>
 
@@ -53,7 +55,7 @@
         </app-secondary-button>
     </div>
 
-
 </form>
 
-<app-scroll-indicator appScrollAnimation type="slide-bottom" [scrollDirection]="'up'" [scrollTarget]="'Why me'"></app-scroll-indicator>
+<app-scroll-indicator appScrollAnimation type="slide-bottom" [scrollDirection]="'up'"
+    [scrollTarget]="'Why me'"></app-scroll-indicator>

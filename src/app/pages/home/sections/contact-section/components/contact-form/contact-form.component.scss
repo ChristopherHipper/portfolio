@@ -1,5 +1,5 @@
 @use 'colors' as *;
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
 form {
     display: flex;
@@ -29,7 +29,6 @@ form {
 
 label {
     display: flex;
-    align-items: center;
     gap: 6px;
     color: $primary-color;
     font-size: 14px;
@@ -39,12 +38,15 @@ label {
 }
 
 .input-continer-name-mail {
-    display: flex;
-    justify-content: center;
-    gap: 21px;
+    @include mx.display(center, unset,column);
 
     div {
         flex: 1;
+    }
+
+    @include mx.respond(md) {
+        @include mx.display(center, unset,unset);
+        gap: 21px;
     }
 }
 
@@ -84,29 +86,22 @@ p {
 }
 
 .checkbox-label {
+    display: flex;
+    align-items: center;
     padding: 0;
     color: $second-color;
-    margin-bottom: 6px;
+    margin-bottom: 24px;
 
     a {
         color: $primary-color;
     }
 }
 
-.checkbox-img {
-    width: 24px;
-    height: 22px;
+.checkbox-img{
     cursor: pointer;
-    background-image: url("../../../../../../../assets/img/checkbox/checkbox.png");
-    background-size: cover;
-
-    &:hover {
-        background-image: url("../../../../../../../assets/img/checkbox/checkbox-hover.png");
-    }
-}
-
-.checkbox input:checked+.checkbox-label .checkbox-img {
-    background-image: url("../../../../../../../assets/img/checkbox/checkbox-checked.png");
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
 }
 
 app-secondary-button {
@@ -116,7 +111,10 @@ app-secondary-button {
 
 app-scroll-indicator {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    @include mx.respond(md){
+        justify-content: flex-end;
+    }
 }
 
 
