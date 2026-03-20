@@ -1,4 +1,4 @@
 <div class="language-container">
-    <button (click)="switchLanguage('german')" [class.active]="language() === 'german'">DE</button>
-    <button (click)="switchLanguage('english')" [class.active]="language() === 'english'">EN</button>
+    <button (click)="language.switchLanguage('de')" [class.active]="language.lang() === 'de'">DE</button>
+    <button (click)="language.switchLanguage('en')" [class.active]="language.lang() === 'en'">EN</button>
 </div>

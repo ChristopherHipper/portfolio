@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core'
+import { LanguageService } from '../../services/language.service'
 
 @Component({
     selector: 'app-language-switch',
@@ -8,10 +9,5 @@ import { Component, signal } from '@angular/core';
     styleUrl: './language-switch.component.scss'
 })
 export class LanguageSwitchComponent {
-  language = signal('english')
-
-  switchLanguage(lang: 'german' | 'english'): void{
-    if (lang === this.language())return;
-    this.language.set(lang);
-  }
+    language = inject(LanguageService);
 }

@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
-import { concat, from, interval, of } from 'rxjs';
-import { concatMap, delay, ignoreElements, map, repeat, take } from 'rxjs/operators';
+import { Component, effect, inject, signal } from '@angular/core';
+import { concat, from, interval, of, Subject } from 'rxjs';
+import { concatMap, delay, ignoreElements, map, repeat, switchMap, take } from 'rxjs/operators';
 import { AsyncPipe } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
+import { LanguageSwitchComponent } from '../../../../../../shared/header/language-switch/language-switch.component';
+import { LanguageService } from '../../../../../../shared/services/language.service';
 
 interface TypeParams {
   word: string;
@@ -10,25 +13,53 @@ interface TypeParams {
 }
 
 @Component({
-    selector: 'app-icon-text',
-    standalone: true,
-    imports: [AsyncPipe],
-    templateUrl: './icon-text.component.html',
-    styleUrl: './icon-text.component.scss'
+  selector: 'app-icon-text',
+  standalone: true,
+  imports: [TranslatePipe],
+  templateUrl: './icon-text.component.html',
+  styleUrl: './icon-text.component.scss'
 })
 export class IconTextComponent {
-  titles: string[] = ['located in Paderborn..', 'ready to work remote..'];
+  language = inject(LanguageService);
   icons: string[] = ['assets/img/aboutme/remote.png', 'assets/img/aboutme/location.png'];
   currentIconIndex: number = 0;
-  currentIcon:string = 'assets/img/aboutme/location.png';
+  currentIcon: string = 'assets/img/aboutme/location.png';
 
-  shownImg(){
+  typedText = '';
+  private reset$ = new Subject<void>();
+
+constructor() {
+  this.reset$
+    .pipe(
+      switchMap(() =>
+        this.getTypewriterEffect(this.language.aboutMeInfos())
+      )
+    )
+    .subscribe(text => (this.typedText = text));
+
+  // Signal reagiert nur auf aboutMeInfos
+  effect(() => {
+    this.language.aboutMeInfos(); // 👈 explizit tracken
+
+    this.resetAnimation();
+    this.reset$.next();
+  });
+
+  // Initial Start
+  this.reset$.next();
+}
+
+  resetAnimation() {
+    this.currentIconIndex = 0
+    this.currentIcon = 'assets/img/aboutme/location.png';
+    this.shownImg()
+  }
+
+  shownImg() {
     this.currentIconIndex++;
     this.currentIconIndex = this.currentIconIndex % this.icons.length;
     this.currentIcon = this.icons[this.currentIconIndex]
   }
-  
-  typedText$ = this.getTypewriterEffect(this.titles);
 
   private type({ word, speed, backwards = false }: TypeParams) {
     return interval(speed).pipe(
