@@ -1,8 +1,99 @@
 {
-    "ABOUTME" : {
-        "title" : "Why Me",
-        "text" : "Precision and logical thinking are skills I gained from my work as a measurement technician. Throughprogramming measurement routines, I discovered my passion for software development. Today, I build webapplications with a focus on clean solutions and good user experiences, both independently and as partof a team.",
-        "me"    : "I am",
-        "button" : "Let's Talk"
-    }
+    "ABOUTME": {
+        "title": "Why Me",
+        "text": "Precision and logical thinking are skills I gained from my work as a measurement technician. Throughprogramming measurement routines, I discovered my passion for software development. Today, I build webapplications with a focus on clean solutions and good user experiences, both independently and as partof a team.",
+        "me": "I am",
+        "button": "Let's Talk"
+    },
+    "HERO": {
+        "job": "FRONTEND DEVELOPER"
+    },
+    "LOGO": {
+        "job": "developer"
+    },
+    "SKILLS": {
+        "title": "My Skills",
+        "info": "I am currently learning",
+        "paragraph": "Learning & Growth",
+        "text": "Discovering new technologies and continuously expanding my knowledge motivates me to take myself and my projects to the next level."
+    },
+    "PROJECTS": {
+        "title": "My Projects",
+        "tech": "Technologies",
+        "elPolloLoco": {
+            "label": "El Pollo Loco",
+            "sections": {
+                "about": {
+                    "title": "About the Project",
+                    "content": "A simple jump-and-run game based on object-oriented approach. Help Pepe to cross the dangerous desert and defeat The Giant Chicken."
+                },
+                "process": {
+                    "title": "How I have organised my work process",
+                    "content": "I organized the project by splitting the game into small, logical components. Using object-oriented programming, every component was implemented as a separate class, supported by additional helper and logic classes. Regular testing helped me improve gameplay and fix bugs early."
+                },
+                "learning": {
+                    "title": "What I have learnt",
+                    "content": "This project strengthened my understanding of JavaScript's object-oriented programming. I learned to manage a game loop with FPS, handle collisions, animations, and player input. Additionally, I improved my skills in structuring bigger projects and generate clean, maintainable code wich improved my confidence as a developer"
+                }
+            }
+        },
+        "join": {
+            "label": "Join",
+            "sections": {
+                "about": {
+                    "title": "About the Project",
+                    "content": "Task manager inspired by the Kanban System, Create and organize tasks using drag and drop functions, assign users and categories."
+                },
+                "process": {
+                    "title": "How I have organised my work process",
+                    "content": "We met every few days to review progress, redistribute tasks, and support each other with challenges. This helped us stay aligned and solve problems efficiently as a team. My primary focus was on the login and sign-up features, along with the task summarization, creation, and editing. A clear task distribution and continuous communication ensured consistent project progress."
+                },
+                "learning": {
+                    "title": "My group work experience",
+                    "content": "Working in a team of four improved my communication and collaboration skills. We coordinated tasks, discussed solutions, and supported each other when facing technical challenges. Using Git and Firebase required close coordination to avoid conflicts and ensure data consistency. Overall, the team collaboration made the project more efficient and closer to real-world development workflows."
+                }
+            }
+        },
+        "portfolio": {
+            "label": "Portfolio",
+            "sections": {
+                "about": {
+                    "title": "About the Project",
+                    "content": "Portfolio Website developed with Angular, TypeScript, and SCSS. It employs modern frontend development techniques. Includes a modular layout with interactive elements and a contact form, all in a responsive design."
+                },
+                "process": {
+                    "title": "How I have organised my work process",
+                    "content": "The project was built using Angular’s component-based architecture, ensuring the application remains modular and maintainable. Recurring logic was implemented in separate components, allowing it to be reused across the app. Navigation between pages is managed using Angular routing."
+                },
+                "learning": {
+                    "title": "What I have learnt",
+                    "content": "Through this project I gained practical experience with Angular and modern frontend development using TypeScript. I learned how to structure applications with components, services, and routing while keeping the code modular and scalable. Additionally, I improved my understanding of data binding, component communication, and reusable UI design."
+                }
+            }
+        }
+    },
+    "NAVIGATION": {
+        "whyMe": "Why Me",
+        "skills": "My Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "CONTACT": {
+        "title" : "Contact me",
+        "paragraph" : "Say hello!",
+        "text" : "Whether it’s an exciting front-end project, a creative collaboration, or a job offer – I’m open to anything where I can use modern web technologies to develop elegant interfaces and write clean, maintainable code. Let’s build digital solutions that not only work, but also make an impression.",
+        "form" : {
+            "name" : "Your name",
+            "email" : "Your Email",
+            "message" : "Your Message",
+            "errorName" : "Your name is required",
+            "errorEmail" : "Your Email is incorrect",
+            "errorMessage" : "A Message is required",
+            "text1" : "I've read the",
+            "text2" : " and agree to the processing of my data as outlined.",
+            "privacyPolicy" : "privacy policy",
+            "send" : "send"
+        }
+    },
+    "legalNotice" : "Legal notice"
 }

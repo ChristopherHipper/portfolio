@@ -1,5 +1,5 @@
 <div class="meta">
-    <p>Technologies</p>
+    <p>{{ "PROJECTS.tech" | translate}}</p>
     <div class="icon-container">
         @for (skill of project()?.technologies; track $index) {
         <app-skill-icons [projectIcon]="true" [skill]="skill"></app-skill-icons>

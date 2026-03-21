@@ -6,12 +6,16 @@
 .about-me-container {
     margin: 0 32px;
     @include mx.display(space-between, center, column);
-    gap: 32px;
+    gap: 28px;
 
-    @include mx.respond(md) {
+    @include mx.respond(lg) {
         @include mx.display(space-between, stretch, unset);
-        max-width: 860px;
+        max-width: 950px;
     }
+}
+
+article{
+    margin:  0 6px;
 }
 
 app-icon-text {
@@ -25,9 +29,9 @@ article {
 }
 
 .btn-container {
-    @include mx.display(center, unset, unset);
+    display: none;
 
-    @include mx.respond(md) {
+    @include mx.respond(lg) {
         @include mx.display(flex-end, unset, unset);
     }
 }

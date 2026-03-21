@@ -2,9 +2,9 @@
     <div class="input-continer-name-mail">
         <div appScrollAnimation type="slide-left">
             @if (invalidName){
-            <label class="error" for="name">Your name is required</label>
+            <label class="error" for="name">{{ 'CONTACT.form.errorName' | translate }}</label>
             } @else{
-            <label for="name">Your Name </label>
+            <label for="name">{{ 'CONTACT.form.name' | translate }}</label>
             }
             <div class="border-animation">
                 <input class="inputfield" [class.input-error]="invalidName" id="name" type="text"
@@ -14,9 +14,9 @@
 
         <div appScrollAnimation type="slide-right">
             @if (invalidEmail) {
-            <label class="error" for="email">Your Email is incorrect</label>
+            <label class="error" for="email">{{ 'CONTACT.form.errorEmail' | translate }}</label>
             }@else {
-            <label for="email">Your Email </label>
+            <label for="email">{{ 'CONTACT.form.email' | translate }}</label>
             }
             <div class="border-animation">
                 <input class="inputfield" [class.input-error]="invalidEmail" id="email" type="text"
@@ -28,9 +28,9 @@
 
     <div appScrollAnimation type="slide-bottom">
         @if (invalidMessage) {
-        <label class="error" for="text">A Message is required</label>
+        <label class="error" for="text">{{ 'CONTACT.form.errorMessage' | translate }}</label>
         }@else{
-        <label for="text">Your Message </label>
+        <label for="text">{{ 'CONTACT.form.message' | translate }}</label>
         }
         <div class="border-animation input-message">
             <textarea class="inputfield messagefield" [class.input-error-message]="invalidMessage" name="text" id="text"
@@ -42,8 +42,7 @@
             <label class="checkbox-label" for="checkbox">
                 <img (click)="toggleCheckbox()" class="checkbox-img" [src]="checkboxImageSrc()" alt="checkbox">
                 <div>
-                    <span>I've read the </span> <a href="legal-notice">private policy</a> <span> and agree to the
-                        processing of my data as outlined.</span>
+                    <span>{{ 'CONTACT.form.text1' | translate }} </span> <a href="legal-notice">{{ 'CONTACT.form.privacyPolicy' | translate }}</a> <span>{{ 'CONTACT.form.text2' | translate }}</span>
                 </div>
 
 
@@ -51,7 +50,7 @@
         </div>
 
         <app-secondary-button [disabled]="!contactForm.valid" type="submit">
-            Send
+            {{ 'CONTACT.form.send' | translate }}
         </app-secondary-button>
     </div>
 

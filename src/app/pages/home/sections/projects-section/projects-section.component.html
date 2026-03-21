@@ -1,5 +1,5 @@
 <section appScrollAnimation>
-    <h2>My Projects</h2>
+    <h2>{{ "PROJECTS.title" | translate}}</h2>
     <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects"></app-projects-nav>
     <main>
         @if(previousProject()){

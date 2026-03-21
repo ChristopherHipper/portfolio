@@ -1,5 +1,5 @@
 <section appScrollAnimation>
-    <h2>My Skills</h2>
+    <h2>{{ 'SKILLS.title' | translate }}</h2>
     <div class="skills-container">
         <div appScrollAnimation type="slide-left" class="skills">
             @for (skill of skills; track skill) {
@@ -7,13 +7,17 @@
             }
         </div>
         <div appScrollAnimation type="slide-right" class="current-learning">
-            <p class="current-learning__headline">I am currently learning</p>
+            <p class="current-learning__headline">{{ 'SKILLS.info' | translate }}</p>
             <div class="current-learning__info">
-                <p> <strong>Learning & Growth:</strong><br>Discovering new technologies and continuously expanding my
-                    knowledge motivates me to take myself and my projects to the next level.</p>
+                <p> <strong>{{ 'SKILLS.paragraph' | translate }}:</strong><br>{{ 'SKILLS.text' | translate }}</p>
                 <app-single-skill [currentlearning]="true" [skill]="'Docker'"></app-single-skill>
 
             </div>
         </div>
+    </div>
+    <div class="btn-container">
+        <app-primary-button>
+            <a [routerLink]="[]" [fragment]="'Contact'">{{ 'ABOUTME.button' | translate }}</a>
+        </app-primary-button>
     </div>
 </section>

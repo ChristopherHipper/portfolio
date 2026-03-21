@@ -1,5 +1,5 @@
 <div class="container">
     <a [routerLink]="''"><img class="container__logo" [src]="getLogo()" alt="Christopher Hipper Logo"></a>
     <span class="container__name">C.Hipper</span>
-    <span [style]="{'color': logoVariant() === 'hero' ? secondColor : mainColor}"  class="container__job">developer</span>
+    <span [style]="{'color': logoVariant() === 'hero' ? secondColor : mainColor}"  class="container__job">{{ 'LOGO.job' | translate }}</span>
 </div>

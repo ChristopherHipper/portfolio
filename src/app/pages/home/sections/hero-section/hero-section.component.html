@@ -13,7 +13,7 @@
         <nav class="burger-nav">
             <ul>
                 @for (navItem of navList(); track navItem; let i = $index) {
-                <li><a (click)="mobileNav.set(false)" [routerLink]="[]" [fragment]="navItem">{{navItem}}</a></li>
+                <li><a (click)="mobileNav.set(false)" [routerLink]="[]" [fragment]="navItem">{{ navItem | translate }}</a></li>
                 }
                 <app-language-switch></app-language-switch>
             </ul>
@@ -27,7 +27,7 @@
         }
         <div class="hero__text">
             <h1>Christopher Hipper</h1>
-            <p>FRONTEND DEVELOPER</p>
+            <p>{{ 'HERO.job' | translate }}</p>
         </div>
         <app-scroll-indicator [scrollDirection]="'down'" [scrollTarget]="'Why me'"></app-scroll-indicator>
     </div>

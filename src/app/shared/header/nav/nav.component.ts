@@ -1,15 +1,16 @@
 import { Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-nav',
     standalone: true,
-    imports: [RouterLink],
+    imports: [RouterLink, TranslatePipe],
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })
 export class NavComponent implements AfterViewInit, OnDestroy {
-  navList = signal(['Why me', 'Skills', 'Projects', 'Contact']);
+  navList = signal(['NAVIGATION.whyMe', 'NAVIGATION.skills', 'NAVIGATION.projects', 'NAVIGATION.contact']);
   activeLink = signal('');
   aactiveLink: string = '';
   private observer!: IntersectionObserver;

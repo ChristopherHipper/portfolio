@@ -1,10 +1,11 @@
 import { Component, input, Input } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-logo',
     standalone: true,
-    imports: [RouterLink],
+    imports: [RouterLink, TranslatePipe],
     templateUrl: './logo.component.html',
     styleUrl: './logo.component.scss'
 })

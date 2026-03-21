@@ -4,10 +4,11 @@ import { SecondaryButtonComponent } from "../../../../../../shared/button/second
 import { ScrollAnimationDirective } from '../../../../../../shared/directives/scroll-animation.directive';
 import { ScrollIndicatorComponent } from "../../../../../../shared/scroll-indicator/scroll-indicator.component";
 import { HttpClient } from '@angular/common/http';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [ReactiveFormsModule, SecondaryButtonComponent, ScrollAnimationDirective, ScrollIndicatorComponent],
+  imports: [ReactiveFormsModule, SecondaryButtonComponent, ScrollAnimationDirective, ScrollIndicatorComponent, TranslatePipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })

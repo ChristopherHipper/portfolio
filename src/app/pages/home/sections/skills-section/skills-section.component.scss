@@ -9,7 +9,7 @@
 
     @include mx.respond(lg) {
         @include mx.display(center, center, unset);
-        max-width: 860px;
+        max-width: 950px;
         gap: 79px;
     }
 }
@@ -40,7 +40,7 @@
     height: 380px;
     transition-duration: 0.3s;
     transition-delay: 100ms;
-    gap: 32px;
+    gap: 12px;
 
 
     @include mx.respond(lg) {
@@ -83,4 +83,16 @@ p {
     @include mx.respond(lg) {
         text-align: center;
     }
+}
+
+.btn-container {
+    margin-top: 40px;
+    @include mx.display(center, unset, unset);
+    @include mx.respond(lg) {
+        display: none;
+    }
+}
+
+a{
+    color: #262E34;
 }

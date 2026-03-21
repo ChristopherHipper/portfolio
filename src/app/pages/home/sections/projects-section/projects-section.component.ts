@@ -4,11 +4,12 @@ import { ProjectDetailComponent } from "./components/project-detail/project-deta
 import { Project } from './interfaces/project.interface';
 import { ProjectsService } from './services/projects.service';
 import { ScrollAnimationDirective } from '../../../../shared/directives/scroll-animation.directive';
+import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [ProjectsNavComponent, ProjectDetailComponent, ScrollAnimationDirective],
+  imports: [ProjectsNavComponent, ProjectDetailComponent, ScrollAnimationDirective,TranslatePipe],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })

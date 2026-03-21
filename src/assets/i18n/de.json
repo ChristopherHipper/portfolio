@@ -4,5 +4,96 @@
         "text": "Präzision und logisches Denken begleiten mich aus meiner Arbeit als Messtechniker. Durch das Programmieren von Messabläufen habe ich meine Begeisterung für Softwareentwicklung entdeckt. Heute entwickle ich Webanwendungen mit Fokus auf saubere Lösungen und gute Benutzererfahrungen, sowohl eigenständig als auch im Team.",
         "me": "Ich bin",
         "button": "Lass uns sprechen"
-    }
+    },
+    "HERO": {
+        "job": "FRONTEND ENTWICKLER"
+    },
+    "LOGO":{
+        "job" : "Entwickler"
+    },
+    "SKILLS" : {
+        "title" : "Fähigkeiten",
+        "info" : "Ich lerne gerade",
+        "paragraph" : "Lernen & Wachstum",
+        "text" : "Neue Technologien zu entdecken und mein Wissen kontinuierlich zu erweitern motiviert mich, mich selbst und meine Projekte auf das nächste Level zu bringen."
+    },
+    "PROJECTS": {
+        "title": "Meine Projecte",
+        "tech": "Technologien",
+        "elPolloLoco": {
+            "label": "El Pollo Loco",
+            "sections": {
+                "about": {
+                    "title": "Über das Project",
+                    "content": "Ein simples Jump and Run Spiel basierend auf Object-orientierte Programmierung. Hilf Pepe die Gefährliche Wüste zu durchqueren und besiege das Riesen Hühnchen"
+                },
+                "process": {
+                    "title": "Wie ich meine Arbeit organisiert habe",
+                    "content": "Das Spiel habe ich in kleine, logisch strukturierte Komponenten aufgeteilt. Mithilfe objektorientierter Programmierung wurde jede Komponente als eigene Klasse umgesetzt und mit Hilfs- und Logikklassen zusätzlich unterstützt. Regelmäßige Tests haben mir geholfen, das Gameplay zu verbessern und Fehler frühzeitig zu beheben."
+                },
+                "learning": {
+                    "title": "Was ich gelernt habe",
+                    "content": "Dieses Projekt hat mein Verständnis der objektorientierten Programmierung in JavaScript gestärkt. Ich habe gelernt, eine Game-Loop mit FPS zu verwalten sowie Kollisionen, Animationen und Benutzereingaben zu verarbeiten. Außerdem habe ich meine Fähigkeiten verbessert, größere Projekte zu strukturieren und sauberen, wartbaren Code zu schreiben, was mein Selbstvertrauen als Entwickler gestärkt hat."
+                }
+            }
+        },
+        "join": {
+            "label": "Join",
+            "sections": {
+                "about": {
+                    "title": "Über das Project",
+                    "content": "Ein vom Kanban-System inspirierter Task-Manager: Erstellen und Organisieren von Aufgaben mithilfe von Drag-and-Drop-Funktionen sowie Erstellung und Zuweisung von Nutzern und Kategorien."
+                },
+                "process": {
+                    "title": "Wie ich meine Arbeit organisiert habe",
+                    "content": "Wir haben uns alle paar Tage getroffen, um den Fortschritt zu überprüfen, Aufgaben neu zu verteilen und uns gegenseitig bei Herausforderungen zu unterstützen. Das hat uns geholfen Probleme als Team effizient zu lösen. Mein Hauptfokus lag auf den Login- und Registrierungsablauf sowie auf der Aufgabenübersicht, -erstellung und -bearbeitung. Eine klare Aufgabenverteilung und kontinuierliche Kommunikation sorgten für einen konstanten Projektfortschritt."
+                },
+                "learning": {
+                    "title": "Meine Erfahrung in der Gruppenarbeit",
+                    "content": "Die Arbeit in einem vierköpfigen Team hat meine Kommunikations- und Teamfähigkeiten verbessert. Wir haben Aufgaben koordiniert, Lösungen diskutiert und uns bei technischen Herausforderungen gegenseitig unterstützt. Die Nutzung von Git und Firebase erforderte eine enge Abstimmung, um Konflikte zu vermeiden und die Datenkonsistenz sicherzustellen. Insgesamt hat die Teamarbeit das Projekt effizienter gemacht und uns näher an reale Entwicklungsabläufe herangeführt."
+                }
+            }
+        },
+        "portfolio": {
+            "label": "Portfolio",
+            "sections": {
+                "about": {
+                    "title": "Über das Project",
+                    "content": "Portfolio-Website, entwickelt mit Angular, TypeScript und SCSS. Sie nutzt moderne Frontend-Entwicklungstechniken und bietet ein modulares Layout mit interaktiven Elementen sowie ein Kontaktformular – alles in einem responsiven Design."
+                },
+                "process": {
+                    "title": "Wie ich meine Arbeit organisiert habe",
+                    "content": "Das Projekt wurde unter Verwendung der komponentenbasierten Architektur von Angular aufgebaut, wodurch die Anwendung modular und wartbar bleibt. Wiederkehrende Logik habe ich in eigenen Komponenten implementiert, die mehrfach genutzt werden können. Die Navigation zwischen den Seiten erfolgt über Angular Routing."
+                },
+                "learning": {
+                    "title": "Was ich gelernt habe",
+                    "content": "Durch dieses Projekt habe ich praktische Erfahrungen mit Angular und moderner Frontend-Entwicklung mit TypeScript gesammelt. Ich habe gelernt, wie man Anwendungen mithilfe von Komponenten, Services und Routing strukturiert und dabei den Code modular und skalierbar hält. Außerdem habe ich mein Verständnis für Datenbindung, Kommunikation zwischen Komponenten und wiederverwendbares UI-Design vertieft."
+                }
+            }
+        }
+    },
+    "NAVIGATION" : {
+        "whyMe" : "Warum ich",
+        "skills" : "Fähigkeiten",
+        "projects" : "Projekte",
+        "contact" : "Kontakt"
+    },
+    "CONTACT": {
+        "title" : "Kontaktiere mich",
+        "paragraph" : "Sag Hallo!",
+        "text" : "Ob spannendes Frontend-Projekt, kreative Zusammenarbeit oder Jobangebot – ich bin offen für alles, bei dem ich moderne Webtechnologien einsetzen, elegante Interfaces gestalten und sauberen, wartbaren Code liefern kann. Lass uns digitale Lösungen entwickeln, die nicht nur funktionieren, sondern Eindruck machen.",
+        "form" : {
+            "name" : "Dein Name",
+            "email" : "Deine Email",
+            "message" : "Deine Nachricht",
+            "errorName" : "Dein Name ist erforderlich",
+            "errorEmail" : "Deine Email ist nicht korrekt",
+            "errorMessage" : "Eine Nachricht ist erforderlich",
+            "text1" : "Ich habe die",
+            "text2" : " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyPolicy" : "Datenschutzrichtlinien",
+            "send" : "Senden"
+        }
+    },
+    "legalNotice" : "Impressum"
 }

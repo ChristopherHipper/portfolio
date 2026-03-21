@@ -4,14 +4,18 @@
 .about-me-infos {
     display: flex;
     color: $second-color;
-    width: 286px;
+    width: 297px;
 
     @include mx.respond(sm) {
         align-items: flex-end;
         width: 330px;
     }
 
-        @include mx.respond(md) {
+    @include mx.respond(sml) {
+        width: 400px;
+    }
+
+    @include mx.respond(lg) {
         width: 100%;
     }
 
@@ -26,10 +30,15 @@
     }
 
     img {
-        width: 53px;
-        height: 43px;
+        width: 43px;
+        height: 33px;
 
         @include mx.respond(sml) {
+            width: 63px;
+            height: 53px;
+        }
+
+        @include mx.respond(md) {
             width: 73px;
             height: 63px;
         }
@@ -38,7 +47,7 @@
 
     span {
         color: $primary-color;
-        font-size: 18px;
+        font-size: 16px;
 
         @include mx.respond(sml) {
             font-size: 20px;
@@ -50,7 +59,7 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: 16px;
 
         @include mx.respond(sml) {
             font-size: 20px;
