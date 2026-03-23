@@ -10,7 +10,7 @@ import { RouterLink } from "@angular/router";
 })
 export class ScrollIndicatorComponent {
   scrollDirection = input();
-  scrollTarget = input('Why me');
+  scrollTarget = input('whyMe');
 
   imageSrc(){
     return `assets/img/scroll/arrow-${this.scrollDirection()}.png`;

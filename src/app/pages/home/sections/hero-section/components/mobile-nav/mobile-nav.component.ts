@@ -1,4 +1,4 @@
-import { Component, output, input } from '@angular/core';
+import { Component, output, input, ElementRef, ViewChild } from '@angular/core';
 import { LogoComponent } from '../../../../../../shared/logo/logo.component';
 import { ɵInternalFormsSharedModule } from "@angular/forms";
 import { FormsModule } from '@angular/forms';
@@ -12,11 +12,11 @@ import { FormsModule } from '@angular/forms';
 export class MobileNavComponent {
   isCheckedChange = output<boolean>();
   isChecked = input<boolean>();
+  @ViewChild('burgerContainer', { read: ElementRef })
+  burgerContainer!: ElementRef;
 
   toggleBurgerMenu(){
     const newCheckedState = !this.isChecked()
-    console.log(newCheckedState);
-    
     this.isCheckedChange.emit(newCheckedState)
   }
 

@@ -1,13 +1,13 @@
 import { Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
-import {TranslatePipe} from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-nav',
-    standalone: true,
-    imports: [RouterLink, TranslatePipe],
-    templateUrl: './nav.component.html',
-    styleUrl: './nav.component.scss'
+  selector: 'app-nav',
+  standalone: true,
+  imports: [RouterLink, TranslatePipe],
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.scss'
 })
 export class NavComponent implements AfterViewInit, OnDestroy {
   navList = signal(['NAVIGATION.whyMe', 'NAVIGATION.skills', 'NAVIGATION.projects', 'NAVIGATION.contact']);
@@ -15,9 +15,14 @@ export class NavComponent implements AfterViewInit, OnDestroy {
   aactiveLink: string = '';
   private observer!: IntersectionObserver;
   options = {
-      root: null,
-      threshold: 0.7
-    };
+    root: null,
+    threshold: 0.7
+  };
+
+  getId(id: string) {
+    const clickedNavItem = id.split('.')[1]
+    return clickedNavItem
+  }
 
   setActiveClass(item: string) {
     this.activeLink.set(item);
@@ -33,13 +38,13 @@ export class NavComponent implements AfterViewInit, OnDestroy {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-            this.activeLink.set(entry.target.id);
+          this.activeLink.set(entry.target.id);
         }
       });
     }, this.options);
   }
 
-  getSection(){
+  getSection() {
     this.navList().forEach(id => {
       const section = document.getElementById(id);
       if (section) {

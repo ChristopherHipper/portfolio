@@ -1,6 +1,6 @@
 <div class="mobile">
     <app-logo [logoVariant]="'hero'"></app-logo>
-    <div class="input-container">
+    <div #burgerContainer class="input-container">
         <input (click)="toggleBurgerMenu()" type="checkbox" id="burger" class="checkbox3 visuallyHidden container"
             [checked]="isChecked()">
         <label for="burger" class="container">
