@@ -1,0 +1,9 @@
+<div class="feedback">
+    <h4 class="feedback__headline">{{ feedback()?.name | translate }}</h4>
+    <div class="feedback__project">
+        <p>{{ 'FEEDBACK.project' | translate }}</p>
+        <p class="feedback__project--name">Join</p>
+    </div>
+    <p class="feedback__text">"{{ feedback()?.text | translate }}"</p>
+    <a class="feedback__link" target="_blank" [href]="feedback()?.link">GitHub Profile</a>
+</div>

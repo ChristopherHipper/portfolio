@@ -35,8 +35,6 @@ export class HeroSectionComponent {
     if (!this.mobileNav()) return;
 
     const target = event.target as HTMLElement;
-    console.log(target);
-    
 
     const clickedInsideNav = this.navRef?.nativeElement.contains(target);
     const clickedBurger = this.burgerComponent?.burgerContainer?.nativeElement?.contains(target) ?? false;

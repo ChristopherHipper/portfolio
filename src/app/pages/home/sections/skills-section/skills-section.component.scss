@@ -38,8 +38,7 @@
     color: $second-color;
     flex: 1;
     height: 380px;
-    transition-duration: 0.3s;
-    transition-delay: 100ms;
+    transition: all 0.4s ease-in-out;
     gap: 12px;
 
 

@@ -1,1 +1,12 @@
-<p>testimonials-section works!</p>
+<section appScrollAnimation>
+    <div class="testimation">
+        <h3 class="testimation__headline">{{ 'FEEDBACK.title' | translate }}</h3>
+        <p class="testimation__text">{{ 'FEEDBACK.title-text' | translate }}</p>
+    </div>
+    <main>
+        @for (feedback of feedbacks; track feedback.name) {
+            <app-feedback [feedback]="feedback"></app-feedback>
+        }
+        
+    </main>
+</section>

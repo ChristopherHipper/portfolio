@@ -13,9 +13,9 @@
         <nav class="burger-nav" >
             <ul>
                 @for (navItem of navList(); track navItem; let i = $index) {
-                <li><a (click)="mobileNav.set(false)" [routerLink]="[]" [fragment]="getId(navItem)">{{ navItem | translate }}</a></li>
+                <li><a [routerLink]="['']" [fragment]="getId(navItem)">{{ navItem | translate }}</a></li>
                 }
-                <app-language-switch (click)="mobileNav.set(false)"></app-language-switch>
+                <app-language-switch></app-language-switch>
             </ul>
         </nav>
         }

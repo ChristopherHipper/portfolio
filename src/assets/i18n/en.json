@@ -95,5 +95,14 @@
             "send" : "send"
         }
     },
-    "legalNotice" : "Legal notice"
+    "legalNotice" : "Imprint",
+    "FEEDBACK" : {
+        "title" : "Need a teamplayer?",
+        "title-text" : "Here what my colleagues said about me",
+        "colleagues1" : "Christian P.",
+        "text1" : "He impressed in our Kanban project with his structured and clean code. Although our focus was on the front end, he also took on a significant portion of the Firebase backend. I particularly appreciated his attention to detail and his ability to find solution-oriented approaches.",
+        "project" : "Project",
+        "colleagues2" : "Riccardo S.",
+        "text2" : "As a teammate, he was always reliable and a pleasure to work with. Communication was always clear and respectful. I was particularly impressed by how open he is to feedback while also contributing his own ideas. That makes working together really easy."
+    }
 }

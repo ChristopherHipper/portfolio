@@ -11,3 +11,9 @@ export interface ProjectSection {
   title: string;
   content: string
 }
+
+export interface Feedback {
+  name: string;
+  text: string;
+  link:string
+}

@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { ProjectsNavComponent } from "./components/projects-nav/projects-nav.component";
 import { ProjectDetailComponent } from "./components/project-detail/project-detail.component";
-import { Project } from './interfaces/project.interface';
+import { Project } from '../../../../shared/interfaces/project.interface';
 import { ProjectsService } from './services/projects.service';
 import { ScrollAnimationDirective } from '../../../../shared/directives/scroll-animation.directive';
 import {TranslatePipe} from '@ngx-translate/core';

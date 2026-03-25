@@ -1,5 +1,5 @@
 import { Component, input, signal } from '@angular/core';
-import { Project } from '../../interfaces/project.interface';
+import { Project } from '../../../../../../shared/interfaces/project.interface';
 import { SecondaryButtonComponent } from "../../../../../../shared/button/secondary-button/secondary-button.component";
 import { PrimaryButtonComponent } from "../../../../../../shared/button/primary-button/primary-button.component";
 import { ScrollAnimationDirective } from '../../../../../../shared/directives/scroll-animation.directive';

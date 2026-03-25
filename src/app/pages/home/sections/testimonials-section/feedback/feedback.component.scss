@@ -1,0 +1,59 @@
+@use 'colors' as *;
+@use 'mixins' as mx;
+
+.feedback {
+    @include mx.display(center, flex-start, column);
+    background-image: url('../../../../../../assets/img/shapes/ellipse-references.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px;
+    width: 300px;
+    transition: all 0.4s ease-in-out;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    @include mx.respond(lg) {
+        width: 400px;
+        height: 400px;
+        @include mx.display(center, center, column);
+    }
+
+
+    &:hover {
+        background-image: url('../../../../../../assets/img/shapes/ellipse-references-hover.png');
+
+    }
+
+    &__project {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 19px;
+
+        &--name {
+            color: $primary-color;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        color: $primary-color;
+        text-decoration: underline;
+        font-size: 16px;
+        margin-top: 24px;
+    }
+
+    &__text {
+        max-height: 100px;
+        overflow-y: auto;
+
+        @include mx.respond(lg) {
+            max-height: unset;
+        }
+    }
+}
+
+p {
+    font-size: 18px;
+}

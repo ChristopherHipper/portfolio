@@ -3,6 +3,7 @@ import { MainPageLayoutComponent } from './layouts/main-page-layout/main-page-la
 import { HomeComponent } from './pages/home/home.component';
 import { SubPageLayoutComponent } from './layouts/sub-page-layout/sub-page-layout.component';
 import { LegalNoticeComponent } from './pages/legal-notice/legal-notice.component';
+import { PrivacyPoliceComponent } from './pages/privacy-police/privacy-police.component';
 
 export const routes: Routes = [
     {
@@ -22,6 +23,10 @@ export const routes: Routes = [
             {
                 path: 'legal-notice',
                 component: LegalNoticeComponent
+            },
+                        {
+                path: 'privacy-policy',
+                component: PrivacyPoliceComponent
             }
         ]
     }

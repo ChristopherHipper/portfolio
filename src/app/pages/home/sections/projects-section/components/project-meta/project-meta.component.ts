@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Project } from '../../interfaces/project.interface';
+import { Project } from '../../../../../../shared/interfaces/project.interface';
 import { SkillIconsComponent } from "../../../../../../shared/skill-icons/skill-icons.component";
 import {TranslatePipe} from '@ngx-translate/core';
 

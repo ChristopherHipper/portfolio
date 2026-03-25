@@ -8,14 +8,14 @@
     "HERO": {
         "job": "FRONTEND ENTWICKLER"
     },
-    "LOGO":{
-        "job" : "Entwickler"
+    "LOGO": {
+        "job": "Entwickler"
     },
-    "SKILLS" : {
-        "title" : "Fähigkeiten",
-        "info" : "Ich lerne gerade",
-        "paragraph" : "Lernen & Wachstum",
-        "text" : "Neue Technologien zu entdecken und mein Wissen kontinuierlich zu erweitern motiviert mich, mich selbst und meine Projekte auf das nächste Level zu bringen."
+    "SKILLS": {
+        "title": "Fähigkeiten",
+        "info": "Ich lerne gerade",
+        "paragraph": "Lernen & Wachstum",
+        "text": "Neue Technologien zu entdecken und mein Wissen kontinuierlich zu erweitern motiviert mich, mich selbst und meine Projekte auf das nächste Level zu bringen."
     },
     "PROJECTS": {
         "title": "Meine Projecte",
@@ -72,28 +72,37 @@
             }
         }
     },
-    "NAVIGATION" : {
-        "whyMe" : "Warum ich",
-        "skills" : "Fähigkeiten",
-        "projects" : "Projekte",
-        "contact" : "Kontakt"
+    "NAVIGATION": {
+        "whyMe": "Warum ich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
     },
     "CONTACT": {
-        "title" : "Kontaktiere mich",
-        "paragraph" : "Sag Hallo!",
-        "text" : "Ob spannendes Frontend-Projekt, kreative Zusammenarbeit oder Jobangebot – ich bin offen für alles, bei dem ich moderne Webtechnologien einsetzen, elegante Interfaces gestalten und sauberen, wartbaren Code liefern kann. Lass uns digitale Lösungen entwickeln, die nicht nur funktionieren, sondern Eindruck machen.",
-        "form" : {
-            "name" : "Dein Name",
-            "email" : "Deine Email",
-            "message" : "Deine Nachricht",
-            "errorName" : "Dein Name ist erforderlich",
-            "errorEmail" : "Deine Email ist nicht korrekt",
-            "errorMessage" : "Eine Nachricht ist erforderlich",
-            "text1" : "Ich habe die",
-            "text2" : " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-            "privacyPolicy" : "Datenschutzrichtlinien",
-            "send" : "Senden"
+        "title": "Kontaktiere mich",
+        "paragraph": "Sag Hallo!",
+        "text": "Ob spannendes Frontend-Projekt, kreative Zusammenarbeit oder Jobangebot – ich bin offen für alles, bei dem ich moderne Webtechnologien einsetzen, elegante Interfaces gestalten und sauberen, wartbaren Code liefern kann. Lass uns digitale Lösungen entwickeln, die nicht nur funktionieren, sondern Eindruck machen.",
+        "form": {
+            "name": "Dein Name",
+            "email": "Deine Email",
+            "message": "Deine Nachricht",
+            "errorName": "Dein Name ist erforderlich",
+            "errorEmail": "Deine Email ist nicht korrekt",
+            "errorMessage": "Eine Nachricht ist erforderlich",
+            "text1": "Ich habe die",
+            "text2": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyPolicy": "Datenschutzrichtlinien",
+            "send": "Senden"
         }
     },
-    "legalNotice" : "Impressum"
+    "legalNotice": "Impressum",
+    "FEEDBACK": {
+        "title": "Teamplayer benötigt?",
+        "title-text": "Hier sas meine Kollegen über mich sagen",
+        "colleagues1": "Christian P.",
+        "text1": "In unserem Kanban-Projekt hat er mit seinem strukturierten und cleanen Code beeindruckt. Obwohl unser Schwerpunkt auf dem Frontend lag, hat er auch einen wesentlichen Teil des Firebase-Backends übernommen. Besonders geschätzt habe ich seine Liebe zum Detail und seine Fähigkeit, lösungsorientierte Ansätze zu finden.",
+        "project": "Projekt",
+        "colleagues2": "Riccardo S.",
+        "text2": "Als Teamkollege war er stets zuverlässig und es war eine Freude, mit ihm zusammenzuarbeiten. Die Kommunikation war immer klar und respektvoll. Besonders beeindruckt hat mich, wie offen er für Feedback ist und gleichzeitig eigene Ideen einbringt. Das macht die Zusammenarbeit wirklich einfach."
+    }
 }

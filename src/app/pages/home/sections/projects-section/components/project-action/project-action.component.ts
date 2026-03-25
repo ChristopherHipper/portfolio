@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { PrimaryButtonComponent } from "../../../../../../shared/button/primary-button/primary-button.component";
 import { SecondaryButtonComponent } from "../../../../../../shared/button/secondary-button/secondary-button.component";
-import { Project } from '../../interfaces/project.interface';
+import { Project } from '../../../../../../shared/interfaces/project.interface';
 
 @Component({
   selector: 'app-project-action',

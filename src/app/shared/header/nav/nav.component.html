@@ -1,7 +1,7 @@
 <nav>
     <ul>
         @for (navItem of navList(); track navItem; let i = $index) {
-            <li><a (click)="setActiveClass(navItem)" [class.active-link]="navItem === activeLink()" [routerLink]="[]" [fragment]="getId(navItem)">{{ navItem | translate }}</a></li>
+            <li><a (click)="setActiveClass(navItem)" [class.active-link]="navItem === activeLink()" [routerLink]="['']" [fragment]="getId(navItem)">{{ navItem | translate }}</a></li>
         }
     </ul>
 </nav>  

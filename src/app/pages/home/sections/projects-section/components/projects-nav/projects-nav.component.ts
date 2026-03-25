@@ -1,5 +1,5 @@
 import { Component, input, signal, output } from '@angular/core';
-import { Project } from '../../interfaces/project.interface';
+import { Project } from '../../../../../../shared/interfaces/project.interface';
 
 @Component({
     selector: 'app-projects-nav',

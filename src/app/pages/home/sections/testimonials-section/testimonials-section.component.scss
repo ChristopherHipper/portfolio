@@ -1,0 +1,46 @@
+@use 'colors' as *;
+@use 'mixins' as mx;
+
+.testimation {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 80px;
+    margin-bottom: 45px;
+    gap: 6px;
+
+    @include mx.respond(lg) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__headline {
+        font-family: 'Anta';
+        font-size: 32px;
+        color: $primary-color;
+
+        @include mx.respond(md) {
+            font-family: 'Josefin Sans';
+        }
+    }
+
+    &__text {
+        color: $second-color;
+        font-size: 18px;
+        margin-top: 6px;
+
+        @include mx.respond(md) {
+            color: $primary-color;
+            font-size: 32px;
+            margin-top: 0px;
+        }
+    }
+
+
+
+}
+
+main {
+    @include mx.display(unset, center, unset);
+    overflow-x: auto;
+    max-width: 100%;
+}
