@@ -2,20 +2,23 @@
 @use 'mixins' as mx;
 
 .feedback {
-    @include mx.display(center, flex-start, column);
+    @include mx.display(flex-start, center, column);
     background-image: url('../../../../../../assets/img/shapes/ellipse-references.png');
     background-repeat: no-repeat;
     background-size: contain;
     padding: 50px;
-    width: 300px;
+    padding-top: 30px;
+    width: 360px;
+    height: 360px;
     transition: all 0.4s ease-in-out;
     margin-left: 24px;
     margin-right: 24px;
+    margin-bottom: 6px;
 
     @include mx.respond(lg) {
         width: 400px;
         height: 400px;
-        @include mx.display(center, center, column);
+        padding: 24px;
     }
 
 
@@ -41,19 +44,45 @@
         color: $primary-color;
         text-decoration: underline;
         font-size: 16px;
-        margin-top: 24px;
+        margin-top: 36px;
+
+        @include mx.respond(lg) {
+            margin-bottom: 24px;
+        }
     }
 
     &__text {
-        max-height: 100px;
-        overflow-y: auto;
-
         @include mx.respond(lg) {
+            max-width: 250px;
             max-height: unset;
+            flex: 1;
+        }
+    }
+    &__mobile{
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        &--btn{
+            font-size: 24px;
         }
     }
 }
 
 p {
     font-size: 18px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    color: $primary-color;
+    background-color: unset;
+    &:hover{
+        color: $second-color;
+    }
 }

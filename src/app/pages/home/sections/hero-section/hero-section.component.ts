@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, input, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, inject, input, signal, ViewChild } from '@angular/core';
 import { LogoComponent } from "../../../../shared/logo/logo.component";
 import { SozialMediaIconsComponent } from "../../../../shared/sozial-media-icons/sozial-media-icons.component";
 import { ScrollIndicatorComponent } from "../../../../shared/scroll-indicator/scroll-indicator.component";
@@ -6,6 +6,7 @@ import { MobileNavComponent } from "./components/mobile-nav/mobile-nav.component
 import { RouterLink } from "@angular/router";
 import { LanguageSwitchComponent } from "../../../../shared/header/language-switch/language-switch.component";
 import { TranslatePipe } from '@ngx-translate/core';
+import { DeviceService } from '../../../../shared/services/device.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -18,12 +19,13 @@ export class HeroSectionComponent {
   @ViewChild('nav') navRef!: ElementRef;
   @ViewChild('burgerBtn', { read: ElementRef }) burgerBtn!: ElementRef;
   @ViewChild('burgerBtn') burgerComponent!: MobileNavComponent;
+  mobile = inject(DeviceService)
 
   icons = signal(['git-hero', 'mail-hero', 'linkedin-hero']);
   logoVariant = signal('');
-  isMobile = input()
+  isMobile = input();
   navList = signal(['NAVIGATION.whyMe', 'NAVIGATION.skills', 'NAVIGATION.projects', 'NAVIGATION.contact']);
-  mobileNav = signal(false)
+  mobileNav = signal(false);
 
   getId(id:string){
     const clickedNavItem = id.split('.')[1]

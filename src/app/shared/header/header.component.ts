@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { NavComponent } from './nav/nav.component';
 import { LogoComponent } from "../logo/logo.component";
 import { LanguageSwitchComponent } from "./language-switch/language-switch.component";
+import { DeviceService } from '../services/device.service';
 
 @Component({
     selector: 'app-header',
@@ -11,5 +12,5 @@ import { LanguageSwitchComponent } from "./language-switch/language-switch.compo
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    isMobile = input();
+    mobile = inject(DeviceService)
 }

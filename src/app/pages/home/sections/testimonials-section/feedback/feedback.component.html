@@ -1,9 +1,31 @@
 <div class="feedback">
-    <h4 class="feedback__headline">{{ feedback()?.name | translate }}</h4>
+
+    @if(isFeedbackOpen && mobile.isMobile()){
+
+    <div class="feedback__mobile" >
+        <div class="btn-container">
+            <button (click)="closeFeedback()" class="btn feedback__mobile--btn">X</button>
+        </div>
+        <p>"{{ feedback()?.text | translate}}"</p>
+    </div>
+
+    }@else{
+        <h4 class="feedback__headline">{{ feedback()?.name | translate }}</h4>
     <div class="feedback__project">
         <p>{{ 'FEEDBACK.project' | translate }}</p>
         <p class="feedback__project--name">Join</p>
     </div>
-    <p class="feedback__text">"{{ feedback()?.text | translate }}"</p>
+    @if(mobile.isMobile()){
+    <p class="feedback__text">"{{ feedback()?.text | translate | truncate:150 }}"</p>
+    }@else{
+    <p class="feedback__text">"{{ feedback()?.text | translate}}"</p>
+    }
+    @if(mobile.isMobile()){
+    <div class="btn-container">
+        <button  class="btn" (click)="openFeedback()">read more</button>
+    </div>
+    }
     <a class="feedback__link" target="_blank" [href]="feedback()?.link">GitHub Profile</a>
+    }
+
 </div>

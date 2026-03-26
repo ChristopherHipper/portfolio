@@ -1,5 +1,5 @@
 <div class="hero">
-    @if (isMobile()) {
+    @if (mobile.isMobile()) {
     <div class="hero__mobile">
         <app-mobile-nav #burgerBtn [isChecked]="mobileNav()" (isCheckedChange)="mobileNav.set($event)"></app-mobile-nav>
     </div>
@@ -22,7 +22,7 @@
     </figure>
 
     <div class="hero__content">
-        @if (!isMobile()) {
+        @if (!mobile.isMobile()) {
         <app-logo [logoVariant]="'hero'"></app-logo>
         }
         <div class="hero__text">
@@ -32,7 +32,7 @@
         <app-scroll-indicator [scrollDirection]="'down'" [scrollTarget]="'whyMe'"></app-scroll-indicator>
     </div>
 
-    @if (!isMobile()) {
+    @if (!mobile.isMobile()) {
     <div class="hero__sozialmedia-container">
         <nav class="hero__sozialmedia">
             @for (icon of icons(); track $index) {

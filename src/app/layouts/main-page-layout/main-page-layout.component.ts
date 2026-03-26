@@ -12,11 +12,5 @@ import { RouterOutlet } from '@angular/router';
     styleUrl: './main-page-layout.component.scss'
 })
 export class MainPageLayoutComponent {
-    isMobile = signal(window.innerWidth < 1024)
 
-    constructor() {
-        window.addEventListener('resize', () => {
-            this.isMobile.set(window.innerWidth < 1024);
-        });
-    }
 }
