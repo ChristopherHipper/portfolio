@@ -2,47 +2,28 @@ import { Component, ElementRef, HostListener, inject, input, signal, ViewChild }
 import { LogoComponent } from "../../../../shared/logo/logo.component";
 import { SozialMediaIconsComponent } from "../../../../shared/sozial-media-icons/sozial-media-icons.component";
 import { ScrollIndicatorComponent } from "../../../../shared/scroll-indicator/scroll-indicator.component";
-import { MobileNavComponent } from "./components/mobile-nav/mobile-nav.component";
-import { RouterLink } from "@angular/router";
-import { LanguageSwitchComponent } from "../../../../shared/header/language-switch/language-switch.component";
 import { TranslatePipe } from '@ngx-translate/core';
 import { DeviceService } from '../../../../shared/services/device.service';
+import { NavigationService } from '../../../../shared/services/navigation.service';
+import { MobileNavComponent } from '../../../../shared/header/mobile-nav/mobile-nav.component';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [LogoComponent, SozialMediaIconsComponent, ScrollIndicatorComponent, MobileNavComponent, RouterLink, LanguageSwitchComponent, TranslatePipe],
+  imports: [LogoComponent, SozialMediaIconsComponent, ScrollIndicatorComponent, TranslatePipe, MobileNavComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
-  @ViewChild('nav') navRef!: ElementRef;
-  @ViewChild('burgerBtn', { read: ElementRef }) burgerBtn!: ElementRef;
-  @ViewChild('burgerBtn') burgerComponent!: MobileNavComponent;
-  mobile = inject(DeviceService)
+  mobile = inject(DeviceService);
+  mobileNav = inject(NavigationService);
 
   icons = signal(['git-hero', 'mail-hero', 'linkedin-hero']);
   logoVariant = signal('');
-  isMobile = input();
-  navList = signal(['NAVIGATION.whyMe', 'NAVIGATION.skills', 'NAVIGATION.projects', 'NAVIGATION.contact']);
-  mobileNav = signal(false);
 
   getId(id:string){
     const clickedNavItem = id.split('.')[1]
     return clickedNavItem
   }
 
-  @HostListener('document:click', ['$event'])
-  handleClickOutside(event: MouseEvent) {
-    if (!this.mobileNav()) return;
-
-    const target = event.target as HTMLElement;
-
-    const clickedInsideNav = this.navRef?.nativeElement.contains(target);
-    const clickedBurger = this.burgerComponent?.burgerContainer?.nativeElement?.contains(target) ?? false;
-
-    if (!clickedInsideNav && !clickedBurger) {
-      this.mobileNav.set(false);
-    }
-  }
 }

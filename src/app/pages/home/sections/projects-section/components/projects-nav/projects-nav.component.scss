@@ -17,36 +17,54 @@ ul {
 }
 
 li {
-    color: $primary-color;
-    font-family: 'Josefin Sans';
-    font-size: 18px;
-    font-weight: 500;
     padding: 12px 6px;
-    cursor: pointer;
     transition: all 0.5s ease;
 
-    &:hover {
-        color: $second-color;
-    }
+
 
     @include mx.respond(sm) {
         padding: 18px 12px;
-        font-size: 20px;
     }
 
-        @include mx.respond(sml) {
+    @include mx.respond(sml) {
         padding: 22px 18px;
-        font-size: 22px;
     }
 
     @include mx.respond(md) {
         padding: 33px;
+    }
+
+    @include mx.respond(lg) {
+        padding: 33px;
+    }
+}
+
+button {
+    background-color: unset;
+    color: $primary-color;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+
+    @include mx.respond(sm) {
+        font-size: 20px;
+    }
+
+    @include mx.respond(sml) {
+        font-size: 22px;
+    }
+
+    @include mx.respond(md) {
         font-size: 24px;
     }
 
     @include mx.respond(lg) {
         font-size: 30px;
-        padding: 33px;
+    }
+
+    &:hover {
+        color: $second-color;
     }
 }
 

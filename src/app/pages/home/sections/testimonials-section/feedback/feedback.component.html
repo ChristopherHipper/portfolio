@@ -1,10 +1,10 @@
-<div class="feedback">
+<div #feedbackRef class="feedback">
 
-    @if(isFeedbackOpen && mobile.isMobile()){
+    @if(isOpen() && mobile.isMobile()){
 
     <div class="feedback__mobile" >
         <div class="btn-container">
-            <button (click)="closeFeedback()" class="btn feedback__mobile--btn">X</button>
+            <button #closeBtn (click)="closeFeedback()" class="btn feedback__mobile--btn">X</button>
         </div>
         <p>"{{ feedback()?.text | translate}}"</p>
     </div>
@@ -16,13 +16,13 @@
         <p class="feedback__project--name">Join</p>
     </div>
     @if(mobile.isMobile()){
-    <p class="feedback__text">"{{ feedback()?.text | translate | truncate:150 }}"</p>
+    <p class="feedback__text">"{{ feedback()?.text | translate | truncate:200 }}"</p>
     }@else{
     <p class="feedback__text">"{{ feedback()?.text | translate}}"</p>
     }
     @if(mobile.isMobile()){
     <div class="btn-container">
-        <button  class="btn" (click)="openFeedback()">read more</button>
+        <button #openBtn  class="btn" (click)="openFeedback()">{{ "FEEDBACK.read" | translate }}</button>
     </div>
     }
     <a class="feedback__link" target="_blank" [href]="feedback()?.link">GitHub Profile</a>

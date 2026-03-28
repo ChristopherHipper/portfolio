@@ -1,24 +1,29 @@
 @use 'colors' as *;
 @use 'mixins' as mx;
 
+
 .feedback {
     @include mx.display(flex-start, center, column);
     background-image: url('../../../../../../assets/img/shapes/ellipse-references.png');
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 50px;
-    padding-top: 30px;
-    width: 360px;
-    height: 360px;
+    background-position: center;
     transition: all 0.4s ease-in-out;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 6px;
+    width: 350px;
+    height: 350px;
+    padding-top: 33px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     @include mx.respond(lg) {
-        width: 400px;
+        min-width: 400px;
+        min-height: 400px;
         height: 400px;
-        padding: 24px;
+        padding-top: 80px;
+        padding-bottom: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
 
@@ -29,7 +34,6 @@
 
     &__project {
         display: flex;
-        gap: 6px;
         margin-bottom: 19px;
 
         &--name {
@@ -38,32 +42,28 @@
     }
 
     &__link {
-        display: flex;
-        justify-content: center;
-        width: 100%;
         color: $primary-color;
         text-decoration: underline;
         font-size: 16px;
-        margin-top: 36px;
-
-        @include mx.respond(lg) {
-            margin-bottom: 24px;
-        }
     }
 
     &__text {
+
+        max-width: 300px;
+
         @include mx.respond(lg) {
-            max-width: 250px;
-            max-height: unset;
             flex: 1;
         }
+
     }
-    &__mobile{
-        max-width: 260px;
+
+    &__mobile {
+        max-width: 250px;
         display: flex;
         flex-direction: column;
-        gap: 27px;
-        &--btn{
+        gap: 12px;
+
+        &--btn {
             font-size: 24px;
         }
     }
@@ -76,13 +76,16 @@ p {
 .btn-container {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     width: 100%;
+    flex: 1;
 }
 
 .btn {
     color: $primary-color;
     background-color: unset;
-    &:hover{
+
+    &:hover {
         color: $second-color;
     }
 }

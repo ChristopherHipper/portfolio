@@ -1,37 +1,23 @@
 @use 'colors' as *;
 
-main{
-    display: flex;
-    justify-content: center;
-    font-family: "Josefin Sans";
-    color: $second-color;
-}
-
 .dataProtection{
-    padding: 0;
-    max-width: 950px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-h1{
-    font-size: 54px;
+a {
+    color: $primary-color;
 }
-
 
 h2{
-    font-size: 24px;
-    margin: 20px 0px;
+    margin-top: 24px;
 }
 
-h3, h4{
-    font-size: 19px;
+h3{
     color: $primary-color;
-    margin-bottom: 6px;
 }
 
 p{
-    margin-bottom: 6px;
-}
-
-a{
-    color: $primary-color;
+    margin-bottom: 24px;
+    margin-left: 24px;
 }

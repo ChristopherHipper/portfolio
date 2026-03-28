@@ -1,18 +1,10 @@
 @use 'mixins' as mx;
 @use 'colors' as *;
 
-.mobile {
+header {
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
-}
-
-.input-container{
-    display: grid;
-}
-
-.container{
-    grid-area: 1 / 1;
+    padding: 22px 35px;
 }
 
 

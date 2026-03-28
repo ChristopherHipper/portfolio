@@ -1,8 +1,8 @@
-<div class="mobile">
+<header>
     <app-logo [logoVariant]="'hero'"></app-logo>
-    <div #burgerContainer class="input-container">
-        <input (click)="toggleBurgerMenu()" type="checkbox" id="burger" class="checkbox3 visuallyHidden container"
-            [checked]="isChecked()">
+    <div class="input-container">
+        <input type="checkbox" id="burger" class="checkbox3 visuallyHidden container"
+            [checked]="nav.mobileNavIsOpen()"  (change)="onToggle($event)">
         <label for="burger" class="container">
             <div class="hamburger hamburger3">
                 <span class="bar bar1"></span>
@@ -12,5 +12,4 @@
             </div>
         </label>
     </div>
-
-</div>
+</header>

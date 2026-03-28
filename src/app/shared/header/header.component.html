@@ -2,8 +2,10 @@
 <header>
     <div class="header-container">
         <app-logo [logoVariant]="'nav'"></app-logo>
-        <app-nav></app-nav>
+        <app-nav [navList]="nav.navList()"></app-nav>
         <app-language-switch></app-language-switch>
     </div>
 </header>
+}@else {
+    <app-mobile-header></app-mobile-header>
 }

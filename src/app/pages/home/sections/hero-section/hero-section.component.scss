@@ -4,7 +4,7 @@
 .hero {
     padding: 0 24px;
     max-width: 1440px;
-    height: 100vh;
+    height: 80vh;
     @include mx.display(unset, unset, column);
 
     @include mx.respond(lg) {
@@ -24,6 +24,7 @@
         flex: 1;
         @include mx.display(space-between, center, column);
         margin-bottom: 16px;
+        gap: 6px;
     }
 
     &__sozialmedia-container {
@@ -63,93 +64,43 @@ p {
 }
 
 .hero__img {
-    @include mx.display(center, flex-end, unset);
-    width: 100%;
-    height: 36vh;
+    height: 276px;
+    display: flex;
+    justify-content: center;
     background-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: contain;
 
-    position: relative;
-
-    @include mx.respond(md) {
-        height: 50vh;
+    @include mx.respond(sml) {
+        height: 50%;
     }
 
     @include mx.respond(lg) {
-        height: 65vh;
-        width: 50%;
-
-        &:hover {
-            background-image: url('../../../../../assets/img/shapes/ellipse-hero-hover.png');
-            mask-image: none;
-            -webkit-mask-image: none;
-            background-color: unset;
-        }
-
-
+        height: 70%;
     }
+
 }
 
-.hero-img {
-    position: absolute;
-    height: 80%;
-    transition: opacity 0.5s ease;
+.portrait {
 
-    @include mx.respond(sm) {
-        height: 100%;
-    }
-}
+    /* Ellipse als Maske */
+    -webkit-mask-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
+    mask-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
 
-.hero-img--me {
-    opacity: 1;
-    z-index: 1;
-}
+    -webkit-mask-size: cover;
+    mask-size: cover;
 
-.hero-img--shape {
-    opacity: 0;
-    z-index: 2;
-}
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 
-.hero__img.menu-open .hero-img--me {
-    opacity: 0;
-}
+    -webkit-mask-position: center;
+    mask-position: center;
 
-.hero__img.menu-open .hero-img--shape {
-    opacity: 1;
-}
+    @include mx.respond(sml) {}
 
-
-
-
-
-
-.burger-nav {
-    height: 100%;
-    position: absolute;
-    z-index: 9;
-
-    ul {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-
-        @include mx.respond(sm) {
-            gap: 40px;
-        }
-
-        li {
-            font-size: 22px;
-            font-family: 'Josefin Sans';
-
-            a {
-                color: $bg-color;
-            }
-        }
+    @include mx.respond(lg) {
+        -webkit-mask-image: unset;
+        mask-image: unset;
     }
 }

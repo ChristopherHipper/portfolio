@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnDestroy, signal } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, signal, input } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -10,7 +10,7 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent implements AfterViewInit, OnDestroy {
-  navList = signal(['NAVIGATION.whyMe', 'NAVIGATION.skills', 'NAVIGATION.projects', 'NAVIGATION.contact']);
+  navList = input<string[]>();
   activeLink = signal('');
   aactiveLink: string = '';
   private observer!: IntersectionObserver;
@@ -45,9 +45,12 @@ export class NavComponent implements AfterViewInit, OnDestroy {
   }
 
   getSection() {
-    this.navList().forEach(id => {
+    this.navList()?.forEach(id => {
       const section = document.getElementById(id);
+      console.log(section);
       if (section) {
+        
+        
         this.observer.observe(section);
       }
     });

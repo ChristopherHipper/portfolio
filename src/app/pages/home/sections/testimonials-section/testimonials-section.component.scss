@@ -40,7 +40,15 @@
 }
 
 main {
-    @include mx.display(unset, center, unset);
+    @include mx.display(flex-start, center, unset);
+    gap: 24px;
     overflow-x: auto;
-    max-width: 100%;
+    width: 100%;
+    padding: 0 24px;
+    max-width: 1440px;
+    padding-bottom: 6px;
+
+    @include mx.respond(md) {
+        justify-content: center;
+    }
 }

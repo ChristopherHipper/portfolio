@@ -11,6 +11,7 @@
     @include mx.respond(lg) {
         @include mx.display(space-between, stretch, unset);
         max-width: 950px;
+        gap: 16px;
     }
 }
 

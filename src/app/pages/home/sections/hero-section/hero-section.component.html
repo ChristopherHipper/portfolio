@@ -1,24 +1,13 @@
 <div class="hero">
-    @if (mobile.isMobile()) {
-    <div class="hero__mobile">
-        <app-mobile-nav #burgerBtn [isChecked]="mobileNav()" (isCheckedChange)="mobileNav.set($event)"></app-mobile-nav>
-    </div>
-    }
 
-
-    <figure class="hero__img" [class.menu-open]="mobileNav()">
-        <img class="hero-img hero-img--me" src="assets/img/hero/me.png" alt="me">
-        <img class="hero-img hero-img--shape" src="assets/img/shapes/ellipse-hero.png" alt="shape" #nav>
-        @if (mobileNav()) {
-        <nav class="burger-nav" >
-            <ul>
-                @for (navItem of navList(); track navItem; let i = $index) {
-                <li><a [routerLink]="['']" [fragment]="getId(navItem)">{{ navItem | translate }}</a></li>
-                }
-                <app-language-switch></app-language-switch>
-            </ul>
-        </nav>
+    <figure class="hero__img">
+        @if(mobileNav.mobileNavIsOpen() && mobile.isMobile()){
+        <app-mobile-nav></app-mobile-nav>
+        }@else{
+        <img class="portrait" src="assets/img/hero/me.png" alt="me">
         }
+
+
     </figure>
 
     <div class="hero__content">
@@ -29,7 +18,7 @@
             <h1>Christopher Hipper</h1>
             <p>{{ 'HERO.job' | translate }}</p>
         </div>
-        <app-scroll-indicator [scrollDirection]="'down'" [scrollTarget]="'whyMe'"></app-scroll-indicator>
+        <app-scroll-indicator [scrollDirection]="'down'"></app-scroll-indicator>
     </div>
 
     @if (!mobile.isMobile()) {
@@ -42,3 +31,4 @@
     </div>
     }
 </div>
+
