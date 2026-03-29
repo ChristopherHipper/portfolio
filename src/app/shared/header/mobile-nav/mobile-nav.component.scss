@@ -4,11 +4,12 @@
 
 
 .mobile-nav {
+    animation: fade-in 0.75s forwards;
     height: 100%;
-    padding: 0 86px;
+    padding: 16px 74px;
 
     @include mx.respond(sml) {
-        padding: 0 147px;;
+        padding: 30px 116px;;
     }
 
     ul {
@@ -30,7 +31,22 @@
 
             a {
                 color: $bg-color;
+                &:hover{
+                    color: $second-color;
+                    font-size: 18px;
+                    padding: 8px;
+                }
             }
         }
     }
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

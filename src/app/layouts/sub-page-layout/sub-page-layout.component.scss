@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'mixins' as mx;
 
 .layout {
     display: flex;
@@ -15,11 +16,81 @@ main {
     color: $second-color;
     max-width: 1440px;
     margin: 0 auto;
+
+}
+
+.img-wrapper {
+    display: flex;
+    transition: transform 1s;
+    cursor: pointer;
+    background-color: #2D3840;
+    border-radius: 50%;
+    padding: 12px;
+    margin-top: 23px;
+    margin-left: 20px;
+
+    &:hover {
+        transform: rotate(360deg);
+
+    }
+
+    a {
+        height: 17px;
+    }
+
 }
 
 .arrow {
     width: 34px;
     height: 17px;
-    margin-top: 23px;
-    margin-left: 20px;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.flip {
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+}
+
+.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+.nav-wrapper{
+    height: 100vh;
+}
+
+.hero__img {
+    height: 276px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../assets/img/shapes/ellipse-hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include mx.respond(sml) {
+        height: 50%;
+    }
+
+    @include mx.respond(lg) {
+        height: 70%;
+    }
+
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

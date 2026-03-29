@@ -82,8 +82,17 @@ p {
 
 }
 
-.portrait {
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
+.portrait {
+    animation: fade-in 0.75s forwards;
     /* Ellipse als Maske */
     -webkit-mask-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
     mask-image: url('../../../../../assets/img/shapes/ellipse-hero.png');

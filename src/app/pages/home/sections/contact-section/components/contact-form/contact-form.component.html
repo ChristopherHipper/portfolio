@@ -38,9 +38,10 @@
         </div>
 
         <div class="checkbox">
-            <input formControlName="checkbox" id="checkbox" type="checkbox">
+            <input (click)="toggleCheckbox()" formControlName="checkbox" id="checkbox" type="checkbox">
             <label class="checkbox-label" for="checkbox">
                 <img (click)="toggleCheckbox()" class="checkbox-img" [src]="checkboxImageSrc()" alt="checkbox">
+                
                 <div>
                     <span>{{ 'CONTACT.form.text1' | translate }} </span> <a  [routerLink]="['privacy-policy']">{{ 'CONTACT.form.privacyPolicy' | translate }}</a> <span>{{ 'CONTACT.form.text2' | translate }}</span>
                 </div>

@@ -1,9 +1,28 @@
 <div class="layout">
     <app-header></app-header>
 
-    <main>
-        <img class="arrow" src="assets/img/scroll/arrow-back.png" alt="backToMainPage">
+    <main class=" flip scroll-animate" [class.in-view]="isInit()">
+
+
+
+
+        @if(mobileNav.mobileNavIsOpen() && mobile.isMobile()){
+        <div class="nav-wrapper">
+            <figure class="hero__img">
+                <app-mobile-nav></app-mobile-nav>
+            </figure>
+        </div>
+        }@else{
+        <div class="img-wrapper">
+            <a href=""><img class="arrow" src="assets/img/scroll/arrow-back.png" alt="backToMainPage"></a>
+        </div>
         <router-outlet></router-outlet>
+        }
+
+
+
+
+
     </main>
     <app-footer></app-footer>
 </div>
