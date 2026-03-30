@@ -8,7 +8,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     templateUrl: './legal-notice.component.html',
     styleUrl: './legal-notice.component.scss'
 })
-export class LegalNoticeComponent {
+export class LegalNoticeComponent{
     isInit = signal(false);
 
     ngOnInit(){
@@ -16,7 +16,6 @@ export class LegalNoticeComponent {
          setTimeout(()=>{
             this.isInit.set(true);
         },10)
-        
     }
 
 }

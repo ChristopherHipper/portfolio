@@ -20,11 +20,9 @@ export class SubPageLayoutComponent {
     isInit = signal(false);
 
     ngOnInit() {
-
         setTimeout(() => {
             this.isInit.set(true);
-        }, 10)
-
+        }, 50)
     }
 
 }

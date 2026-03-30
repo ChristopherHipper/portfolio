@@ -1,5 +1,11 @@
 <form [formGroup]="contactForm" (ngSubmit)="formSubmit()">
+    @if(showSuccessMessage()){
+    <div class="success-wrapper">
+        <div class="success-msg">Your data has been submitted succesfully!</div>
+    </div>
+    }
     <div class="input-continer-name-mail">
+
         <div appScrollAnimation type="slide-left">
             @if (invalidName){
             <label class="error" for="name">{{ 'CONTACT.form.errorName' | translate }}</label>
@@ -19,12 +25,14 @@
             <label for="email">{{ 'CONTACT.form.email' | translate }}</label>
             }
             <div class="border-animation">
-                <input class="inputfield" [class.input-error]="invalidEmail" id="email" type="text"
-                    formControlName="email" />
+                <input class="inputfield" [class.input-error]="invalidEmail"
+                    id="email" type="text" formControlName="email" />
             </div>
         </div>
 
     </div>
+
+
 
     <div appScrollAnimation type="slide-bottom">
         @if (invalidMessage) {
@@ -40,10 +48,12 @@
         <div class="checkbox">
             <input (click)="toggleCheckbox()" formControlName="checkbox" id="checkbox" type="checkbox">
             <label class="checkbox-label" for="checkbox">
-                <img (click)="toggleCheckbox()" class="checkbox-img" [src]="checkboxImageSrc()" alt="checkbox">
-                
+                <img class="checkbox-img" [src]="checkboxImageSrc()" alt="checkbox">
+
                 <div>
-                    <span>{{ 'CONTACT.form.text1' | translate }} </span> <a  [routerLink]="['privacy-policy']">{{ 'CONTACT.form.privacyPolicy' | translate }}</a> <span>{{ 'CONTACT.form.text2' | translate }}</span>
+                    <span>{{ 'CONTACT.form.text1' | translate }} </span> <a [routerLink]="['privacy-policy']">{{
+                        'CONTACT.form.privacyPolicy' | translate }}</a> <span>{{ 'CONTACT.form.text2' | translate
+                        }}</span>
                 </div>
 
 
@@ -54,6 +64,9 @@
             {{ 'CONTACT.form.send' | translate }}
         </app-secondary-button>
     </div>
+
+
+
 
 </form>
 

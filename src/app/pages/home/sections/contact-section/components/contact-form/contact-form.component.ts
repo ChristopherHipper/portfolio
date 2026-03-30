@@ -17,6 +17,7 @@ export class ContactFormComponent {
   formbuilder = inject(FormBuilder)
   http = inject(HttpClient)
   checkbox = signal(false);
+  showSuccessMessage = signal(false)
 
   contactForm = this.formbuilder.group({
     name: ['', [Validators.required, Validators.minLength(1)]],
@@ -27,10 +28,13 @@ export class ContactFormComponent {
 
   formSubmit() {
     if (this.contactForm.valid) {
+      this.showSuccessMessage.set(false);
       this.http.post('https://christopher-hipper.de/sendMail.php', this.contactForm.value)
         .subscribe({
           next: (response) => {
             this.contactForm.reset();
+            this.showSuccessMessage.set(true);
+            setTimeout(()=>{this.showSuccessMessage.set(false);},1000)
           },
           error: (error) => {
             console.error(error);

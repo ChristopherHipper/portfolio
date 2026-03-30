@@ -38,14 +38,14 @@ label {
 }
 
 .input-continer-name-mail {
-    @include mx.display(center, unset,column);
+    @include mx.display(center, unset, column);
 
     div {
         flex: 1;
     }
 
     @include mx.respond(md) {
-        @include mx.display(center, unset,unset);
+        @include mx.display(center, unset, unset);
         gap: 21px;
     }
 }
@@ -97,7 +97,7 @@ p {
     }
 }
 
-.checkbox-img{
+.checkbox-img {
     cursor: pointer;
     width: 24px;
     height: 24px;
@@ -112,7 +112,8 @@ app-secondary-button {
 app-scroll-indicator {
     display: flex;
     justify-content: center;
-    @include mx.respond(md){
+
+    @include mx.respond(md) {
         justify-content: flex-end;
     }
 }
@@ -159,5 +160,37 @@ app-scroll-indicator {
 
     to {
         transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+}
+
+.success-wrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.success-msg {
+    background-color: $primary-color;
+    color: $second-color;
+    padding: 16px;
+    border-radius: 30px;
+    max-width: 340px;
+    animation: slide-in 0.75s forwards;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+}
+
+
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

@@ -47,7 +47,6 @@ export class NavComponent implements AfterViewInit, OnDestroy {
   getSection() {
     this.navList()?.forEach(id => {
       const section = document.getElementById(id);
-      console.log(section);
       if (section) {
         
         
