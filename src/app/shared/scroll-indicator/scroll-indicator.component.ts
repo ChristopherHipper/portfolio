@@ -13,5 +13,5 @@ export class ScrollIndicatorComponent {
 
   imageSrc(){
     return `assets/img/scroll/arrow-${this.scrollDirection()}.png`;
-  }
+  };
 }

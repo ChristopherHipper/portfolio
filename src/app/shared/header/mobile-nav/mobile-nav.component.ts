@@ -1,4 +1,4 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { LanguageSwitchComponent } from "../language-switch/language-switch.component";
 import { RouterLink } from "@angular/router";
 import { TranslatePipe } from '@ngx-translate/core';
@@ -13,5 +13,5 @@ import { ClickOutsideDirective } from "../../directives/click-outside.directive"
 })
 export class MobileNavComponent {
   nav = inject(NavigationService);
-  navList = this.nav.navList()
+  navList = this.nav.navList();
 }

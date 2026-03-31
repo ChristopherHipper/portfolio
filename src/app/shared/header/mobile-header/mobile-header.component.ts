@@ -11,10 +11,9 @@ import { NavigationService } from '../../services/navigation.service';
 export class MobileHeaderComponent {
   nav = inject(NavigationService);
 
-
   onToggle(event: Event) {
     const checked = (event.target as HTMLInputElement).checked;
     this.nav.mobileNavIsOpen.set(checked);
-  }
+  };
 
 }

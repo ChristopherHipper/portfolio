@@ -1,7 +1,7 @@
 <nav class="mobile-nav" (clickOutside)="nav.mobileNavIsOpen.set(false);">
     <ul>
         @for (navItem of navList; track navItem; let i = $index) {
-        <li><a (click)="nav.mobileNavIsOpen.set(false);" [routerLink]="['']" [fragment]="navItem">{{ navItem | translate }}</a></li>
+        <li><a (click)="nav.mobileNavIsOpen.set(false);" [routerLink]="['']" [fragment]="navItem">{{ 'NAVIGATION.' + navItem | translate }}</a></li>
         }
         <app-language-switch></app-language-switch>
     </ul>

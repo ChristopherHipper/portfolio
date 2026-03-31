@@ -22,8 +22,8 @@ export class HeroSectionComponent {
   logoVariant = signal('');
 
   getId(id:string){
-    const clickedNavItem = id.split('.')[1]
-    return clickedNavItem
-  }
+    const clickedNavItem = id.split('.')[1];
+    return clickedNavItem;
+  };
 
 }

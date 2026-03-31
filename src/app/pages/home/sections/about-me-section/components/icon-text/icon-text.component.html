@@ -1,5 +1,5 @@
 <div class="about-me-infos">
-    <img [src]=currentIcon alt="">
+    <img [src]="'assets/img/aboutme/' + currentIcon + '.png'" alt="{{currentIcon}} image">
     <div>
         <p><span>{{ 'ABOUTME.me' | translate }} </span> {{ typedText }} </p>
         <div class="seperator"></div>

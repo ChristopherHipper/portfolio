@@ -1,15 +1,15 @@
 import { Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class DeviceService {
-      isMobile = signal(window.innerWidth < 1024)
+    isMobile = signal(window.innerWidth < 1024);
 
     constructor() {
         window.addEventListener('resize', () => {
             this.isMobile.set(window.innerWidth < 1024);
         });
-    }
-  
+    };
+
 }

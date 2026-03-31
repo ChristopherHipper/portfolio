@@ -39,11 +39,9 @@ label {
 
 .input-continer-name-mail {
     @include mx.display(center, unset, column);
-
     div {
         flex: 1;
     }
-
     @include mx.respond(md) {
         @include mx.display(center, unset, unset);
         gap: 21px;
@@ -78,7 +76,6 @@ p {
     z-index: 1;
     height: 150px;
 }
-
 
 .checkbox input {
     width: 0;
@@ -117,8 +114,6 @@ app-scroll-indicator {
         justify-content: flex-end;
     }
 }
-
-
 
 .border-animation {
     --offset: 1px;
@@ -180,8 +175,6 @@ app-scroll-indicator {
     top: 50px;
     z-index: 1;
 }
-
-
 
 @keyframes slide-in {
     0% {

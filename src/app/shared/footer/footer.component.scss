@@ -30,7 +30,6 @@ footer {
     font-size: 18px;
     @include mx.display(space-between, unset, column);
 
-
     a {
         color: $bg-color;
         margin-right: auto;

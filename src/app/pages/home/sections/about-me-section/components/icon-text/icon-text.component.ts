@@ -1,9 +1,7 @@
-import { Component, effect, inject, signal } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { concat, from, interval, of, Subject } from 'rxjs';
 import { concatMap, delay, ignoreElements, map, repeat, switchMap, take } from 'rxjs/operators';
-import { AsyncPipe } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { LanguageSwitchComponent } from '../../../../../../shared/header/language-switch/language-switch.component';
 import { LanguageService } from '../../../../../../shared/services/language.service';
 
 interface TypeParams {
@@ -21,37 +19,35 @@ interface TypeParams {
 })
 export class IconTextComponent {
   language = inject(LanguageService);
-  icons: string[] = ['assets/img/aboutme/remote.png', 'assets/img/aboutme/location.png'];
+  icons: string[] = ['remote', 'location'];
   currentIconIndex: number = 0;
-  currentIcon: string = 'assets/img/aboutme/location.png';
+  currentIcon: string = 'location';
 
   typedText = '';
   private reset$ = new Subject<void>();
 
-constructor() {
-  this.reset$
-    .pipe(
-      switchMap(() =>
-        this.getTypewriterEffect(this.language.aboutMeInfos())
+  constructor() {
+    this.reset$
+      .pipe(
+        switchMap(() =>
+          this.getTypewriterEffect(this.language.aboutMeInfos())
+        )
       )
-    )
-    .subscribe(text => (this.typedText = text));
+      .subscribe(text => (this.typedText = text));
 
-  // Signal reagiert nur auf aboutMeInfos
-  effect(() => {
-    this.language.aboutMeInfos(); // 👈 explizit tracken
+    effect(() => {
+      this.language.aboutMeInfos();
 
-    this.resetAnimation();
+      this.resetAnimation();
+      this.reset$.next();
+    });
+
     this.reset$.next();
-  });
-
-  // Initial Start
-  this.reset$.next();
-}
+  }
 
   resetAnimation() {
     this.currentIconIndex = 0
-    this.currentIcon = 'assets/img/aboutme/location.png';
+    this.currentIcon = 'location';
     this.shownImg()
   }
 

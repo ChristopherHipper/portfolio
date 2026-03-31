@@ -1,4 +1,4 @@
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { NavComponent } from './nav/nav.component';
 import { LogoComponent } from "../logo/logo.component";
 import { LanguageSwitchComponent } from "./language-switch/language-switch.component";

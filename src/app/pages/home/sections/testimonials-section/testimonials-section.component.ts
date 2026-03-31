@@ -23,5 +23,5 @@ export class TestimonialsSectionComponent {
             text: 'FEEDBACK.text2',
             link: 'https://github.com/ricci27aut',
         }
-    ]
+    ];
 }

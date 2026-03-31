@@ -6,14 +6,14 @@
             <app-single-skill [skill]="skill"></app-single-skill>
             }
         </div>
-        <div appScrollAnimation type="slide-right" class="current-learning">
+        <article appScrollAnimation type="slide-right" class="current-learning">
             <p class="current-learning__headline">{{ 'SKILLS.info' | translate }}</p>
             <div class="current-learning__info">
                 <p> <strong>{{ 'SKILLS.paragraph' | translate }}:</strong><br>{{ 'SKILLS.text' | translate }}</p>
                 <app-single-skill [currentlearning]="true" [skill]="'Docker'"></app-single-skill>
 
             </div>
-        </div>
+        </article>
     </div>
     <div class="btn-container">
         <app-primary-button>

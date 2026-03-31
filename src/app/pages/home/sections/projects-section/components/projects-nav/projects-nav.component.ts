@@ -9,7 +9,7 @@ import { Project } from '../../../../../../shared/interfaces/project.interface';
     styleUrl: './projects-nav.component.scss'
 })
 export class ProjectsNavComponent {
-  selectProject = output<string>()
+  selectProject = output<string>();
   projects = input<Project[]>();
   activeProject = signal('el-pollo-loco');
 

@@ -66,7 +66,7 @@ export class ProjectsService {
           content: 'PROJECTS.portfolio.sections.learning.content'
         },
       ],
-  image: '',
+  image: 'portfolio.png',
   links: ['', 'https://github.com/ChristopherHipper/portfolio']
 },
   ];

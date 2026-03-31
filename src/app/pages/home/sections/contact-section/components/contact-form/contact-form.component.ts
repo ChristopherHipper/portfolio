@@ -14,17 +14,17 @@ import { RouterLink } from "@angular/router";
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
-  formbuilder = inject(FormBuilder)
-  http = inject(HttpClient)
+  formbuilder = inject(FormBuilder);
+  http = inject(HttpClient);
   checkbox = signal(false);
-  showSuccessMessage = signal(false)
+  showSuccessMessage = signal(false);
 
   contactForm = this.formbuilder.group({
     name: ['', [Validators.required, Validators.minLength(1)]],
     email: ['', [Validators.required, Validators.email]],
     message: ['', [Validators.required, Validators.minLength(1)]],
     checkbox: ['', [Validators.requiredTrue]]
-  })
+  });
 
   formSubmit() {
     if (this.contactForm.valid) {
@@ -34,37 +34,37 @@ export class ContactFormComponent {
           next: (response) => {
             this.contactForm.reset();
             this.showSuccessMessage.set(true);
-            setTimeout(()=>{this.showSuccessMessage.set(false);},1000)
+            setTimeout(()=>{this.showSuccessMessage.set(false);},1000);
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    }
-  }
+    };
+  };
 
   get invalidName() {
     return !this.contactForm.get('name')?.valid && this.contactForm.get('name')?.touched;
-  }
+  };
 
   get invalidEmail() {
     return !this.contactForm.get('email')?.valid && this.contactForm.get('email')?.touched;
-  }
+  };
 
   get invalidMessage() {
     return !this.contactForm.get('message')?.valid && this.contactForm.get('message')?.touched;
-  }
+  };
 
   toggleCheckbox(){
     this.checkbox.set(!this.checkbox());
-  }
+  };
 
   checkboxImageSrc() {
     if (this.checkbox()) {
       return `assets/img/checkbox/checkbox-checked.png`
     } else {
       return `assets/img/checkbox/checkbox.png`
-    }
-  }
+    };
+  };
 }

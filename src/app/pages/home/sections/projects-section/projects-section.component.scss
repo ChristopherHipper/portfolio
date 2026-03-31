@@ -1,7 +1,7 @@
 @use 'mixins' as mx;
 @use 'colors' as *;
 
-main {
+.project-wrapper {
     background-color: #2D3840;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;

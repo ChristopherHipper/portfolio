@@ -12,7 +12,6 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class NavComponent implements AfterViewInit, OnDestroy {
   navList = input<string[]>();
   activeLink = signal('');
-  aactiveLink: string = '';
   private observer!: IntersectionObserver;
   options = {
     root: null,
@@ -20,43 +19,41 @@ export class NavComponent implements AfterViewInit, OnDestroy {
   };
 
   getId(id: string) {
-    const clickedNavItem = id.split('.')[1]
-    return clickedNavItem
-  }
+    const clickedNavItem = id.split('.')[1];
+    return clickedNavItem;
+  };
 
   setActiveClass(item: string) {
     this.activeLink.set(item);
-  }
+  };
 
 
   ngAfterViewInit(): void {
     this.initIntersectionObserver();
     this.getSection();
-  }
+  };
 
   initIntersectionObserver() {
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) { 
           this.activeLink.set(entry.target.id);
-        }
+        };
       });
     }, this.options);
-  }
+  };
 
   getSection() {
     this.navList()?.forEach(id => {
       const section = document.getElementById(id);
       if (section) {
-        
-        
         this.observer.observe(section);
-      }
+      };
     });
-  }
+  };
 
   ngOnDestroy(): void {
     this.observer?.disconnect();
-  }
+  };
 
 }

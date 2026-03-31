@@ -39,7 +39,7 @@
 
 }
 
-main {
+article {
     @include mx.display(flex-start, center, unset);
     gap: 24px;
     overflow-x: auto;

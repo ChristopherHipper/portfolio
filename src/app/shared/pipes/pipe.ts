@@ -7,5 +7,5 @@ import {Pipe, PipeTransform} from '@angular/core';
 export class TruncatePipe implements PipeTransform {
   transform(value: string,limit:number = 15): string {
     return value.length < limit ? value : value.substring(0,limit) + '...';
-  }
+  };
 }

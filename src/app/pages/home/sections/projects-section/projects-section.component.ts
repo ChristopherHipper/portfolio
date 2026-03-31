@@ -14,8 +14,8 @@ import {TranslatePipe} from '@ngx-translate/core';
   styleUrl: './projects-section.component.scss'
 })
 export class ProjectsSectionComponent {
-  projectService = inject(ProjectsService)
-  currentProject = signal<Project>(this.projectService.projects[0])
+  projectService = inject(ProjectsService);
+  currentProject = signal<Project>(this.projectService.projects[0]);
   previousProject = signal<Project | undefined>(undefined);
 
   getProject(name: string) {
@@ -28,6 +28,6 @@ export class ProjectsSectionComponent {
       setTimeout(() => {
         this.previousProject.set(undefined);
       }, 200);
-    }
-  }
+    };
+  };
 }

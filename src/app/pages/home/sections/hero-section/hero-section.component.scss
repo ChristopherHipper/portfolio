@@ -28,7 +28,10 @@
     }
 
     &__sozialmedia-container {
-        height: 85%
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 220px;
     }
 
     &__sozialmedia {
@@ -73,20 +76,20 @@ p {
     background-size: contain;
     transition: all 0.25s ease-in-out;
 
-
-
     @include mx.respond(sml) {
         height: 50%;
     }
 
     @include mx.respond(lg) {
         height: 70%;
+        max-width: 600px;
+        display: flex;
+        align-items: flex-end;
 
         &:hover {
             background-image: url('../../../../../assets/img/shapes/ellipse-hero-hover.png');
         }
     }
-
 }
 
 @keyframes fade-in {
@@ -101,16 +104,12 @@ p {
 
 .portrait {
     animation: fade-in 0.75s forwards;
-    /* Ellipse als Maske */
     -webkit-mask-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
     mask-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
-
     -webkit-mask-size: cover;
     mask-size: cover;
-
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-
     -webkit-mask-position: center;
     mask-position: center;
 
@@ -119,5 +118,6 @@ p {
     @include mx.respond(lg) {
         -webkit-mask-image: unset;
         mask-image: unset;
+        max-height: 600px;
     }
 }

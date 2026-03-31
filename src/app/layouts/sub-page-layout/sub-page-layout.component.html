@@ -2,10 +2,6 @@
     <app-header></app-header>
 
     <main class=" flip scroll-animate" [class.in-view]="isInit()">
-
-
-
-
         @if(mobileNav.mobileNavIsOpen() && mobile.isMobile()){
         <div class="nav-wrapper">
             <figure class="hero__img">
@@ -18,11 +14,6 @@
         </div>
         <router-outlet></router-outlet>
         }
-
-
-
-
-
     </main>
     <app-footer></app-footer>
 </div>

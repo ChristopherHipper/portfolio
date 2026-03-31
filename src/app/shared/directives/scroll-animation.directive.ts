@@ -6,7 +6,7 @@ import { AfterViewInit, Directive, ElementRef, Input, OnDestroy, signal } from '
 })
 export class ScrollAnimationDirective implements AfterViewInit, OnDestroy {
   @Input() type: 'slide-bottom' | 'fade' | 'slide-left' | 'slide-right' | 'flip' = 'fade';
-  isMobile = signal(window.innerWidth < 1024)
+  isMobile = signal(window.innerWidth < 1024);
   private observer!: IntersectionObserver;
 
   constructor(private el: ElementRef) {

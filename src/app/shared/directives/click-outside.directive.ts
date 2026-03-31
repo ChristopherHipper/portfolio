@@ -16,9 +16,9 @@ export class ClickOutsideDirective implements OnDestroy {
                 this.clickOutside.emit();
             }
         }, { capture: true });
-    }
+    };
 
     ngOnDestroy() {
         this.listener?.();
-    }
+    };
 }
