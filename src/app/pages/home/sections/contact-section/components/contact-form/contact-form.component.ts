@@ -33,8 +33,9 @@ export class ContactFormComponent {
         .subscribe({
           next: (response) => {
             this.contactForm.reset();
+            this.checkbox.set(false);
             this.showSuccessMessage.set(true);
-            setTimeout(()=>{this.showSuccessMessage.set(false);},1000);
+            setTimeout(()=>{this.showSuccessMessage.set(false);},2000);
           },
           error: (error) => {
             console.error(error);

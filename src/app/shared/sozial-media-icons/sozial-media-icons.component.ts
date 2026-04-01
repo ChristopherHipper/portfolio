@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
     selector: 'app-sozial-media-icons',
@@ -9,14 +9,18 @@ import { Component, input } from '@angular/core';
 })
 export class SozialMediaIconsComponent {
   iconImg = input('')
+  arialabel:string = "";
 
   getHref() {
     let iconName = this.iconImg().split("-")[0];    
     if (iconName === 'git') {
+      this.arialabel = "Open Christopher Hipper's GitHub Profil";
       return 'https://github.com/ChristopherHipper';
     } else if (iconName === 'mail') {
+      this.arialabel = "Open Mail to Christopher Hipper";
       return 'mailto:hipper.christopher@gmail.com';
     } else {
+      this.arialabel = "Open Christopher Hipper's LinkedIn Profil";
       return 'https://www.linkedin.com/in/christopher-hipper-014293253/';
     };
   };

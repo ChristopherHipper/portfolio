@@ -1,4 +1,5 @@
 @use 'colors' as *;
+@use 'mixins' as mx;
 
 .language-container {
     display: flex;
@@ -8,25 +9,30 @@
         background-color: unset;
         padding: 2px 4px;
         transition: color 0.5s, background-image 0.5s;
+        color: $bg-color;
+
+        @include mx.respond(md){
+            font-size: 22px;
+        }
     }
     button:not(.active):hover {
         ~.active {
             background-image: none;
-            color: $bg-color;
+            color: $bg-color !important;
         }
-        color: $second-color;
+        color: $second-color !important;
     }
 }
 
 .active {
     &:has(+ button:not(.active):hover) {
         background-image: none;
-        color: $bg-color;
+        color: $bg-color !important;
     }
     background-image: url('../../../../assets/img/shapes/ellipse-nav-hover.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    color: $second-color;
+    color: $second-color !important;
     cursor: default;
 }
