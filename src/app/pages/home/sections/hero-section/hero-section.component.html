@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="hero" role="banner" aria-label="Hero Bereich">
 
     <figure class="hero__img">
         @if(mobileNav.mobileNavIsOpen() && mobile.isMobile()){
@@ -12,10 +12,10 @@
         @if (!mobile.isMobile()) {
         <div class="hero__logo-sozial">
             <div class="hero-logo">
-                <app-logo [logoVariant]="'hero'"></app-logo>
+                <app-logo aria-label="main logo" [logoVariant]="'hero'"></app-logo>
             </div>
             <div class="hero__sozialmedia-container">
-                <nav class="hero__sozialmedia">
+                <nav aria-label="Social Media Links" class="hero__sozialmedia">
                     @for (icon of icons(); track $index) {
                     <app-sozial-media-icons [iconImg]="icon"></app-sozial-media-icons>
                     }
@@ -23,19 +23,10 @@
             </div>
         </div>
         }
-
-
-
         <div class="hero__text">
-            <h1>Christopher Hipper</h1>
+            <h1 aria-label="Headline">Christopher Hipper</h1>
             <p>{{ 'HERO.job' | translate }}</p>
         </div>
         <app-scroll-indicator [scrollDirection]="'down'"></app-scroll-indicator>
-
-
-
-
     </div>
-
-
 </div>

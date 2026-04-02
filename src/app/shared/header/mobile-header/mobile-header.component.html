@@ -1,9 +1,10 @@
 <header>
     <app-logo [logoVariant]="'hero'"></app-logo>
     <div class="input-container">
-        <input type="checkbox" id="burger" class="checkbox3 visuallyHidden container"
+        <input  aria-label="Open/Close Navigation Menü" type="checkbox" id="burger" class="checkbox3 visuallyHidden container"
             [checked]="nav.mobileNavIsOpen()"  (change)="onToggle($event)">
         <label for="burger" class="container">
+            <span class="visuallyHidden">Open/Close Navigation Menü</span>
             <div class="hamburger hamburger3">
                 <span class="bar bar1"></span>
                 <span class="bar bar2"></span>

@@ -2,7 +2,7 @@
 
     @if(isOpen() && mobile.isMobile()){
 
-    <div class="feedback__mobile" >
+    <div class="feedback__mobile">
         <div class="btn-container">
             <button aria-label="Close" #closeBtn (click)="closeFeedback()" class="btn feedback__mobile--btn">X</button>
         </div>
@@ -10,7 +10,7 @@
     </div>
 
     }@else{
-        <h4 class="feedback__headline">{{ feedback()?.name | translate }}</h4>
+    <h4 class="feedback__headline">{{ feedback()?.name | translate }}</h4>
     <div class="feedback__project">
         <p>{{ 'FEEDBACK.project' | translate }}</p>
         <p class="feedback__project--name">Join</p>
@@ -22,7 +22,8 @@
     }
     @if(mobile.isMobile()){
     <div class="btn-container">
-        <button aria-label="open" #openBtn  class="btn" (click)="openFeedback()">{{ "FEEDBACK.read" | translate }}</button>
+        <button aria-label="{{ 'FEEDBACK.read' | translate }}" #openBtn class="btn" (click)="openFeedback()">{{ "FEEDBACK.read" | translate
+            }}</button>
     </div>
     }
     <a class="feedback__link" target="_blank" [href]="feedback()?.link">GitHub Profile</a>

@@ -25,8 +25,8 @@
             <label for="email">{{ 'CONTACT.form.email' | translate }}</label>
             }
             <div class="border-animation">
-                <input class="inputfield" [class.input-error]="invalidEmail"
-                    id="email" type="text" formControlName="email" />
+                <input class="inputfield" [class.input-error]="invalidEmail" id="email" type="text"
+                    formControlName="email" />
             </div>
         </div>
 
@@ -57,10 +57,12 @@
 
             </label>
         </div>
-
-        <app-secondary-button class="secondary-btn" [class.disabled]="!contactForm.valid" [disabled]="!contactForm.valid" type="submit">
-            {{ 'CONTACT.form.send' | translate }}
-        </app-secondary-button>
+        <button>
+            <app-secondary-button class="secondary-btn" [class.disabled]="!contactForm.valid"
+                [disabled]="!contactForm.valid" type="submit">
+                {{ 'CONTACT.form.send' | translate }}
+            </app-secondary-button>
+        </button>
     </div>
 </form>
 

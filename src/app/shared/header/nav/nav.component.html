@@ -1,4 +1,4 @@
-<nav>
+<nav aria-label="desktop navigation">
     <ul>
         @for (navItem of navList(); track navItem; let i = $index) {
             <li><a (click)="setActiveClass(navItem)" [class.active-link]="navItem === activeLink()" [routerLink]="['']" [fragment]="navItem">{{ 'NAVIGATION.' + navItem | translate }}</a></li>

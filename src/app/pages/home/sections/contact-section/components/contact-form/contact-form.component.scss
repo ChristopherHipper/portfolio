@@ -197,6 +197,9 @@ app-scroll-indicator {
     }
 }
 
-app-secondary-button {
+button {
     float: right;
+    background: unset;
+    padding: 0;
+    cursor: unset;
 }
