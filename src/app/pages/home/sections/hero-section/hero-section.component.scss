@@ -10,11 +10,23 @@
     @include mx.display(unset, unset, column);
 
     @include mx.respond(lg) {
-        align-items: flex-end;
-        flex-direction: row;
-        gap: 8px;
+        @include mx.display(space-between, flex-end, row);
+        gap: 16px;
         margin: 0 auto;
         padding: 0 72px;
+    }
+
+    &__logo-sozial {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .hero-logo {
+            grid-area: 1 / 2 / 2 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__mobile {
@@ -23,16 +35,14 @@
 
     &__content {
         flex: 1;
-        @include mx.display(space-between, center, column);
+        @include mx.display(unset, center, column);
         margin-bottom: 16px;
-        gap: 6px;
     }
 
     &__sozialmedia-container {
-        height: 100%;
+        grid-area: 1 / 3 / 2 / 4;
         display: flex;
-        align-items: center;
-        margin-bottom: 220px;
+        justify-content: end
     }
 
     &__sozialmedia {
@@ -87,7 +97,8 @@ p {
 
     @include mx.respond(lg) {
         height: 70%;
-        max-width: 600px;
+        max-width: 450px;
+        max-height: 600px;
         display: flex;
         align-items: flex-end;
 
@@ -125,4 +136,10 @@ p {
         mask-image: unset;
         max-height: 600px;
     }
+}
+
+app-scroll-indicator{
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
 }

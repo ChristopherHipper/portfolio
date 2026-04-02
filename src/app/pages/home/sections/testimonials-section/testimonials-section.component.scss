@@ -51,4 +51,21 @@ article {
     @include mx.respond(md) {
         justify-content: center;
     }
+
+
+}
+
+article::-webkit-scrollbar {
+    height: 5px;
+}
+
+article::-webkit-scrollbar-track {
+    background: #36424b;
+    border-radius: 12px;
+}
+
+article::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 12px;
+    border: 1px solid #232e33;
 }

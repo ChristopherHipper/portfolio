@@ -33,14 +33,10 @@ export class FeedbackComponent {
   handleClickOutside(event: MouseEvent) {
     if (!this.isOpen()) return;
     const target = event.target as HTMLElement;
-    
+
     const clickedInsideFeedback = this.feedbackRef?.nativeElement.contains(target);
     const clickedCloseBtn = this.closeBtn?.nativeElement.contains(target);
-     const clickedOpenBtn = target.closest('.btn-container');
-
-    console.log(clickedOpenBtn);
-    
-
+    const clickedOpenBtn = target.closest('.btn-container');
 
     if (!clickedInsideFeedback && !clickedCloseBtn && !clickedOpenBtn) {
       this.isOpen.set(false);

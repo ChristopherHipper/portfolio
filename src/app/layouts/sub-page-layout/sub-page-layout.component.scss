@@ -16,17 +16,17 @@ main {
     color: $second-color;
     max-width: 1440px;
     margin: 0 auto;
+    margin-top: 124px;
 
 }
 
-.img-wrapper {
+.arrow-link{
     display: flex;
     transition: transform 1s;
     cursor: pointer;
     background-color: #2D3840;
     border-radius: 50%;
     padding: 12px;
-    margin-top: 23px;
     margin-left: 20px;
 
     &:hover {
@@ -43,6 +43,7 @@ main {
 .arrow {
     width: 34px;
     height: 17px;
+    height: 100%;
 }
 
 .scroll-animate {

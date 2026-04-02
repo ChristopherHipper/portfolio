@@ -58,7 +58,7 @@
             </label>
         </div>
 
-        <app-secondary-button [disabled]="!contactForm.valid" type="submit">
+        <app-secondary-button class="secondary-btn" [class.disabled]="!contactForm.valid" [disabled]="!contactForm.valid" type="submit">
             {{ 'CONTACT.form.send' | translate }}
         </app-secondary-button>
     </div>

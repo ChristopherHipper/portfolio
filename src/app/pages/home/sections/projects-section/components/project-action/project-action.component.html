@@ -1,10 +1,10 @@
 <div class="btn-container">
     @if(project()?.name !== 'portfolio'){
     <app-primary-button>
-        <a class="primary-btn-link" target="_blank" href="{{ project()?.links?.[0] }} ">Live Test</a>
+        <a class="primary-btn" target="_blank" href="{{ project()?.links?.[0] }} ">Live Test</a>
     </app-primary-button>
     }
-    <app-secondary-button [disabled]="false" [gitHubBtn]="true">
-        <a class="secondary-btn-link" target="_blank" href="{{ project()?.links?.[1] }}">GitHub</a>
+    <app-secondary-button>
+        <a class="secondary-btn gitHub-btn" target="_blank" href="{{ project()?.links?.[1] }}">GitHub</a>
     </app-secondary-button>
 </div>

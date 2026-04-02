@@ -2,14 +2,43 @@
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
-    scrollbar-color: #89BCD9 #36424b;
 }
 
 body {
     height: 100%;
     background-color: #262E34;
-    
+    --sb-track-color: #36424b;
+    --sb-thumb-color: #89bcd9;
+    --sb-size: 9px;
+
 }
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 12px;
+    border: 1px solid #232e33;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+::selection {
+    color: #89BCD9;
+}
+
+
 
 button {
     cursor: pointer;

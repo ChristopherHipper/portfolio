@@ -10,23 +10,32 @@
 
     <div class="hero__content">
         @if (!mobile.isMobile()) {
-        <app-logo [logoVariant]="'hero'"></app-logo>
+        <div class="hero__logo-sozial">
+            <div class="hero-logo">
+                <app-logo [logoVariant]="'hero'"></app-logo>
+            </div>
+            <div class="hero__sozialmedia-container">
+                <nav class="hero__sozialmedia">
+                    @for (icon of icons(); track $index) {
+                    <app-sozial-media-icons [iconImg]="icon"></app-sozial-media-icons>
+                    }
+                </nav>
+            </div>
+        </div>
         }
+
+
+
         <div class="hero__text">
             <h1>Christopher Hipper</h1>
             <p>{{ 'HERO.job' | translate }}</p>
         </div>
         <app-scroll-indicator [scrollDirection]="'down'"></app-scroll-indicator>
+
+
+
+
     </div>
 
-    @if (!mobile.isMobile()) {
-    <div class="hero__sozialmedia-container">
-        <nav class="hero__sozialmedia">
-            @for (icon of icons(); track $index) {
-            <app-sozial-media-icons [iconImg]="icon"></app-sozial-media-icons>
-            }
-        </nav>
-    </div>
-    }
+
 </div>
-

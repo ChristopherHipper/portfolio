@@ -1,7 +1,7 @@
 {
     "ABOUTME": {
         "title": "Warum ich",
-        "text": "Präzision und logisches Denken begleiten mich aus meiner Arbeit als Messtechniker. Durch das Programmieren von Messabläufen habe ich meine Begeisterung für Softwareentwicklung entdeckt. Heute entwickle ich Webanwendungen mit Fokus auf saubere Lösungen und gute Benutzererfahrungen, sowohl eigenständig als auch im Team.",
+        "text": "Präzision und logisches Denken sind Fähigkeiten, die ich mir durch meine Arbeit als Messtechniker angeeignet habe. Durch das Programmieren von Messroutinen habe ich meine Leidenschaft für die Softwareentwicklung entdeckt. Heute entwickle ich Webanwendungen mit dem Fokus auf saubere Lösungen und eine gute Benutzererfahrung, sowohl eigenständig als auch im Team.",
         "me": "Ich bin",
         "button": "Lass uns sprechen"
     },
@@ -33,7 +33,7 @@
                 },
                 "learning": {
                     "title": "Was ich gelernt habe",
-                    "content": "Dieses Projekt hat mein Verständnis der objektorientierten Programmierung in JavaScript gestärkt. Ich habe gelernt, eine Game-Loop mit FPS zu verwalten sowie Kollisionen, Animationen und Benutzereingaben zu verarbeiten. Außerdem habe ich meine Fähigkeiten verbessert, größere Projekte zu strukturieren und sauberen, wartbaren Code zu schreiben, was mein Selbstvertrauen als Entwickler gestärkt hat."
+                    "content": "Dieses Projekt hat mein Verständnis der objektorientierten Programmierung in JavaScript gestärkt. Ich habe gelernt, ein Game-Loop mit FPS zu verwalten sowie Kollisionen, Animationen und Benutzereingaben zu verarbeiten. Außerdem habe ich meine Fähigkeiten verbessert, größere Projekte zu strukturieren und sauberen, wartbaren Code zu schreiben, was mein Selbstvertrauen als Entwickler gestärkt hat."
                 }
             }
         },

@@ -1,8 +1,9 @@
 @use './mixins' as mx;
+@use './colors' as *;
 
 h1 {
     font-family: 'Anta';
-    color: #F8F5EC;
+    color: $second-color;
     font-size: 48px;
     margin-bottom: 16px;
     margin-top: 8px;
@@ -28,7 +29,7 @@ h2 {
     font-size: 32px;
     margin-bottom: 32px;
     margin-top: 80px;
-    color: #89BCD9;
+    color: $primary-color;
     font-family: 'Anta';
 
     @include mx.respond(sm) {
@@ -54,7 +55,7 @@ h2 {
 h3 {
     font-family: 'Josefin Sans';
     font-size: 18px;
-    color: #89BCD9;
+    color: $primary-color;
 
     @include mx.respond(sml) {
         font-size: 22px;
@@ -62,13 +63,13 @@ h3 {
 
     @include mx.respond(md) {
         font-size: 28px;
-        color: #F8F5EC;
+        color: $second-color;
     }
 }
 
 h4 {
     font-size: 24px;
-    color: #F8F5EC;
+    color: $second-color;
     margin-bottom: 8px;
 
     @include mx.respond(md) {
@@ -79,9 +80,38 @@ h4 {
 p {
     font-size: 16px;
     font-family: 'Josefin Sans';
-    color: #F8F5EC;
+    color: $second-color;
 
     @include mx.respond(md) {
         font-size: 18px;
+    }
+}
+
+.primary-btn{
+    display: inline-block;
+    border-radius: 30px;
+    color: $bg-color;
+    background-color: $primary-color;
+    padding: 13px 30px;
+    font-size: 18px;
+    font-family: 'Josefin Sans';
+    cursor: pointer;
+    &:hover {
+        background-color: $second-color;
+    }
+}
+
+.secondary-btn{
+    display: inline-block;
+    border-radius: 30px;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: $bg-color;
+    padding: 13px 30px;
+    font-size: 18px;
+    font-family: 'Josefin Sans';
+    cursor: pointer;
+    &:hover {
+        background-color: #F8F5EC1F;
     }
 }

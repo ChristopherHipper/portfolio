@@ -25,7 +25,7 @@ export class ProjectsService {
         },
       ],
       image: 'el-pollo-loco.png',
-      links: ['', 'https://github.com/ChristopherHipper/el-pollo-loco']
+      links: ['https://el-pollo-loco.christopher-hipper.de/', 'https://github.com/ChristopherHipper/el-pollo-loco']
     },
     {
       name: 'join',
@@ -46,7 +46,7 @@ export class ProjectsService {
         },
       ],
       image: 'join.png',
-      links: ['', 'https://github.com/ChristopherHipper/Join']
+      links: ['https://join.christopher-hipper.de/', 'https://github.com/ChristopherHipper/Join']
     },
     {
       name: 'portfolio',

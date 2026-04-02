@@ -39,9 +39,11 @@ label {
 
 .input-continer-name-mail {
     @include mx.display(center, unset, column);
+
     div {
         flex: 1;
     }
+
     @include mx.respond(md) {
         @include mx.display(center, unset, unset);
         gap: 21px;
@@ -101,10 +103,6 @@ p {
     margin-right: 6px;
 }
 
-app-secondary-button {
-    display: flex;
-    justify-content: flex-end;
-}
 
 app-scroll-indicator {
     display: flex;
@@ -158,12 +156,13 @@ app-scroll-indicator {
     }
 }
 
-.success-wrapper{
+.success-wrapper {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .success-msg {
     background-color: $primary-color;
     color: $second-color;
@@ -186,4 +185,18 @@ app-scroll-indicator {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.disabled {
+    color: #f8f5ec82;
+    border: 1px solid #f8f5ec82;
+    cursor: unset;
+
+    &:hover {
+        background-color: $bg-color;
+    }
+}
+
+app-secondary-button {
+    float: right;
 }
