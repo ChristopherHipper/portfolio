@@ -50,6 +50,10 @@
             @include mx.display(center, center, column);
             gap: 16px;
         }
+
+        @include mx.respondHeight(600px) {
+            flex-direction: row;
+        }
     }
 
     &__text {
@@ -57,6 +61,10 @@
 
         @include mx.respond(lg) {
             margin-bottom: 140px;
+        }
+
+        @include mx.respondHeight(600px) {
+            margin-bottom: 6px;
         }
     }
 }
@@ -78,7 +86,7 @@ p {
 }
 
 .hero__img {
-    height: 229px;
+    height: 40%;
     display: flex;
     justify-content: center;
     background-image: url('../../../../../assets/img/shapes/ellipse-hero.png');
@@ -88,11 +96,11 @@ p {
     transition: all 0.25s ease-in-out;
 
     @include mx.respond(sml) {
-        height: 350px;
+        height: 50%;
     }
 
     @include mx.respond(md) {
-        height: 500px;
+        height: 60%;
     }
 
     @include mx.respond(lg) {
@@ -134,11 +142,11 @@ p {
     @include mx.respond(lg) {
         -webkit-mask-image: unset;
         mask-image: unset;
-        max-height: 600px;
+        max-height: 100%;
     }
 }
 
-app-scroll-indicator{
+app-scroll-indicator {
     display: flex;
     align-items: flex-end;
     flex: 1;

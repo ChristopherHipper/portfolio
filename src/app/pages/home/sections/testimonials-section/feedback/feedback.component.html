@@ -13,7 +13,7 @@
     <h4 class="feedback__headline">{{ feedback()?.name | translate }}</h4>
     <div class="feedback__project">
         <p>{{ 'FEEDBACK.project' | translate }}</p>
-        <p class="feedback__project--name">Join</p>
+        <p class="feedback__project--name"> Join</p>
     </div>
     @if(mobile.isMobile()){
     <p class="feedback__text">"{{ feedback()?.text | translate | truncate:200 }}"</p>

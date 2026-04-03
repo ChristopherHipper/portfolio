@@ -10,7 +10,6 @@ body {
     --sb-track-color: #36424b;
     --sb-thumb-color: #89bcd9;
     --sb-size: 9px;
-
 }
 
 body::-webkit-scrollbar {
@@ -37,8 +36,6 @@ body::-webkit-scrollbar-thumb {
 ::selection {
     color: #89BCD9;
 }
-
-
 
 button {
     cursor: pointer;

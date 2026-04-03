@@ -41,7 +41,6 @@
     transition: all 0.4s ease-in-out;
     gap: 12px;
 
-
     @include mx.respond(lg) {
         background-image: url('../../../../../assets/img/shapes/ellipse-skills.png');
         background-repeat: no-repeat;

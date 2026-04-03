@@ -4,6 +4,9 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "rootDir": "./src",
+        "types": [
+      "jasmine"
+    ],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

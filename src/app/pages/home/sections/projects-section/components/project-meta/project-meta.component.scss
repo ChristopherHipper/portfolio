@@ -22,7 +22,6 @@
     display: flex;
     gap: 18px;
 
-
     @include mx.respond(sml) {
         gap: 32px;
     }

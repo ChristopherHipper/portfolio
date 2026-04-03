@@ -23,7 +23,5 @@ export class ProjectPreviewComponent {
         this.changeProject.set(true);
       }, 10)
     }
-
-
   }
 }

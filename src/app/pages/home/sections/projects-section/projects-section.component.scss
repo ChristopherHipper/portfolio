@@ -3,12 +3,14 @@
 
 .project-wrapper {
     background-color: #2D3840;
-    border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     width: 100%;
     display: grid;
 
+    @include mx.respond(md) {
+        border-top-right-radius: 50px;
+    }
 
     @include mx.respond(lg) {
         border-radius: 0;

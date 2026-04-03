@@ -22,7 +22,6 @@ export class IconTextComponent {
   icons: string[] = ['remote', 'location'];
   currentIconIndex: number = 0;
   currentIcon: string = 'location';
-
   typedText = '';
   private reset$ = new Subject<void>();
 
@@ -43,19 +42,19 @@ export class IconTextComponent {
     });
 
     this.reset$.next();
-  }
+  };
 
   resetAnimation() {
-    this.currentIconIndex = 0
+    this.currentIconIndex = 0;
     this.currentIcon = 'location';
-    this.shownImg()
-  }
+    this.shownImg();
+  };
 
   shownImg() {
     this.currentIconIndex++;
     this.currentIconIndex = this.currentIconIndex % this.icons.length;
-    this.currentIcon = this.icons[this.currentIconIndex]
-  }
+    this.currentIcon = this.icons[this.currentIconIndex];
+  };
 
   private type({ word, speed, backwards = false }: TypeParams) {
     return interval(speed).pipe(
@@ -66,7 +65,7 @@ export class IconTextComponent {
       ),
       take(word.length)
     );
-  }
+  };
 
   typeEffect(word: string) {
     this.shownImg();
@@ -83,5 +82,5 @@ export class IconTextComponent {
       concatMap((title) => this.typeEffect(title)),
       repeat()
     );
-  }
+  };
 }

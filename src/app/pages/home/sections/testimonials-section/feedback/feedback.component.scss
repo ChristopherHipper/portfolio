@@ -33,6 +33,7 @@
     &__project {
         display: flex;
         margin-bottom: 19px;
+        gap: 6px;
 
         &--name {
             color: $primary-color;

@@ -11,8 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class LegalNoticeComponent{
     isInit = signal(false);
 
-    ngOnInit(){
-          
+    ngOnInit(){ 
          setTimeout(()=>{
             this.isInit.set(true);
         },10)

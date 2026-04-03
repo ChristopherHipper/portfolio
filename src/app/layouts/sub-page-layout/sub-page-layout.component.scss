@@ -17,7 +17,6 @@ main {
     max-width: 1440px;
     margin: 0 auto;
     margin-top: 124px;
-
 }
 
 .arrow-link{
@@ -31,13 +30,11 @@ main {
 
     &:hover {
         transform: rotate(360deg);
-
     }
 
     a {
         height: 17px;
     }
-
 }
 
 .arrow {
@@ -83,15 +80,4 @@ main {
         height: 70%;
     }
 
-}
-
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }

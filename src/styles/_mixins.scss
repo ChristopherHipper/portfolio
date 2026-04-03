@@ -7,9 +7,14 @@
     flex-direction: $fd;
 }
 
-
 @mixin respond($size) {
     @media screen and (min-width: map-get(var.$breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin respondHeight($size) {
+    @media screen and (max-height: $size) {
         @content;
     }
 }

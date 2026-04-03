@@ -13,6 +13,6 @@ export class SingleSkillComponent {
   currentlearning = input(false);
 
   getSkillImg(){
-    return `assets/img/icons/skills/${this.skill()}.png`
-  }
+    return `assets/img/icons/skills/${this.skill()}.png`;
+  };
 }

@@ -34,9 +34,6 @@
             margin-top: 0px;
         }
     }
-
-
-
 }
 
 article {
@@ -51,8 +48,6 @@ article {
     @include mx.respond(md) {
         justify-content: center;
     }
-
-
 }
 
 article::-webkit-scrollbar {

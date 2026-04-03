@@ -20,8 +20,6 @@ li {
     padding: 12px 6px;
     transition: all 0.5s ease;
 
-
-
     @include mx.respond(sm) {
         padding: 18px 12px;
     }
@@ -69,11 +67,14 @@ button {
 }
 
 .active-project {
-    color: $second-color;
     background-color: #2D3840;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     cursor: default;
+
+    button {
+        color: $second-color;
+    }
 
     @include mx.respond(sm) {
         border-top-left-radius: 30px;
