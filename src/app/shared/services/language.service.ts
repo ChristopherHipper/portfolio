@@ -17,8 +17,14 @@ export class LanguageService {
       };
     };
 
+    constructor(){
+      this.translate.use(localStorage.getItem("language") || 'en');
+      this.lang.set(localStorage.getItem("language")|| 'en');
+    }
+
     switchLanguage(language: string): void {
       if (language === this.lang()) {return};
+      localStorage.setItem("language", language);
       this.translate.use(language);
       this.lang.set(language);
       this.getAboutmeInfos();
