@@ -1,15 +1,19 @@
 @use 'colors' as *;
-@use 'mixins' as *;
+@use 'mixins' as mx;
 
 header {
     background-color: $primary-color;
 }
 
 .header-container {
-    @include display();
+    @include mx.display();
     font-family: 'Josefin Sans';
     margin: 0 auto;
     padding: 0 72px;
     height: 104px;
     max-width: 1440px;
+
+    @include mx.respond(xxl) {
+        padding: 0;
+    }
 }
