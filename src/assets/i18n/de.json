@@ -1,7 +1,7 @@
 {
     "ABOUTME": {
         "title": "Warum ich",
-        "text": "Präzision und logisches Denken sind Fähigkeiten, die ich mir durch meine Arbeit als Messtechniker angeeignet habe. Durch das Programmieren von Messroutinen habe ich meine Leidenschaft für die Softwareentwicklung entdeckt. Heute entwickle ich Webanwendungen mit dem Fokus auf saubere Lösungen und eine gute Benutzererfahrung, sowohl eigenständig als auch im Team.",
+        "text": "Ich entwickle Frontend-Anwendungen mit einem klaren Fokus auf saubere Lösungen und eine überzeugende User Experience. Geprägt durch einen technischen Hintergrund, in dem Präzision und logisches Denken entscheidend sind, habe ich durch das Programmieren von Messroutinen meine Leidenschaft für die Softwareentwicklung entdeckt. Heute arbeite ich sowohl eigenständig als auch effektiv im Team.",
         "me": "Ich bin",
         "button": "Lass uns sprechen"
     },
@@ -25,7 +25,7 @@
             "sections": {
                 "about": {
                     "title": "Über das Project",
-                    "content": "Ein simples Jump and Run Spiel basierend auf Object-orientierte Programmierung. Hilf Pepe die Gefährliche Wüste zu durchqueren und besiege das Riesen Hühnchen"
+                    "content": "Ein simples Jump and Run Spiel basierend auf objektorientierter Programmierung. Hilf Pepe die gefährliche Wüste zu durchqueren und besiege das Riesenhühnchen"
                 },
                 "process": {
                     "title": "Wie ich meine Arbeit organisiert habe",
@@ -98,7 +98,7 @@
     "legalNotice": "Impressum",
     "FEEDBACK": {
         "title": "Teamplayer benötigt?",
-        "title-text": "Hier was meine Kollegen über mich sagen",
+        "title-text": "Hier ist was meine Kollegen über mich sagen",
         "colleagues1": "Christian P.",
         "text1": "In unserem Kanban-Projekt hat er mit strukturiertem und cleanem Code überzeugt. Trotz des Frontend-Fokus hat er einen wesentlichen Teil des Firebase-Backends übernommen. Besonders geschätzt habe ich seine Liebe zum Detail und seine lösungsorientierte Arbeitsweise.",
         "project": "Projekt",

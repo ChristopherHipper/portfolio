@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 import { MobileNavComponent } from "../../shared/header/mobile-nav/mobile-nav.component";
 
 import { DeviceService } from '../../shared/services/device.service';
@@ -10,7 +10,7 @@ import { NavigationService } from '../../shared/services/navigation.service';
 @Component({
     selector: 'app-sub-page-layout',
     standalone: true,
-    imports: [HeaderComponent, RouterOutlet, FooterComponent, MobileNavComponent],
+    imports: [HeaderComponent, RouterOutlet, FooterComponent, MobileNavComponent, RouterLinkWithHref],
     templateUrl: './sub-page-layout.component.html',
     styleUrl: './sub-page-layout.component.scss'
 })
