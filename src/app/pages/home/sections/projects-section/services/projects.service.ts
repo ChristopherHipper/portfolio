@@ -49,25 +49,25 @@ export class ProjectsService {
       links: ['https://join.christopher-hipper.de/', 'https://github.com/ChristopherHipper/Join']
     },
     {
-      name: 'portfolio',
-      label: 'Portfolio',
-      technologies: ['Angular', 'CSS', 'TypeScript'],
+      name: 'poll-app',
+      label: 'Poll-App',
+      technologies: ['Angular', 'Supabase'],
       sections: [
         {
-          title: 'PROJECTS.portfolio.sections.about.title',
-          content: 'PROJECTS.portfolio.sections.about.content'
+          title: 'PROJECTS.poll-app.sections.about.title',
+          content: 'PROJECTS.poll-app.sections.about.content'
         },
         {
-          title: 'PROJECTS.portfolio.sections.process.title',
-          content: 'PROJECTS.portfolio.sections.process.content'
+          title: 'PROJECTS.poll-app.sections.process.title',
+          content: 'PROJECTS.poll-app.sections.process.content'
         },
         {
-          title: 'PROJECTS.portfolio.sections.learning.title',
-          content: 'PROJECTS.portfolio.sections.learning.content'
+          title: 'PROJECTS.poll-app.sections.learning.title',
+          content: 'PROJECTS.poll-app.sections.learning.content'
         },
       ],
-  image: 'portfolio.png',
-  links: ['', 'https://github.com/ChristopherHipper/portfolio']
+  image: 'poll-app.png',
+  links: ['', 'https://github.com/ChristopherHipper/poll-app']
 },
   ];
 }

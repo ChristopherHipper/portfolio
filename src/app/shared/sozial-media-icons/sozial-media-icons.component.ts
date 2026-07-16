@@ -18,7 +18,7 @@ export class SozialMediaIconsComponent {
       return 'https://github.com/ChristopherHipper';
     } else if (iconName === 'mail') {
       this.arialabel = "Open Mail to Christopher Hipper";
-      return 'mailto:hipper.christopher@gmail.com';
+      return 'mailto:mail@christopher-hipper.de';
     } else {
       this.arialabel = "Open Christopher Hipper's LinkedIn Profil";
       return 'https://www.linkedin.com/in/christopher-hipper-014293253/';

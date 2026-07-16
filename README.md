@@ -1,27 +1,79 @@
-# Portfolio
+🗳️ Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+## 📷 Preview
 
-## Development server
+![Portfolio Preview](./src/assets/img/projects/portfolio.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+A personal portfolio designed to showcase my projects, skills, and development journey. The application focuses on a clean user interface, responsive design, and an engaging user experience while presenting my work in a professional way.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🎯 Features
 
-## Build
+📂 Showcase featured and personal projects
+🛠️ Display technical skills and technologies
+📱 Fully responsive design for all devices
+✨ Smooth animations and interactive UI elements
+📄 About me and contact section
+⚡ Fast performance and optimized user experience
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+🛠️ Tech Stack
 
-## Running unit tests
+**Angular 20** – for building a modern single-page application  
+**TypeScript** – for clean and scalable application logic  
+**SCSS** – for structured and maintainable styling  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Getting Started
 
-## Running end-to-end tests
+```bash
+# Clone the repository
+git clone https://github.com/ChristopherHipper/portfolio
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Navigate into the project
+cd poll-app
 
-## Further help
+# Install dependencies
+npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Start development server
+npm start
+```
+
+The application will be available at:
+
+```
+http://localhost:4200
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+The production build will be generated inside the `dist/` directory.
+
+## 🧪 Running Tests
+
+```bash
+npm test
+```
+
+## 📋 Requirements
+
+- Node.js 20+
+- npm
+- Angular CLI 20.3.3
+
+Install the Angular CLI globally if you don't have it already:
+
+```bash
+npm install -g @angular/cli@20.3.3
+```
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+
+## 📄 License
+
+This project is licensed under the MIT License.

@@ -54,20 +54,20 @@
                 }
             }
         },
-        "portfolio": {
-            "label": "Portfolio",
+        "poll-app": {
+            "label": "Poll-App",
             "sections": {
                 "about": {
                     "title": "About the Project",
-                    "content": "Portfolio Website developed with Angular, TypeScript, and SCSS. It employs modern frontend development techniques. Includes a modular layout with interactive elements and a contact form, all in a responsive design."
+                    "content": "A modern survey app built with Angular and Supabase. Users can create their own surveys and participate in polls. The results are saved in real time and displayed clearly."
                 },
                 "process": {
                     "title": "How I have organised my work process",
-                    "content": "The project was built using Angular’s component-based architecture, ensuring the application remains modular and maintainable. Recurring logic was implemented in separate components, allowing it to be reused across the app. Navigation between pages is managed using Angular routing."
+                    "content": "I organized the project into logically structured Angular components and services to create a clear separation between the user interface and data management. Supabase serves as the backend for the database and communication with the application. Thanks to the modular structure and regular testing, I was able to keep the code organized and easily add new features."
                 },
                 "learning": {
                     "title": "What I have learnt",
-                    "content": "Through this project I gained practical experience with Angular and modern frontend development using TypeScript. I learned how to structure applications with components, services, and routing while keeping the code modular and scalable. Additionally, I improved my understanding of data binding, component communication, and reusable UI design."
+                    "content": "This project has deepened my understanding of developing modern web applications with Angular. I learned how to work with Supabase as a backend, exchange data efficiently between the frontend and the database, and build a scalable application architecture. I was also able to expand my knowledge of working with Angular components, services, routing, and asynchronous data streams, and further improve my skills in writing clean, maintainable code."
                 }
             }
         }
@@ -135,7 +135,7 @@
             "company": "Christopher Hipper",
             "address": "Pivitsheider Straße 133a, 32832 Augustdorf",
             "phone": "+491713028957",
-            "email": "hipper.christopher@gmail.com",
+            "email": "mail@christopher-hipper.de",
             "text13": "The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (e.g. names, email addresses, etc.).",
             "sub9": "Storage period",
             "text14": "Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke your consent to data processing, your data will be deleted, unless we have other legally permissible reasons for storing your personal data (e.g. retention periods under tax or commercial law); in the latter case, deletion will take place after these reasons no longer apply.",

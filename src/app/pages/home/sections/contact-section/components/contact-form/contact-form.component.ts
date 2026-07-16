@@ -20,9 +20,9 @@ export class ContactFormComponent {
   showSuccessMessage = signal(false);
 
   contactForm = this.formbuilder.group({
-    name: ['', [Validators.required, Validators.minLength(1)]],
+    name: ['', [Validators.required, Validators.minLength(1),Validators.pattern(/^(\s+\S+\s*)*(?!\s).*$/)]],
     email: ['', [Validators.required, Validators.email]],
-    message: ['', [Validators.required, Validators.minLength(1)]],
+    message: ['', [Validators.required, Validators.minLength(1),Validators.pattern(/^(\s+\S+\s*)*(?!\s).*$/)]],
     checkbox: ['', [Validators.requiredTrue]]
   });
 

@@ -13,5 +13,5 @@ import { RouterLink } from "@angular/router";
     styleUrl: './skills-section.component.scss'
 })
 export class SkillsSectionComponent {
-  skills: string[] = ['Angular','TypeScript', 'JavaScript', 'HTML', 'CSS', 'REST-API', 'Firebase', 'Git', 'Material Design' , 'Scrum']
+  skills: string[] = ['Angular','TypeScript', 'JavaScript', 'HTML', 'CSS', 'REST-API', 'Firebase', 'Git', 'Material Design' , 'Scrum', 'Supabase']
 }

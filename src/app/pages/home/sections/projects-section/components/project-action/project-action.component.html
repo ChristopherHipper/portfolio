@@ -1,9 +1,7 @@
 <div class="btn-container">
-    @if(project()?.name !== 'portfolio'){
     <app-primary-button>
         <a class="primary-btn" target="_blank" href="{{ project()?.links?.[0] }} ">Live Test</a>
     </app-primary-button>
-    }
     <app-secondary-button>
         <a class="secondary-btn gitHub-btn" target="_blank" href="{{ project()?.links?.[1] }}">GitHub</a>
     </app-secondary-button>
