@@ -67,7 +67,7 @@ export class ProjectsService {
         },
       ],
   image: 'poll-app.png',
-  links: ['', 'https://github.com/ChristopherHipper/poll-app']
+  links: ['https://poll-app.christopher-hipper.de/', 'https://github.com/ChristopherHipper/poll-app']
 },
   ];
 }

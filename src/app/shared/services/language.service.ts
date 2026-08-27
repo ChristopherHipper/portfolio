@@ -7,26 +7,27 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageService {
   private translate = inject(TranslateService);
   lang = signal('en');
-  aboutMeInfos = signal(['ready to work remote..','located in Paderborn..']);
+  aboutMeInfos = signal(['ready to work remote..', 'located in Paderborn..']);
 
-    getAboutmeInfos(){
-      if (this.lang() === 'en') {
-        this.aboutMeInfos.set(['ready to work remote..','located in Paderborn..' ]);
-      } else {
-        this.aboutMeInfos.set(['bereit remote zu arbeiten..','ansässig in Paderborn..']);
-      };
+  getAboutmeInfos() {
+    if (this.lang() === 'en') {
+      this.aboutMeInfos.set(['ready to work remote..', 'located in Paderborn..']);
+    } else {
+      this.aboutMeInfos.set(['bereit remote zu arbeiten..', 'ansässig in Paderborn..']);
     };
+  };
 
-    constructor(){
-      this.translate.use(localStorage.getItem("language") || 'en');
-      this.lang.set(localStorage.getItem("language")|| 'en');
-    }
+  constructor() {
+    this.translate.use(localStorage.getItem("language") || 'en');
+    this.lang.set(localStorage.getItem("language") || 'en');
+    this.getAboutmeInfos();
+  }
 
-    switchLanguage(language: string): void {
-      if (language === this.lang()) {return};
-      localStorage.setItem("language", language);
-      this.translate.use(language);
-      this.lang.set(language);
-      this.getAboutmeInfos();
+  switchLanguage(language: string): void {
+    if (language === this.lang()) { return };
+    localStorage.setItem("language", language);
+    this.translate.use(language);
+    this.lang.set(language);
+    this.getAboutmeInfos();
   };
 }
