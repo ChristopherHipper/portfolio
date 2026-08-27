@@ -29,7 +29,7 @@ A personal portfolio designed to showcase my projects, skills, and development j
 git clone https://github.com/ChristopherHipper/portfolio
 
 # Navigate into the project
-cd poll-app
+cd portfolio
 
 # Install dependencies
 npm install
