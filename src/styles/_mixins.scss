@@ -1,4 +1,5 @@
 @use './variables' as var;
+@use "sass:map";
 
 @mixin display($jc: space-between , $ai: center , $fd: unset) {
     display: flex;
@@ -8,7 +9,7 @@
 }
 
 @mixin respond($size) {
-    @media screen and (min-width: map-get(var.$breakpoints, $size)) {
+    @media screen and (min-width: map.get(var.$breakpoints, $size)) {
         @content;
     }
 }

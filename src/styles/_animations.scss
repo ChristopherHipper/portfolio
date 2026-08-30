@@ -93,3 +93,13 @@
 .flip-again {
     animation: flipIn 400ms ease forwards;
 }
+
+@keyframes portrait-fader {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
