@@ -23,7 +23,7 @@ jobs:
 
       # Tests run before the build so broken code never even gets built.
       - name: Run tests
-        run: npm test
+        run: npm test -- --watch=false --browsers=ChromeHeadless
 
-      - name: Build project
-        run: npm run build
+      - name: Create production build
+        run: npm run build -- --configuration production
