@@ -1,7 +1,7 @@
 <div class="layout">
     <app-header></app-header>
 
-    <main class="flip scroll-animate" [class.in-view]="isInit()">
+    <main class="scroll-animate" [class.in-view]="isInit()">
         @if(mobileNav.mobileNavIsOpen() && mobile.isMobile()){
         <div class="nav-wrapper">
             <figure class="hero__img">

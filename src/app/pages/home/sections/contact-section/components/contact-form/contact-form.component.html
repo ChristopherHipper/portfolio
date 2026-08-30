@@ -6,7 +6,7 @@
     }
     <div class="input-continer-name-mail">
 
-        <div appScrollAnimation type="slide-left">
+        <div class="slide-left">
             @if (invalidName){
             <label class="error" for="name">{{ 'CONTACT.form.errorName' | translate }}</label>
             } @else{
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div appScrollAnimation type="slide-right">
+        <div class="slide-right">
             @if (invalidEmail) {
             <label class="error" for="email">{{ 'CONTACT.form.errorEmail' | translate }}</label>
             }@else {
@@ -32,13 +32,13 @@
 
     </div>
 
-    <div appScrollAnimation type="slide-bottom">
+    <div class="fade-in">
         @if (invalidMessage) {
         <label class="error" for="text">{{ 'CONTACT.form.errorMessage' | translate }}</label>
         }@else{
         <label for="text">{{ 'CONTACT.form.message' | translate }}</label>
         }
-        <div class="border-animation input-message">
+        <div class="border-animation input-message ">
             <textarea class="inputfield messagefield" [class.input-error-message]="invalidMessage" name="text" id="text"
                 formControlName="message"></textarea>
         </div>
@@ -64,4 +64,4 @@
     </div>
 </form>
 
-<app-scroll-indicator appScrollAnimation type="slide-bottom" [scrollDirection]="'up'"></app-scroll-indicator>
+<app-scroll-indicator class="fade-in" [scrollDirection]="'up'"></app-scroll-indicator>

@@ -1,14 +1,14 @@
-<section appScrollAnimation>
+<section class="project fade-in">
     <h2>{{ "PROJECTS.title" | translate}}</h2>
     <app-projects-nav (selectProject)="getProject($event)" [projects]="projectService.projects"></app-projects-nav>
     <section class="project-wrapper">
         @if(previousProject()){
-        <div class="project fade-out">
+        <div class="project leave">
             <app-project-detail [project]="previousProject()"></app-project-detail>
         </div>
         }
         @if(currentProject()){
-        <div class="project fade-in">
+        <div class="project entry">
             <app-project-detail [project]="currentProject()"></app-project-detail>
         </div>
         }

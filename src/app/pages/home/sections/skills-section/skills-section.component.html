@@ -1,16 +1,16 @@
-<section appScrollAnimation>
-    <h2>{{ 'SKILLS.title' | translate }}</h2>
+<section class="fade-in">
+    <h2 >{{ 'SKILLS.title' | translate }}</h2>
     <div class="skills-container">
-        <div appScrollAnimation type="slide-left" class="skills">
+        <div class="skills slide-left">
             @for (skill of skills; track skill) {
             <app-single-skill [skill]="skill"></app-single-skill>
             }
         </div>
-        <article appScrollAnimation type="slide-right" class="current-learning">
+        <article class="current-learning slide-right">
             <p class="current-learning__headline">{{ 'SKILLS.info' | translate }}</p>
             <div class="current-learning__info">
                 <p> <strong>{{ 'SKILLS.paragraph' | translate }}:</strong><br>{{ 'SKILLS.text' | translate }}</p>
-                <app-single-skill [currentlearning]="true" [skill]="'Docker'"></app-single-skill>
+                <app-single-skill [currentlearning]="true" [skill]="'Claude'"></app-single-skill>
             </div>
         </article>
     </div>
