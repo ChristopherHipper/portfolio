@@ -3,13 +3,12 @@ import { ProjectsNavComponent } from "./components/projects-nav/projects-nav.com
 import { ProjectDetailComponent } from "./components/project-detail/project-detail.component";
 import { Project } from '../../../../shared/interfaces/project.interface';
 import { ProjectsService } from './services/projects.service';
-import { ScrollAnimationDirective } from '../../../../shared/directives/scroll-animation.directive';
 import {TranslatePipe} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [ProjectsNavComponent, ProjectDetailComponent, ScrollAnimationDirective,TranslatePipe],
+  imports: [ProjectsNavComponent, ProjectDetailComponent,TranslatePipe],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })
@@ -27,7 +26,7 @@ export class ProjectsSectionComponent {
       this.currentProject.set(foundProject);
       setTimeout(() => {
         this.previousProject.set(undefined);
-      }, 200);
+      }, 500);
     };
   };
 }

@@ -1,7 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { SecondaryButtonComponent } from "../../../../../../shared/button/secondary-button/secondary-button.component";
-import { ScrollAnimationDirective } from '../../../../../../shared/directives/scroll-animation.directive';
 import { ScrollIndicatorComponent } from "../../../../../../shared/scroll-indicator/scroll-indicator.component";
 import { HttpClient } from '@angular/common/http';
 import {TranslatePipe} from '@ngx-translate/core';
@@ -9,7 +8,7 @@ import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact-form',
-  imports: [ReactiveFormsModule, SecondaryButtonComponent, ScrollAnimationDirective, ScrollIndicatorComponent, TranslatePipe, RouterLink],
+  imports: [ReactiveFormsModule, SecondaryButtonComponent, ScrollIndicatorComponent, TranslatePipe, RouterLink],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })

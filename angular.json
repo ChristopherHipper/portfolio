@@ -37,7 +37,10 @@
                 "src/styles"
               ]
             },
-            "scripts": []
+            "scripts": [
+              "src/assets/vanta/three.r134.min.js",
+              "src/assets/vanta/vanta.net.min.js"
+            ]
           },
           "configurations": {
             "production": {
