@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { HeroSectionComponent } from './hero-section.component';
+import { provideRouter } from '@angular/router';
 
 describe('HeroSectionComponent', () => {
   let component: HeroSectionComponent;
@@ -8,7 +9,10 @@ describe('HeroSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroSectionComponent]
+      imports: [TranslateModule.forRoot(),HeroSectionComponent],
+    providers: [
+      provideRouter([])
+    ]
     })
     .compileComponents();
     

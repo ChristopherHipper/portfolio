@@ -100,7 +100,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+             "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
+            "scripts": [
+               "src/assets/vanta/three.r134.min.js",
+              "src/assets/vanta/vanta.net.min.js"
+            ]
           }
         }
       }

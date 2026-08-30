@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { IconTextComponent } from './icon-text.component';
 
 describe('IconTextComponent', () => {
@@ -8,7 +8,7 @@ describe('IconTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IconTextComponent]
+      imports: [TranslateModule.forRoot(),IconTextComponent]
     })
     .compileComponents();
     

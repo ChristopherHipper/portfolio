@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { ContactInfoComponent } from './contact-info.component';
 
 describe('ContactInfoComponent', () => {
@@ -8,7 +8,7 @@ describe('ContactInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactInfoComponent]
+      imports: [TranslateModule.forRoot(),ContactInfoComponent]
     })
     .compileComponents();
 

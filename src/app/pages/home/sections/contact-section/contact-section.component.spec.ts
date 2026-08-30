@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { ContactSectionComponent } from './contact-section.component';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('ContactSectionComponent', () => {
   let component: ContactSectionComponent;
@@ -8,7 +10,11 @@ describe('ContactSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactSectionComponent]
+      imports: [TranslateModule.forRoot(),ContactSectionComponent],
+    providers: [
+      provideRouter([]),
+      provideHttpClient()
+    ]
     })
     .compileComponents();
     

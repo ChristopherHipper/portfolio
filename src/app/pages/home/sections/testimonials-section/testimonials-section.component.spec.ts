@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { TestimonialsSectionComponent } from './testimonials-section.component';
 
 describe('TestimonialsSectionComponent', () => {
@@ -8,7 +8,7 @@ describe('TestimonialsSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TestimonialsSectionComponent]
+      imports: [TranslateModule.forRoot(),TestimonialsSectionComponent]
     })
     .compileComponents();
     

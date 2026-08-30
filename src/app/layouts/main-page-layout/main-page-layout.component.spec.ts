@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { MainPageLayoutComponent } from './main-page-layout.component';
+import { provideRouter } from '@angular/router';
 
 describe('MainPageLayoutComponent', () => {
   let component: MainPageLayoutComponent;
@@ -8,7 +9,10 @@ describe('MainPageLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainPageLayoutComponent]
+      imports: [TranslateModule.forRoot(),MainPageLayoutComponent],
+    providers: [
+      provideRouter([])
+    ]
     })
     .compileComponents();
     

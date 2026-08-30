@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { ProjectMetaComponent } from './project-meta.component';
 
 describe('ProjectMetaComponent', () => {
@@ -8,7 +8,7 @@ describe('ProjectMetaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProjectMetaComponent]
+      imports: [TranslateModule.forRoot(),ProjectMetaComponent]
     })
     .compileComponents();
     

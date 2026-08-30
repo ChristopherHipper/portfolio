@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router';
 import { MobileHeaderComponent } from './mobile-header.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('MobileHeaderComponent', () => {
   let component: MobileHeaderComponent;
@@ -8,7 +9,10 @@ describe('MobileHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MobileHeaderComponent]
+      imports: [TranslateModule.forRoot(),MobileHeaderComponent],
+    providers: [
+      provideRouter([])
+    ]
     })
     .compileComponents();
 

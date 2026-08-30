@@ -1,0 +1,29 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      # setup-node provides the right Node.js version and caches npm dependencies.
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Tests run before the build so broken code never even gets built.
+      - name: Run tests
+        run: npm test
+
+      - name: Build project
+        run: npm run build
